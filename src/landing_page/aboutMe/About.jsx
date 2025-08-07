@@ -236,9 +236,9 @@ const About = () => {
     });
   return (
     <>
-      <div className="row d-flex MainAboutDiv justify-content-center align-items-start px-5" id="about">
+      <div className="row d-flex MainAboutDiv justify-content-center align-items-start px-3 px-md-5" id="about">
         
-         <div className="col-lg-5 col-11 aboutDiv">
+         <div className="col-lg-5 col-12 aboutDiv">
           <h1 className="mb-4 text-start" >About.</h1>
           <p style={{fontSize:"14px"}}>Hello my VIKASH SATHE, I’m a Full Stack MERN Developer with expertise in MongoDB, Express, React, Node.js, and Data Structures & Algorithms(DSA) in JAVA, focused on building efficient, scalable, and responsive web applications.</p>
           <div className="row d-flex topicDiv py-4 mt-4 mb-3 justify-content-start align-items-center">
@@ -304,7 +304,7 @@ const About = () => {
 
 
         </div>
-        <div className="col-lg-5 col-11 d-flex justify-content-end align-items-center"  >
+        <div className="col-lg-5 col-11 d-flex justify-content-md-end justify-content-center align-items-center"  >
           <img
             src={about_img}
             alt=""

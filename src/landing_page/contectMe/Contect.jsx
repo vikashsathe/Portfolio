@@ -140,7 +140,7 @@ const Contect = () => {
           </div>
         </div>
 
-        <div className="col-md-6 col-11 px-5 d-flex justify-content-center align-items-center rightContect">
+        <div className="col-md-6 col-11 px-3 px-md-5 d-flex justify-content-center align-items-center rightContect">
           <form 
             onSubmit={onSubmit}
             className="contect-right d-flex flex-column gap-4 col-12"
@@ -173,7 +173,7 @@ const Contect = () => {
             />
             <button
               type="submit"
-              className="contect-submit fs-6 col-4 px-5 py-3"
+              className="contect-submit fs-6 col-md-4 col-6 px-5 py-3"
             >
               Submit now
             </button>

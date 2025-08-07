@@ -100,6 +100,7 @@ background: linear-gradient(160deg,rgba(249, 206, 52, 1) 0%, rgba(238, 42, 123, 
   }
   .flipDiv img {
    width: 80%;   
+   margin-top: 20px;
   }
 
 

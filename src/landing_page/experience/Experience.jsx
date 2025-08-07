@@ -229,8 +229,8 @@ const Experience = () => {
   });
   return (
     <>
-      <div className="row d-flex MainExpDiv justify-content-center align-items-start px-5" id="experience">
-         <div className="col-md-5 col-11 d-flex justify-content-start align-items-center">
+      <div className="row d-flex MainExpDiv justify-content-center align-items-start px-3 px-md-5" id="experience">
+         <div className="col-md-5 col-11 d-flex justify-content-md-start justify-content-center align-items-center">
           <img
             src={experience_img}
             alt=""

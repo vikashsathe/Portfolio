@@ -284,7 +284,7 @@ const home = () => {
             
           </div>
         </div>
-        <div className="col-md-5 col-11 mt-5 d-flex justify-content-end align-items-center"
+        <div className="col-md-5 col-11 mt-md-5 mt-2 d-flex justify-content-md-end justify-content-center align-items-center"
           style={{ marginTop: "-65px" }}
         >
           <img
