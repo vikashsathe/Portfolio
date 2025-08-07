@@ -75,9 +75,9 @@ const Project = () => {
         <div className="row mt-5 mb-5">
           <div className="wrapper">
             <div className="left d-flex align-items-center flex-column text-justify">
-              <h1 className="mt-5 mb-3 text-center">crafted with love.</h1>
+              <h1 className="mt-5 mb-0 text-center">crafted with <span style={{color:"#ffe066"}}>love</span>.</h1>
               <p
-                className=""
+                className="m-0 fw-light"
                 style={ { fontSize: "14px"} }
               >
                these are few of my recent works

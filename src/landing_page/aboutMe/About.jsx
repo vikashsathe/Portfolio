@@ -242,11 +242,11 @@ const About = () => {
           <h1 className="mb-4 text-start" >About.</h1>
           <p style={{fontSize:"14px"}}>Hello my VIKASH SATHE, I’m a Full Stack MERN Developer with expertise in MongoDB, Express, React, Node.js, and Data Structures & Algorithms(DSA) in JAVA, focused on building efficient, scalable, and responsive web applications.</p>
           <div className="row d-flex topicDiv py-4 mt-4 mb-3 justify-content-start align-items-center">
-               <a className="nav-link col-lg-3 col-2 text-center active"
+               <a className="nav-link col-md-3 col-4 text-center active"
               onClick={(e) => setActive(e.currentTarget, 'anwendungDiv1')}>
               Certificates
             </a>
-            <a className="nav-link col-lg-3 col-2 text-center"
+            <a className="nav-link col-md-3 col-4 text-center"
               onClick={(e) => setActive(e.currentTarget, 'productDiv1')}>
               Education
             </a>

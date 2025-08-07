@@ -101,14 +101,14 @@ const Contect = () => {
 
   return (
     <>
-      <div className="mt-5 mb-5 contentDiv" id="contact">
+      {/* <div className="mt-5 mb-5 contentDiv" id="contact">
         <div className="row d-flex justify-content-center align-items-center">
           <h1 className="mt-5 text-center">Contect.</h1>
-        </div>
-      </div>
-      <div className="row d-flex justify-content-center align-items-start mb-5">
+        </div> */}
+      {/* </div> */}
+      <div id="contect" className="contentDiv row mt-5 mb-5 d-flex justify-content-center align-items-start mb-5">
         <div className="col-md-4 col-11 leftContect">
-          <h1 className="mb-4">Let's Talk</h1>
+          <h1 className="mb-4">Let'<span style={{color:"#ffe066"}}>s</span> Talk </h1>
           <p className="mb-3">
             I'm currently avaliable to take on new project, so feel free to send
             me a message about anything that you want me to work on. You can
@@ -173,7 +173,7 @@ const Contect = () => {
             />
             <button
               type="submit"
-              className="contect-submit fs-6 col-md-4 col-6 px-5 py-3"
+              className="contect-submit fs-6 col-md-4 col-6 px-3 px-md-5 py-3"
             >
               Submit now
             </button>
