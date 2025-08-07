@@ -12,6 +12,7 @@ import Contect from './landing_page/contectMe/Contect.jsx';
 import ProjectDetials from './landing_page/projects/ProjectDetials.jsx';
 import { useGSAP } from '@gsap/react'
 import gsap from "gsap"
+import Footer from './landing_page/footer/Footer.jsx';
 
 
 function App() {
@@ -55,6 +56,7 @@ useGSAP(() => {
                 <Project />
                 <About />
                 <Contect />
+                <Footer />
               </>
             }
           />

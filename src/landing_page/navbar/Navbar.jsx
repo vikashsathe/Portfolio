@@ -105,7 +105,7 @@ const Navbar = () => {
 
     
     const menuRef = useRef();
-    const menuLinksRef = useRef();
+    // const menuLinksRef = useRef();
 
 // const mobileSideMenuOpen = () => {
 
@@ -118,16 +118,17 @@ const mobileSideMenuOpen = () => {
 
   // Animate the links
   gsap.fromTo(
-    menuLinksRef.current.children,
+    // menuLinksRef.current.children,
+    ".mobileSideBar a",
     {
-      x: -50,
+      x: 80,
       opacity: 0,
     },
     {
       x: 0,
       opacity: 1,
       duration: 0.6,
-      stagger: 0.1,
+      stagger: 0.5,
       ease: "power2.out",
     }
   );
@@ -220,9 +221,13 @@ const mobileSideMenuOpen = () => {
 
       <div ref={menuRef} className="mobileSideBar d-none d-flex flex-column">
 
-      <div className="d-flex flex-column px-4 py-3 gap-4 position-relative">
+        <div
+    // ref={menuLinksRef}
+    className="d-flex flex-column px-4 py-3 gap-4 position-relative"
+  >
+
         <p className="mobileClose position-absolute" onClick={mobileSideMenuClose}><i className="ri-close-line fs-1"></i></p>
-        <h1 className="border">Well Come</h1>
+        <h1 className="text-center" style={{letterSpacing:"10px", textTransform:"uppercase"}}>Well Come</h1>
           <a
           href="#skills"
           className="text-white"
@@ -260,6 +265,46 @@ const mobileSideMenuOpen = () => {
         >
           Experience
         </a>
+
+        {/* <div className="bg-dark"> {Service_data.map((service, index) => (
+                <div
+                  className="col-6 serviceCard mt-3 mb-3 services-format rounded-2"
+                  key={index}
+                  style={{ textAlign: "justify", width: "45%" }}
+                >
+                  <div>
+                    <img
+                      src={service.w_img}
+                      alt=""
+                      className="img-fluid"
+                      style={{
+                        objectFit: "contain",
+                        width: "100%",
+                        minHeight: "200px",
+                        maxHeight: "200px",
+                      }}
+                    />
+                  </div>
+
+                  <h2
+                    className="px-4"
+                    style={{ minHeight: "90px", letterSpacing: "1px" }}
+                  >
+                    {service.w_name}
+                  </h2>
+                  <p className="px-4" style={{ minHeight: "80px" }}>
+                    {service.w_disc}
+                  </p>
+                  <p className="mb-3 readMore">
+                    <a
+                      className="px-4 text-dark"
+                      style={{ textDecoration: "none" }}
+                    >
+                      Read More <i className="ri-arrow-right-line"></i>
+                    </a>
+                  </p>
+                </div>
+              ))}</div> */}
       </div>
       </div>
 

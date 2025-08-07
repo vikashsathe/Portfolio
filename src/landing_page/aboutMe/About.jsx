@@ -304,7 +304,7 @@ const About = () => {
 
 
         </div>
-        <div className="col-lg-5 col-11 d-flex justify-content-md-end justify-content-center align-items-center"  >
+        <div className="col-lg-5 col-11 d-flex mt-5 mt-md-0 justify-content-md-end justify-content-center align-items-center"  >
           <img
             src={about_img}
             alt=""

@@ -1,0 +1,34 @@
+import React from 'react'
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+const Footer = () => {
+
+
+      useGSAP(() => {
+
+        
+     gsap.to(".heartBlink", {
+  opacity: 0,
+  duration: 1.5, // how fast it shrinks/disappears
+  repeat: -1,    // infinite loop
+  yoyo: true,    // go back to original state
+  ease: "power1.inOut" // smooth transition
+});
+
+    
+
+      })
+  return (
+    <>
+    
+        <div className="row d-flex justify-content-center align-items-center px-3 px-md-5">
+            <h6 className='text-center py-4'>created with <span className='heartBlink'> ❤️ </span> by <span style={{color:"#ffe066"}}>me</span></h6>
+        </div>
+    
+    </>
+  )
+}
+
+export default Footer

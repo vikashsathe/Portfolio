@@ -141,20 +141,20 @@
 }
 
 
-
-
-
-.mobileSideBar{
-position: absolute;
-background: #fff;
+        .mobileSideBar{
+position: fixed;
+top: 50%;
+left: 60%;
+transform: translate(-50%, -50%);
+background-color: #fff;
 width: 80%;
-right: 0;
-top: -24px;
 height: 100vh;
-color: #030303 !important;
 z-index: 200;
+color: #030303 !important;
+        }
 
-}
+
+
 .mobileSideBar a{
 color: #030303 !important;
 cursor: pointer;
