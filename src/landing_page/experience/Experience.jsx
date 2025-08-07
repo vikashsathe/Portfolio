@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./Experience.css";
-import experience_img from "../../assets/home_img/HomeImg.png";
+import experience_img from "../../assets/home_img/homeimg.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 

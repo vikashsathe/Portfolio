@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./About.css";
-import about_img from "../../assets/home_img/HomeImg.png";
+import about_img from "../../assets/home_img/homeimg.png";
 // import about_img from "../../assets/home_img/HomeImg.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
