@@ -7,7 +7,7 @@ import Logo from "../../assets/logo/logo.png";
 import Resume from "../../assets/resume/Vikash_Sathe.pdf";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import downloadBtn from "../../assets/Resume/download-line.svg";
+import downloadBtn from "../../assets/resume/download-line.svg";
 import Service_data from "../../assets/service/data/service_data.js";
 
 
