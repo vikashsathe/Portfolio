@@ -85,14 +85,19 @@ background: linear-gradient(160deg,rgba(249, 206, 52, 1) 0%, rgba(238, 42, 123, 
 
 @media (max-width: 768px) {
   .flipDiv {
-    flex: 1 1 40%;
-    max-width: 40%;
-    height: 60px;     
+    flex: 10% 10% 10%;
+    max-width: 30%;
+    height: 40px;     
   }
 
+
+}
+@media (max-width: 567px) {
   .flipDiv img {
-    border-radius: 8px;
+   width: 85%;   
   }
+
+
 }
 
 
