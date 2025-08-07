@@ -1,0 +1,174 @@
+
+
+#closeSkillCard{
+  max-height: 664px;
+  /* background-color: orange; */
+  overflow: scroll;
+  scrollbar-width: none;
+  text-align: justify;
+}
+
+.experience_img{
+   /* transform: rotateY(180deg); */
+    width: 100%;
+    height: 70% !important;
+}
+
+
+.socialDiv p{
+    width: 50px;
+    height: 50px;
+    border: none;
+     background: #030303;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    overflow: hidden;
+      box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.451);
+}
+.socialDiv p i{
+    font-size: 33px;
+    color:rgb(255, 255, 255);
+     object-fit: cover;
+    
+    
+}
+.socialDiv p:hover .ri-linkedin-fill{
+    scale: 1.05;
+    background-color: #0077B5;
+    /* color: #fff; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in;
+    
+    
+}
+.socialDiv p:hover .ri-github-fill{
+    scale: 1.05;
+background: #ffffff;
+color: #000000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in;
+}
+.socialDiv p:hover .ri-instagram-line{
+    scale: 1.05;
+background: #F9CE34;
+color: #fff;
+background: linear-gradient(160deg,rgba(249, 206, 52, 1) 0%, rgba(238, 42, 123, 1) 50%, rgba(98, 40, 215, 1) 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in;
+}
+.socialDiv p:hover .ri-twitter-x-line{
+    scale: 1.05;
+background: #1DA1F2;
+color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in;
+}
+
+
+/* .flipDivExp{
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    cursor: pointer;
+} */
+
+
+
+.ExprienceDiv{
+    max-height: 665px;
+    overflow: scroll;
+    scrollbar-width: none;
+    text-align: justify;
+}
+
+
+
+
+.accordion-button {
+  background: #c5c8d01d !important;
+  color: #f8fafc !important;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 14px;
+  border: none !important;
+  transition: all 0.3s ease;
+  position: relative;
+  backdrop-filter: blur(8px);
+}
+
+.accordion-button:hover {
+  background: #c5c8d025 !important;
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #1e40af, #0ea5e9) !important;
+  color: #fff !important;
+}
+
+.accordion-button::after {
+  transition: transform 0.3s ease;
+  filter: brightness(1.2);
+}
+
+
+.accordion-body{
+    background: #c5c8d01d !important;
+    border: none !important;
+    border-radius: 0 0 14px 14px;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+.sparkle-list {
+  list-style: none; 
+  padding-left: 0;
+}
+
+.sparkle-list li {
+  position: relative;
+  padding-left: 1.5rem; 
+  margin-bottom: 8px;
+  color: #e2e8f0;
+  font-size: 15px;
+}
+
+.sparkle-list li::before {
+  content: '✨';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+  .accordion {
+  --bs-accordion-btn-icon: url("../../assets/add-line.svg");
+  --bs-accordion-btn-active-icon: url("../../assets/subtract-line.svg")    
+}

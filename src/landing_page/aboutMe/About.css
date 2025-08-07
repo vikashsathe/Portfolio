@@ -1,0 +1,80 @@
+.about_img{
+        transform: rotateY(180deg);
+    width: 100%;
+    height: 70% !important;
+}
+
+
+.aboutDiv{
+    max-height: 665px;
+    text-align: justify;
+}
+
+
+
+
+.nav-link.active {
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active::after {
+ content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background-color: lightcyan;
+}
+
+
+
+
+.accordion-button{
+box-shadow: none;
+background-color: transparent;
+color: #fff;
+border: 1px solid #fff;
+}
+
+.accordion-button:focus{
+  border: none;
+  box-shadow: none;
+  border: 1px solid #fff;
+}
+
+
+.accordion-button:not(.collapsed){
+  color: #fff;
+  background-color: transparent;
+}
+
+.accordion-item, .accordion-body{
+  box-shadow: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.dropDownMessage a{
+  text-decoration: none;
+  color: #fff;
+}
+
+#anwendungDiv1, #productDiv1{
+    background: #c5c8d01d !important;
+  color: #f8fafc !important;
+  font-size: 14px !important;
+  border-radius: 5px 5px 14px 14px;
+
+}
+

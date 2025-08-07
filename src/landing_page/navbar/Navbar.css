@@ -1,0 +1,185 @@
+.row {
+  font-size: 16px;
+}
+
+.navDiv {
+  background: #030303;
+  border-radius: 20px;
+  z-index: 100;
+  box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
+}
+
+.downloadResumeBtn {
+  border: none;
+  box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
+   background-color: #fff;
+   color: #030303;
+  padding: 15px 30px;
+  border-radius: 40px;
+  transition: transform 0.5s; 
+}
+.downloadResumeBtn:hover{
+   transform: scale(1.04);
+}
+
+.services-format h2 {
+    font-size: 35px;
+    font-weight: 800;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(270deg, rgb(49, 183, 194) 50%, rgb(123, 195, 147)) text;
+    transition: transform 0.5s; 
+}
+
+
+.services-format:hover{
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+
+
+
+.logo {
+  width: 150px;
+  height: 80px;
+}
+
+.miniResume {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 47px;
+  z-index: 10;
+  cursor: pointer;
+  right: 175px;
+  border-radius: 50%;
+  background: #030303;
+  box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
+}
+.miniResume img {
+  width: 25px;
+  transform: translate(12px, 12px);
+
+}
+
+.minDiv a:hover {
+  scale: 1.04;
+  transition: all 1s ease;
+  color: rgb(255, 255, 255) !important;
+  opacity: 0.3;
+}
+
+
+.miniContectBtn{
+ width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 50%;
+  right: 50px;
+  background: transparent;
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.4);
+  transition: transform 0.5s;
+}
+
+.miniContectBtn:hover a{
+  scale: 1.1;
+}
+
+
+
+.miniContectBtn:hover a{
+    transform: scale(0.98);
+}
+
+
+
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    z-index: 1;
+    scale: 0.7;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    z-index: 1;
+  }
+}
+
+
+
+.proDiv{
+  height: 50vh;
+  z-index: 10;
+  transform: translate(0, 68%) !important;
+}
+
+.proDiv.show {
+  animation: fadeSlide 0.8s ease forwards;
+}
+
+
+
+.serviceCard{
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 0px 30px, rgba(2, 6, 9, 1) 0px 0px 4px, rgba(0, 0, 0, 0.17) 0px 0px 0px, rgba(0, 0, 0, 0.50) 0px 1px 0px;
+}
+
+.readMore{
+  transition: transform 0.5s;
+}
+.readMore:hover{
+  transform: scale(0.98);
+}
+
+
+
+
+
+.mobileSideBar{
+position: absolute;
+background: #fff;
+width: 80%;
+right: 0;
+top: -24px;
+height: 100vh;
+color: #030303 !important;
+z-index: 200;
+
+}
+.mobileSideBar a{
+color: #030303 !important;
+cursor: pointer;
+font-weight: 500;
+text-transform: uppercase;
+font-size: 18px;
+letter-spacing: 1px;
+}
+.mobileClose{
+    left: -40px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-color: #fff;
+    border: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* ✅ Mobile: 2 per row + smaller size */
+@media (max-width: 768px) {
+  .miniResume {
+    right: 40px;     /* smaller height */
+  }
+}

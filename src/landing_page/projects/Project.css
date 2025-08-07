@@ -1,0 +1,116 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* left 1 part, right 2 parts */
+  height: 100vh; 
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* desktop layout */
+  height: 100vh;
+  padding: 1rem;
+}
+
+/* 👇 Mobile screen */
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr; /* stack vertically */
+    height: auto; /* let content grow */
+  }
+
+  .left, .right {
+    width: 100%; /* full width */
+    padding: 1rem !important;
+  }
+
+  .left p {
+    padding: 0 !important; /* remove big left padding on mobile */
+    text-align: center;
+  }
+
+  .right .col-10 {
+    width: 100% !important;
+  }
+
+  .project-card {
+    width: 100% !important;
+  }
+}
+
+
+.left {
+  position: sticky;
+  top: 0;
+  height: 70vh;
+  /* background-color: rgb(244, 86, 7); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  /* background-color: rgb(5, 177, 235); */
+  padding: 30px;
+  
+}
+
+
+
+.card-body {
+    height: 190px;
+    background-color: transparent;
+
+}
+
+.card-body img {
+    transition: transform 0.5s;
+}
+
+.card-body img:hover {
+    transform: scale(0.98);
+    cursor: crosshair;
+
+}
+
+
+
+.arrowShare {
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: #030303;
+    text-decoration: none;
+    color: #fff;
+    overflow: hidden;
+}
+
+.arrowShare i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.arrowShare:hover {
+    scale: 1.05;
+    color: #030303;
+    background-color: #fff;
+    transition: all 0.5s ease-in;
+}
+
+.xBtn {
+
+    right: 30px;
+    background: black;
+    width: 40px;
+    height: 40px;
+    top: 30px;
+    border-radius: 50%;
+}
+
+
+
