@@ -93,6 +93,11 @@ background: linear-gradient(160deg,rgba(249, 206, 52, 1) 0%, rgba(238, 42, 123, 
 
 }
 @media (max-width: 567px) {
+  .flipDiv {
+           flex: 1 1 40%;
+        max-width: 16%;
+        height: 8px;  
+  }
   .flipDiv img {
    width: 80%;   
   }
