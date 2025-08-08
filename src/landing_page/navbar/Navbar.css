@@ -141,17 +141,25 @@
 }
 
 
-        .mobileSideBar{
-position: fixed;
-top: 50%;
-left: 60%;
-transform: translate(-50%, -50%);
-background-color: #fff;
-width: 80%;
-height: 100vh;
-z-index: 200;
-color: #030303 !important;
-        }
+ .mobileSideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: #fff;
+  z-index: 200;
+  color: #030303 !important;
+
+  transform: translateX(100%); /* hidden to the right */
+  transition: transform 0.3s ease;
+}
+
+.mobileSideBar.open {
+  transform: translateX(0); /* visible */
+}
+
 
 
 

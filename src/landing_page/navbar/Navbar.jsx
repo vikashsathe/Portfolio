@@ -114,7 +114,9 @@ const Navbar = () => {
 // };
 const mobileSideMenuOpen = () => {
   console.log("Opening menu");
-  menuRef.current.classList.remove("d-none");
+  // menuRef.current.classList.remove("d-none");
+   menuRef.current.classList.remove("d-none");
+  menuRef.current.classList.add("open");
 
   // Animate the links
   gsap.fromTo(
@@ -136,9 +138,19 @@ const mobileSideMenuOpen = () => {
 
 
 
- const mobileSideMenuClose = () => {
-  console.log("Closing menu");
-  menuRef.current.classList.add("d-none"); 
+//  const mobileSideMenuClose = () => {
+//   console.log("Closing menu");
+//   menuRef.current.classList.add("d-none"); 
+// };
+
+
+
+
+const mobileSideMenuClose = () => {
+  menuRef.current.classList.remove("open");
+  setTimeout(() => {
+    menuRef.current.classList.add("d-none");
+  }, 300); // same as transition time
 };
 
 
@@ -266,11 +278,11 @@ const mobileSideMenuOpen = () => {
           Experience
         </a>
 
-        {/* <div className="bg-dark"> {Service_data.map((service, index) => (
+        <div className="px-2" style={{overflow:"scroll",height:"70vh",scrollbarWidth:"none"}}> {Service_data.map((service, index) => (
                 <div
-                  className="col-6 serviceCard mt-3 mb-3 services-format rounded-2"
+                  className="col-12 serviceCard overflow-scroll mt-2 mb-3 services-format rounded-2"
                   key={index}
-                  style={{ textAlign: "justify", width: "45%" }}
+                  style={{ textAlign: "justify" }}
                 >
                   <div>
                     <img
@@ -278,33 +290,41 @@ const mobileSideMenuOpen = () => {
                       alt=""
                       className="img-fluid"
                       style={{
-                        objectFit: "contain",
+                        objectFit: "cover",
                         width: "100%",
-                        minHeight: "200px",
-                        maxHeight: "200px",
+                        minHeight: "100px",
+                        maxHeight: "100px",
                       }}
                     />
                   </div>
 
                   <h2
-                    className="px-4"
-                    style={{ minHeight: "90px", letterSpacing: "1px" }}
+                    className="px-3 py-2 fs-4"
+                    style={{ letterSpacing: "1px" }}
                   >
                     {service.w_name}
                   </h2>
-                  <p className="px-4" style={{ minHeight: "80px" }}>
-                    {service.w_disc}
-                  </p>
-                  <p className="mb-3 readMore">
+                  <p className="mb-3 readMore" >
                     <a
-                      className="px-4 text-dark"
-                      style={{ textDecoration: "none" }}
+                      className="px-3 py-0 text-dark"
+                      style={{ textDecoration: "none", fontSize:"10px" }}
                     >
                       Read More <i className="ri-arrow-right-line"></i>
                     </a>
                   </p>
                 </div>
-              ))}</div> */}
+              ))}
+
+                  <div
+                className="col-12 d-flex justify-content-center mb-5 align-items-center rounded-5 border px-4 py-3 services-format rounded-2"
+                style={{ background: "lightgray" }}
+              >
+                <h6 className="m-0 d-flex justify-content-center align-items-center gap-2">
+                  See What's new <i className="ri-arrow-right-line"></i>{" "}
+                </h6>
+              </div>
+              </div>
+              
       </div>
       </div>
 
