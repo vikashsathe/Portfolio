@@ -257,7 +257,7 @@ const About = () => {
   
 
           {/* Anwendung Div */}
-          <div className="dropDownMessage py-3 px-4 gap-3 d-flex flex-column" id="anwendungDiv1" style={{maxHeight:"274px", overflow:"scroll", scrollbarWidth:"none"}}>
+          <div className="dropDownMessage py-2 px-2 gap-3 d-flex flex-column" id="anwendungDiv1" style={{maxHeight:"274px", overflow:"scroll", scrollbarWidth:"none"}}>
                { Certificate_data.map((certificate, index) => (
                 <div className="position-relative certificate-body">
                          <img
@@ -269,7 +269,7 @@ const About = () => {
                         {/* <a href={certificate.s_link} target="_blank">
                         <p className="position-absolute bg-dark rounded-5 d-flex justify-content-center align-items-center" style={{top:"30px", right:"30px", width:"50px",height:"50px", cursor:"pointer"}}>p</p>
                         </a> */}
-                         <div className="arrowShare d-none" style={{top:"30px", right:"30px"}}>
+                         <div className="arrowShare d-none" style={{top:"20px", right:"30px"}}>
                           <a href={certificate.s_link} target="_blank">
                           <i
                             className="ri-arrow-right-up-line fs-4"
@@ -304,7 +304,7 @@ const About = () => {
 
 
         </div>
-        <div className="col-lg-5 col-11 d-flex mt-5 mt-md-0 justify-content-md-end justify-content-center align-items-center"  >
+        <div className="col-lg-5 col-12 d-flex mt-5 mt-md-0 justify-content-md-end justify-content-center align-items-center"  >
           <img
             src={about_img}
             alt=""

@@ -70,7 +70,7 @@ gsap.to(".scale_skills", {
 
 
   return (
-    <div className="mt-5 mb-5 skillsDiv" id="skills">
+    <div className="mt-5 px-3 px-md-5 mb-5 skillsDiv" id="skills">
 
       <div className="row d-flex justify-content-center align-items-center">
         <h1 className="mt-5 text-center">Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>

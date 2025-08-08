@@ -119,9 +119,11 @@ const Contect = () => {
             <i className="ri-mail-ai-line fs-4"></i> vikashsathe83@gmail.com
           </p>
             </a>
+            <a className="text-decoration-none text-light" href="https://wa.me/917869603377?text=Hi%20Vikash%2C%20I%20saw%20your%20portfolio!" target="_blank">
           <p className="d-flex mb-2 justify-content-start m-0 align-items-center gap-3">
             <i className="ri-phone-fill fs-4"></i> +91 7869603377
           </p>
+          </a>
           <p className="d-flex justify-content-start m-0 align-items-center gap-3">
             <i className="ri-send-plane-fill fs-4"></i> Indore, Madhya Pradesh
           </p>

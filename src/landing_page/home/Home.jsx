@@ -261,7 +261,8 @@ const home = () => {
               letterSpacing: "-0.36px",
             }}
           >
-            Hello I’am VIKASH SATHE Software Developer Based In{" "}
+        <span style={{color:"#ffe066"}}>Hello</span> I’m VIKASH SATHE, a Software Developer based in{" "}
+
             <span className="ind" style={{ color: "", text: "transparent" }}>
               India.
             </span>
