@@ -77,9 +77,9 @@ gsap.to(".scale_skills", {
         <p className="text-center m-0 fw-light">skills, interests, passion and hobbies</p>
       </div>
 
-<div className="row  d-flex flex-row gap-3 mt-5 px-5 justify-content-center align-items-center">
+<div className="row  d-flex flex-row gap-3 mt-5 px-2 px-md-5 justify-content-center align-items-center">
   <div className="row  d-flex gap-3 justify-content-center align-items-center">
-  <div className="col-11 gap-3 imgDiv d-flex flex-column justify-content-center align-items-start" style={{minHeight:"630px", maxHeight:"630px"}}>
+  <div className="col-md-11 col-12 gap-3 imgDiv d-flex flex-column justify-content-center align-items-start" style={{minHeight:"630px", maxHeight:"630px"}}>
     <div className="col-12 gap-3 d-flex justify-content-center align-items-center" >
     <div className="col-2  d-flex justify-content-center align-items-center" style={{height:"100px",scrollbarWidth:"none", cursor:"pointer"}}> 
       <video src={video01} className="w-100 h-100" autoPlay loop playsInline style={{objectFit:"cover"}}></video>

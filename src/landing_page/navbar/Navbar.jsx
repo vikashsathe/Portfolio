@@ -242,6 +242,7 @@ const mobileSideMenuClose = () => {
         <h1 className="text-center" style={{letterSpacing:"10px", textTransform:"uppercase"}}>Well Come</h1>
           <a
           href="#skills"
+          onClick={mobileSideMenuClose}
           className="text-white"
           style={{ textDecoration: "none" }}
         >
@@ -258,6 +259,7 @@ const mobileSideMenuClose = () => {
         <a
           href="#projects-section"
           className="text-white"
+            onClick={mobileSideMenuClose}
           style={{ textDecoration: "none" }}
         >
           Projects
@@ -266,6 +268,7 @@ const mobileSideMenuClose = () => {
         <a
           href="#about"
           className="text-white"
+            onClick={mobileSideMenuClose}
           style={{ textDecoration: "none" }}
         >
           About Me
@@ -273,6 +276,7 @@ const mobileSideMenuClose = () => {
         <a
           href="#experience"
           className="text-white"
+            onClick={mobileSideMenuClose}
           style={{ textDecoration: "none" }}
         >
           Experience
