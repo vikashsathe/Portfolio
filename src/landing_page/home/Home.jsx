@@ -253,20 +253,44 @@ const home = () => {
         style={{ marginTop: "60px" }}
       >
         <div className="col-md-5 col-12">
-          <p
-            className="heading"
-            style={{
-              fontSize: "48px",
-              marginTop: "-20px",
-              letterSpacing: "-0.36px",
-            }}
-          >
-        <span style={{color:"#ffe066"}}>Hello</span> I’m VIKASH SATHE, a Software Developer based in{" "}
+<p
+  className=""
+  style={{
+    fontSize:"50px",
+    fontWeight: 600,
+    lineHeight: "1.1",
+    letterSpacing: "-0.5px",
+  }}
+>
+  <span
+    style={{
+      color: "#ffe066"
+    }}>
+    Hello
+  </span> 
+  <br/>
+  I’m <span> VIKASH SATHE</span>,
+  <br/>
+  <span
+    style={{
+      color: "#555",
+      fontWeight: 700,
+    }}>
 
-            <span className="ind" style={{ color: "", text: "transparent" }}>
-              India.
-            </span>
-          </p>
+    a Software Developer
+  </span>
+  <br />
+  <span
+    style={{
+      color: "#999",
+      fontWeight: 500,
+    }}
+  >
+    based in India
+  </span>
+</p>
+
+
 
           <div className="socialDiv col-lg-12 mb-5 mt-5 d-flex gap-4"
             style={{ marginTop: "-100px" }}
