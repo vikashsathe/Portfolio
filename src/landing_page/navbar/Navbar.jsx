@@ -157,7 +157,7 @@ const mobileSideMenuClose = () => {
   return (
     <div className="row py-4 d-flex position-relative justify-content-center mt-4 align-items-center g-0">
       <div
-        className="col-11 col-md-10 d-flex justify-content-between align-items-center py-2 px-5 mt-5 overflow-hidden navDiv"
+        className="col-11 col-md-10 d-flex justify-content-between align-items-center py-2 px-5 mt-2 mt-md-5 overflow-hidden navDiv"
         ref={navRef}
         style={{ position: "fixed" }}
       >

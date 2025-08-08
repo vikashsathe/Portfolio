@@ -185,9 +185,10 @@ letter-spacing: 1px;
 
 
 
-/* ✅ Mobile: 2 per row + smaller size */
-@media (max-width: 768px) {
+
+@media (max-width: 567px) {
   .miniResume {
-    right: 40px;     /* smaller height */
+    right: 40px; 
+    top: 26px;
   }
 }
