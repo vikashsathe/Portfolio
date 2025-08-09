@@ -71,8 +71,8 @@ const Project = () => {
 
   return (
     <>
-      <div className="container projectDiv" id="projects-section">
-        <div className="row mt-5 mb-5">
+      <div className="container projectDiv " id="projects-section">
+        <div className="row mt-5 mb-5 px-0 px-md-3">
           <div className="wrapper">
             <div className="left d-flex align-items-center flex-column text-justify">
               <h1 className="mt-5 mb-0 text-center">crafted with <span style={{color:"#ffe066"}}>love</span>.</h1>

@@ -29,8 +29,8 @@ const Experience = () => {
         duration: 5,
          scrollTrigger: {
       trigger: ".MainExpDiv",
-      start: "top 70%",
-      end: "top 20%",
+       start: "top 80%",
+      end: "top 50%",
       scrub: 1.5,
     },
       });
@@ -55,8 +55,8 @@ const Experience = () => {
   });
   return (
     <>
-      <div className="row d-flex MainExpDiv justify-content-center align-items-start px-3 px-md-5" id="experience">
-         <div className="col-md-5 col-11 d-flex order-1 order-md-0 mt-5 mt-md-0 justify-content-md-start justify-content-center align-items-center">
+      <div className="row d-flex MainExpDiv justify-content-center align-items-start px-2 px-md-5" id="experience">
+         <div className="col-md-5 col-12 d-flex order-1 order-md-0 mt-5 mt-md-0 justify-content-md-start justify-content-center align-items-center">
           <img
             src={experience_img}
             alt=""
@@ -64,7 +64,7 @@ const Experience = () => {
             style={{ width: "80%" }}
           />
         </div>
-         <div className="col-md-5 col-11 ExprienceDiv order-0 order-md-1 mt-5" >
+         <div className="col-md-5 col-12 ExprienceDiv order-0 order-md-1 mt-5" >
           <h1 className="mb-4 text-start" >Exprience.</h1>
           <p style={{fontSize:"14px"}}>Gained hands-on experience by building projects using MERN stack and PHP. Worked on e-commerce apps, login systems, and APIs. Focused on full-stack development, clean code, and real-world problem solving.</p>
           <div className="row d-flex mt-4 mb-4 justify-content-start align-items-center">

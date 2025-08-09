@@ -41,7 +41,7 @@ const skills = () => {
 
 
   return (
-    <div className="px-3 px-md-5 mt-5 mb-5 skillsDiv bg-dark" id="skills">
+    <div className="px-3 px-md-5 mt-5 mb-5 skillsDiv rounded-3 bg-dark" id="skills">
 
       <div className="row  d-flex justify-content-center align-items-center">
         <h1 className="mt-5 col-12 text-center" style={{fontSize:"50px"}}>Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>

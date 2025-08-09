@@ -34,7 +34,7 @@ const Contect = () => {
       scrollTrigger: {
         trigger: ".contentDiv",
         scoller: "body",
-        start: "top 85%",
+        start: "top 90%",
         end: "top -100%",
         stagger: true,
       },
@@ -51,7 +51,7 @@ const Contect = () => {
         scrollTrigger: {
           trigger: ".AboutsocialDiv",
           scoller: "body",
-          start: "top 85%",
+          start: "top 90%",
           end: "top -100%",
           stagger: true,
         },
@@ -65,7 +65,7 @@ const Contect = () => {
         scrollTrigger: {
           trigger: ".AboutsocialDiv",
           scoller: "body",
-          start: "top 85%",
+          start: "top 90%",
           end: "top -100%",
           stagger: true,
         },
@@ -106,10 +106,10 @@ const Contect = () => {
           <h1 className="mt-5 text-center">Contect.</h1>
         </div> */}
       {/* </div> */}
-      <div id="contact" className="contentDiv row mt-5 mb-5 d-flex justify-content-center align-items-start mb-5">
-        <div className="col-md-4 col-11 leftContect">
+      <div id="contact" className="contentDiv row mt-5 d-flex justify-content-center align-items-start mb-5 px-2 px-md-5">
+        <div className="col-md-4 col-12 leftContect">
           <h1 className="mb-4">Let'<span style={{color:"#ffe066"}}>s</span> Talk </h1>
-          <p className="mb-3">
+          <p className="mb-3" style={{textAlign:"justify"}}>
             I'm currently avaliable to take on new project, so feel free to send
             me a message about anything that you want me to work on. You can
             contact anytime.
@@ -128,7 +128,7 @@ const Contect = () => {
             <i className="ri-send-plane-fill fs-4"></i> Indore, Madhya Pradesh
           </p>
 
-          <div className="AboutsocialDiv col-lg-12 mb-5 mt-5 d-flex gap-4">
+          <div className="AboutsocialDiv col-lg-12 mb-4 mt-4 mt-md-5 mb-md-5 d-flex gap-4">
          <a target="_blank" href="https://www.linkedin.com/in/vikash-sathe-941166208/">
               <i className="socialIcon ri-linkedin-fill"></i>
               </a>
@@ -142,10 +142,10 @@ const Contect = () => {
           </div>
         </div>
 
-        <div className="col-md-6 col-11 px-3 px-md-5 d-flex justify-content-center align-items-center rightContect">
+        <div className="col-md-6 col-12 d-flex justify-content-center align-items-center rightContect">
           <form 
             onSubmit={onSubmit}
-            className="contect-right d-flex flex-column gap-4 col-12"
+            className="contect-right d-flex flex-column gap-3 gap-md-4 col-12"
           >
             <input
               type="hidden"
@@ -156,26 +156,26 @@ const Contect = () => {
               name="name"
               type="text"
               placeholder="Your Name"
-              className="inp col-12 p-3"
+              className="inp col-12 px-3 py-2 py-md-3"
               required
             />
             <input
               name="email"
               type="email"
               placeholder="Your Email"
-              className="inp col-12 p-3"
+              className="inp col-12 px-3 py-2 py-md-3"
               required
             />
             <textarea
               name="message"
               placeholder="Your Message"
-              className="inp col-12 p-3"
+              className="inp col-12 px-3 py-2 py-md-3"
               style={{ minHeight: "150px" }}
               required
             />
             <button
               type="submit"
-              className="contect-submit fs-6 col-md-4 col-6 px-3 px-md-5 py-3"
+              className="contect-submit fs-6 col-md-4 col-6 px-3 px-md-5 py-2 py-md-3"
             >
               Submit now
             </button>

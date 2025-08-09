@@ -23,8 +23,8 @@ const Footer = () => {
   return (
     <>
     
-        <div className="row d-flex justify-content-center align-items-center px-3 px-md-5">
-            <h6 className='text-center py-4'>created with <span className='heartBlink'> ❤️ </span> by <span style={{color:"#ffe066"}}>me</span></h6>
+        <div className="row d-flex justify-content-center align-items-center px-2 px-md-5">
+            <h6 className='text-center py-4' style={{color:" rgb(85, 85, 85)"}}>created with <span className='heartBlink'> ❤️ </span> by <span style={{color:"#ffe066"}}>me</span></h6>
         </div>
     
     </>

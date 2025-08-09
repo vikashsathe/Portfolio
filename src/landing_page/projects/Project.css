@@ -6,13 +6,12 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 3fr; /* desktop layout */
+  grid-template-columns: 1fr 2fr; /* desktop layout */
   height: 100vh;
-  padding: 1rem;
 }
 
 /* 👇 Mobile screen */
-@media (max-width: 768px) {
+@media (max-width: 567px) {
   .wrapper {
     grid-template-columns: 1fr; /* stack vertically */
     height: auto; /* let content grow */
@@ -20,7 +19,7 @@
 
   .left, .right {
     width: 100%; /* full width */
-    padding: 1rem !important;
+    /* padding: 1rem !important; */
   }
 
   .left p {
@@ -48,11 +47,7 @@
   align-items: center;
 }
 
-.right {
-  /* background-color: rgb(5, 177, 235); */
-  padding: 30px;
-  
-}
+
 
 
 

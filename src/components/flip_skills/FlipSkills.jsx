@@ -29,6 +29,7 @@ const FlipSkills = () => {
       const imgRef01 = useRef(null);
   const [index01, setInde01] = useState(0);
 
+
   useEffect(() => {
     const interval = setInterval(() => {
       gsap.from(imgRef01.current, {
@@ -128,32 +129,42 @@ const FlipSkills = () => {
     return () => clearInterval(interval);
   }, []);
 
-      useGSAP(() => {
 
-    function stringLing() {
-      var path = "M 110 100 Q 500 100 1300 100";
-      var finalPath = "M 110 100 Q 500 100 1300 100";
-      var string = document.querySelector("#string");
+  const stringRef = useRef(null);
 
-      string.addEventListener("mousemove", function (dets) {
-        path = `M 110 100 Q ${dets.x} ${dets.y} 1300 100`;
-        gsap.to("svg path", {
-          attr: { d: path },
-          duration: 0.3,
-          ease: "power3.out",
-        });
-      });
+useGSAP(() => {
+  if (!stringRef.current) return;
 
-      string.addEventListener("mouseleave", function () {
-        gsap.to("svg path", {
-          attr: { d: finalPath },
-          duration: 1.3,
-          ease: "elastic.out(1,0.2)",
-        });
-      });
-    }
-    stringLing();
-  });
+  const pathEl = stringRef.current.querySelector("path");
+  let path = "M 110 100 Q 500 100 1300 100";
+  const finalPath = "M 110 100 Q 500 100 1300 100";
+
+  const handleMove = (e) => {
+    path = `M 110 100 Q ${e.clientX} ${e.clientY} 1300 100`;
+    gsap.to(pathEl, {
+      attr: { d: path },
+      duration: 0.3,
+      ease: "power3.out",
+    });
+  };
+
+  const handleLeave = () => {
+    gsap.to(pathEl, {
+      attr: { d: finalPath },
+      duration: 1.3,
+      ease: "elastic.out(1,0.2)",
+    });
+  };
+
+  stringRef.current.addEventListener("mousemove", handleMove);
+  stringRef.current.addEventListener("mouseleave", handleLeave);
+
+  return () => {
+    stringRef.current.removeEventListener("mousemove", handleMove);
+    stringRef.current.removeEventListener("mouseleave", handleLeave);
+  };
+}, []);
+
   return (
        <div className="row d-flex justify-content-center position-relative align-items-center ">
         <div
@@ -161,7 +172,7 @@ const FlipSkills = () => {
         
         >
           <div
-            id="string"
+             ref={stringRef}
             style={{ width: "100%", maxWidth: "100%", overflow: "hidden" }}
           >
             <svg

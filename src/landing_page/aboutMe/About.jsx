@@ -54,15 +54,19 @@ const About = () => {
         if (arrow) arrow.classList.add("d-none");
       });
     });
+
+
+
+    
   return (
     <>
-      <div className="row d-flex MainAboutDiv justify-content-center align-items-start px-3 px-md-5" id="about">
+      <div className="row pt-4 pt-md-0 d-flex MainAboutDiv justify-content-center align-items-start px-2 px-md-5" id="about">
         
          <div className="col-lg-5 col-12 aboutDiv">
           <h1 className="mb-4 text-start" >About.</h1>
           <p style={{fontSize:"14px"}}>Hello my VIKASH SATHE, I’m a Full Stack MERN Developer with expertise in MongoDB, Express, React, Node.js, and Data Structures & Algorithms(DSA) in JAVA, focused on building efficient, scalable, and responsive web applications.</p>
           <div className="row d-flex topicDiv py-4 mt-4 mb-3 justify-content-start align-items-center">
-               <a className="nav-link col-md-3 col-4 text-center active"
+               <a className="nav-link col-md-3 col-4 text-center"
               onClick={(e) => setActive(e.currentTarget, 'anwendungDiv1')}>
               Certificates
             </a>
@@ -77,7 +81,7 @@ const About = () => {
   
 
           {/* Anwendung Div */}
-          <div className="dropDownMessage py-2 px-2 gap-3 d-flex flex-column" id="anwendungDiv1" style={{maxHeight:"274px", overflow:"scroll", scrollbarWidth:"none"}}>
+          <div className="dropDownMessage d-none py-2 px-2 gap-3 d-flex flex-column" id="anwendungDiv1" style={{maxHeight:"274px", overflow:"scroll", scrollbarWidth:"none"}}>
                { Certificate_data.map((certificate, index) => (
                 <div className="position-relative certificate-body">
                          <img
