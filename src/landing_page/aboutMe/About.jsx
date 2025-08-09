@@ -113,7 +113,7 @@ const About = () => {
                         {/* <a href={certificate.s_link} target="_blank">
                         <p className="position-absolute bg-dark rounded-5 d-flex justify-content-center align-items-center" style={{top:"30px", right:"30px", width:"50px",height:"50px", cursor:"pointer"}}>p</p>
                         </a> */}
-                         <div className="arrowShare d-none" style={{top:"20px", right:"30px"}}>
+                         <div className="arrowShare d-none" style={{top:"15px", right:"15px"}}>
                           <a href={certificate.s_link} target="_blank">
                           <i
                             className="ri-arrow-right-up-line fs-4"
