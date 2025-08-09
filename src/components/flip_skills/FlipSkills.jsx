@@ -191,21 +191,21 @@ useGSAP(() => {
           </div>
         </div>
         <div className="flipRow col-12">
+           <div className="flipDiv">
+            <img src={imgSec01[index01]} alt="Flipping" />
+          </div>
           <div className="flipDiv">
-  <img ref={imgRef01} src={imgSec01[index01]} alt="Flipping" />
-</div>
-<div className="flipDiv">
-  <img ref={imgRef02} src={imgSec02[index02]} alt="Flipping" />
-</div>
-<div className="flipDiv">
-  <img ref={imgRef03} src={imgSec03[index03]} alt="Flipping" />
-</div>
-<div className="flipDiv">
-  <img ref={imgRef04} src={imgSec04[index04]} alt="Flipping" />
-</div>
-<div className="flipDiv">
-  <img ref={imgRef05} src={imgSec05[index05]} alt="Flipping" />
-</div>
+            <img src={imgSec02[index02]} alt="Flipping" />
+          </div>
+          <div className="flipDiv">
+            <img src={imgSec03[index03]} alt="Flipping" />
+          </div>
+          <div className="flipDiv">
+            <img src={imgSec04[index04]} alt="Flipping" />
+          </div>
+          <div className="flipDiv">
+            <img src={imgSec05[index05]} alt="Flipping" />
+          </div>
 
         </div>
       </div>
@@ -213,4 +213,5 @@ useGSAP(() => {
 }
 
 export default FlipSkills
+
 
