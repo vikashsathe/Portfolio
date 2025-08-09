@@ -43,7 +43,7 @@ const Contect = () => {
 
     function socialIcon() {
       gsap.from(".AboutsocialDiv a", {
-        x: 50,
+        x: 100,
         stagger: 1,
         opacity: 0,
         delay: 0.2,
@@ -106,7 +106,7 @@ const Contect = () => {
           <h1 className="mt-5 text-center">Contect.</h1>
         </div> */}
       {/* </div> */}
-      <div id="contact" className="contentDiv row mt-5 d-flex justify-content-center align-items-start mb-5 px-2 px-md-5">
+      <div id="contact" className="contentDiv row mt-5 d-flex justify-content-center align-items-start mb-3 mb-md-5 px-2 px-md-5">
         <div className="col-md-4 col-12 leftContect">
           <h1 className="mb-4">Let'<span style={{color:"#ffe066"}}>s</span> Talk </h1>
           <p className="mb-3" style={{textAlign:"justify"}}>

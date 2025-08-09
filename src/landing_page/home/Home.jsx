@@ -43,7 +43,7 @@ const home = () => {
 
     function socialIcon() {
       gsap.from(".socialDiv a", {
-        x: 50,
+        x: 80,
         stagger: 1,
         opacity: 0,
         delay: 0.2,

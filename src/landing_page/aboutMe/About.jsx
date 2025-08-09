@@ -52,21 +52,28 @@ const About = () => {
 
   });
 
+    useEffect(() => {
+  const cards = document.querySelectorAll(".certificate-body");
+  
+  cards.forEach((card) => {
+    const arrow = card.querySelector(".arrowShare");
 
-
-
-
-  gsap.utils.toArray(".certificate-body").forEach((card) => {
-      const arrow = card.querySelector(".arrowShare");
-
-      card.addEventListener("mouseenter", () => {
-        if (arrow) arrow.classList.remove("d-none");
-      });
-
-      card.addEventListener("mouseleave", () => {
-        if (arrow) arrow.classList.add("d-none");
-      });
+    card.addEventListener("mouseenter", () => {
+      if (arrow) arrow.classList.remove("d-none");
     });
+
+    card.addEventListener("mouseleave", () => {
+      if (arrow) arrow.classList.add("d-none");
+    });
+  });
+
+
+  return () => {
+    cards.forEach((card) => {
+      card.replaceWith(card.cloneNode(true)); // removes events
+    });
+  };
+}, [Certificate_data]); // run after certificates load
 
 
 
