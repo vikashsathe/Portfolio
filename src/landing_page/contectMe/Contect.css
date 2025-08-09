@@ -87,3 +87,32 @@ background: linear-gradient(160deg,rgba(249, 206, 52, 1) 0%, rgba(238, 42, 123, 
     transition: all 0.3s ease-in;
 }
 
+
+
+
+ .alert {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: #fff;
+  z-index: 200;
+  color: #030303 !important;
+
+  transform: translateX(100%); /* hidden to the right */
+  transition: transform 0.3s ease;
+}
+
+
+
+
+
+        @keyframes fadeInOut {
+          0% { opacity: 0; transform: scale(0.8); }
+          10% { opacity: 1; transform: scale(1); }
+          90% { opacity: 1; }
+          100% { opacity: 0; transform: scale(0.8); }
+        }
+   

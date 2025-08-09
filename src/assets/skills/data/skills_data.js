@@ -10,6 +10,8 @@ import Php from "../img/PHP.svg";
 import Github from "../img/GitHub.svg";
 import Express from "../img/Express.svg";
 import MongoDB from "../img/MongoDB.svg";
+import Gsap from "../img/gsap.svg";
+import Codeigniter from "../img/codeigniter.svg";
 
 const Skills_Data = [
     {
@@ -41,6 +43,10 @@ const Skills_Data = [
         img: Node,
         s_name:'NodeJS',
     },
+     {
+        img: Gsap,
+        s_name:'Gsap',
+    },
     {
         img: Bootstrap,
         s_name:'Bootstrap',
@@ -60,6 +66,10 @@ const Skills_Data = [
     {
         img: Github,
         s_name:'Git & GitHub',
+    },
+    {
+        img: Codeigniter,
+        s_name:'CodeIgniter',
     },
     
     

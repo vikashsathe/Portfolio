@@ -153,7 +153,6 @@ const mobileSideMenuClose = () => {
   }, 300); // same as transition time
 };
 
-
   return (
     <div className="row py-4 d-flex position-relative justify-content-center mt-4 align-items-center g-0">
       <div
@@ -350,8 +349,7 @@ const mobileSideMenuClose = () => {
           </a>
         </div>
       </div>
-      <div
-        className="container proDiv position-fixed text-dark"
+      <div className="container proDiv position-fixed text-dark"
         style={{ background: "#fff" }}
         ref={proDivRef}
         onMouseLeave={handleMouseLeave}
@@ -429,6 +427,25 @@ const mobileSideMenuClose = () => {
           </div>
         </div>
       </div>
+
+
+       <div className="alert-popup d-none d-flex flex-column d-flex justify-content-center align-items-center">
+        <div className="alertCart bg-success rounded-3 overflow-hidden col-md-3 col-7" style={{fontSize:"16px"}}>
+                <div className="alertMessage px-4 py-3 d-flex justify-content-between align-items-center">
+                  g
+                  <i className="ri-close-line"></i>
+                </div>
+                <div className="bg-danger px-4 py-2">
+                  message
+                </div>
+
+        </div>
+      </div>
+
+    
+
+
+
     </div>
   );
 };

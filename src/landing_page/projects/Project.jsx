@@ -80,7 +80,7 @@ const Project = () => {
                 className="m-0 fw-light"
                 style={ { fontSize: "13px", color:"#999"} }
               >
-               these are few of my recent works
+               these are a few of my recent works
               </p>
             </div>
             <div className="right d-flex justify-content-center">

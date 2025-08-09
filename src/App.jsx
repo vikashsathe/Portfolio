@@ -13,7 +13,8 @@ import ProjectDetials from './landing_page/projects/ProjectDetials.jsx';
 import { useGSAP } from '@gsap/react'
 import gsap from "gsap"
 import Footer from './landing_page/footer/Footer.jsx';
-import RippleEffect from './landing_page/ripple/Ripple.jsx';
+// import RippleEffect from './landing_page/ripple/Ripple.jsx';
+
 
 
 function App() {
@@ -51,7 +52,7 @@ useGSAP(() => {
             path="/"
             element={
               <>
-      <RippleEffect />
+      {/* <RippleEffect /> */}
 
                 <Home />
                 <Skills />

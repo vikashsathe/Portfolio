@@ -65,15 +65,19 @@ const About = () => {
     card.addEventListener("mouseleave", () => {
       if (arrow) arrow.classList.add("d-none");
     });
+
   });
+  
+
+
 
 
   return () => {
     cards.forEach((card) => {
-      card.replaceWith(card.cloneNode(true)); // removes events
+      card.replaceWith(card.cloneNode(true)); 
     });
   };
-}, [Certificate_data]); // run after certificates load
+}, [Certificate_data]);
 
 
 
@@ -164,3 +168,4 @@ const About = () => {
 };
 
 export default About;
+

@@ -1,9 +1,10 @@
-import React from "react";
+
 import "./Contect.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
+import React, { useState } from "react";
 
 const Contect = () => {
   useGSAP(() => {
@@ -75,6 +76,11 @@ const Contect = () => {
     socialIcon();
   });
 
+
+
+
+      const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState("");
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -94,19 +100,18 @@ const Contect = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      console.log("Success", res);
-      alert(res.message);
+      // console.log("Success", res);
+      // alert(res.message);
+       console.log("Success", res);
+      setPopupMessage(res.message); // set message
+      setShowPopup(true); // show popup
+      setTimeout(() => setShowPopup(false), 3000);
     }
   };
 
   return (
     <>
-      {/* <div className="mt-5 mb-5 contentDiv" id="contact">
-        <div className="row d-flex justify-content-center align-items-center">
-          <h1 className="mt-5 text-center">Contect.</h1>
-        </div> */}
-      {/* </div> */}
-      <div id="contact" className="contentDiv row mt-5 d-flex justify-content-center align-items-start mb-3 mb-md-5 px-2 px-md-5">
+      <div id="contact" className="contentDiv row mt-5 d-flex justify-content-center align-items-start mb-3 mb-md-5 px-2 px-md-0">
         <div className="col-md-4 col-12 leftContect">
           <h1 className="mb-4">Let'<span style={{color:"#ffe066"}}>s</span> Talk </h1>
           <p className="mb-3" style={{textAlign:"justify"}}>
@@ -128,7 +133,7 @@ const Contect = () => {
             <i className="ri-send-plane-fill fs-4"></i> Indore, Madhya Pradesh
           </p>
 
-          <div className="AboutsocialDiv col-lg-12 mb-4 mt-4 mt-md-5 mb-md-5 d-flex gap-4">
+          <div className="AboutsocialDiv col-lg-12 mt-4 mt-md-5 mb-5 d-flex gap-4">
          <a target="_blank" href="https://www.linkedin.com/in/vikash-sathe-941166208/">
               <i className="socialIcon ri-linkedin-fill"></i>
               </a>
@@ -182,6 +187,26 @@ const Contect = () => {
           </form>
         </div>
       </div>
+
+        {showPopup && (
+        <div className="alert-popup d-flex flex-column justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100">
+          <div
+            className="alertCart bg-success rounded-3 overflow-hidden col-md-3 col-7"
+            style={{ fontSize: "16px", animation: "fadeInOut 3s" }}
+          >
+            <div className="alertMessage px-4 py-3 d-flex justify-content-between align-items-center text-white">
+              Success
+              <i
+                className="ri-close-line"
+                style={{ cursor: "pointer" }}
+                onClick={() => setShowPopup(false)}
+              ></i>
+            </div>
+            <div className="bg-danger px-4 py-2 text-white">{popupMessage}</div>
+          </div>
+        </div>
+      )}
+      
     </>
   );
 };
