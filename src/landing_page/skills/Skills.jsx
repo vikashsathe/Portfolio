@@ -40,7 +40,7 @@ const skills = () => {
       trigger: ".skillsCards",
       scoller: "body",
       start: "top 100%",
-      end: "top 60%",
+      end: "top 40%",
        scrub: true,
     },
     filter: "blur(10px)",
@@ -106,7 +106,7 @@ const skills = () => {
         <h1 className="mt-5 col-12 text-center skillHeading">Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>
         <p className="text-center m-0 fw-light" style={{color:"#999",fontSize:"13px"}}>skills, interests, passion and hobbies</p>
       </div>
-<div className="row p-3 mt-3 mb-1 mt-md-5 mb-md-5 ">
+<div className="row p-3 mt-3 mb-1 mt-md-5 ">
   {Skills_Data.map((skill, index) => (
     <div key={index} className="col-4 skillsCards col-sm-4 col-md-3 col-lg-1 mb-4">
       <div
