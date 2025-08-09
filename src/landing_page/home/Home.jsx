@@ -57,20 +57,6 @@ const home = () => {
       });
     }
     socialIcon();
-
-    function heading() {
-      gsap.to(".heading", {
-        scale: "1",
-        opacity: 1,
-        zIndex: 20,
-        duration: 0.8,
-      });
-      gsap.set(".heading", {
-        scale: "100",
-        opacity: 0,
-      });
-    }
-    heading();
   });
 
   return (

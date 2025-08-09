@@ -53,21 +53,21 @@ const Navbar = () => {
       if (!navRef.current) return;
 
       if (currentScroll === 0) {
-        console.log("Reached top");
+        // console.log("Reached top");
         navRef.current.classList.add("navD");
         navRef.current.classList.remove("d-none");
         miniResume.current.classList.add("d-none");
       } else if (currentScroll >= maxScroll) {
-        console.log("Reached bottom");
+        // console.log("Reached bottom");
         navRef.current.classList.add("d-none");
         miniResume.current.classList.remove("d-none");
       } else if (currentScroll > lastScrollTop) {
-        console.log("Scrolling down");
+        // console.log("Scrolling down");
         navRef.current.classList.add("d-none");
         navRef.current.classList.add("navD");
         miniResume.current.classList.remove("d-none");
       } else if (currentScroll < lastScrollTop) {
-        console.log("Scrolling up");
+        // console.log("Scrolling up");
         navRef.current.classList.remove("d-none");
         navRef.current.classList.add("amin");
         navRef.current.classList.add("navD");
@@ -427,25 +427,6 @@ const mobileSideMenuClose = () => {
           </div>
         </div>
       </div>
-
-
-       <div className="alert-popup d-none d-flex flex-column d-flex justify-content-center align-items-center">
-        <div className="alertCart bg-success rounded-3 overflow-hidden col-md-3 col-7" style={{fontSize:"16px"}}>
-                <div className="alertMessage px-4 py-3 d-flex justify-content-between align-items-center">
-                  g
-                  <i className="ri-close-line"></i>
-                </div>
-                <div className="bg-danger px-4 py-2">
-                  message
-                </div>
-
-        </div>
-      </div>
-
-    
-
-
-
     </div>
   );
 };

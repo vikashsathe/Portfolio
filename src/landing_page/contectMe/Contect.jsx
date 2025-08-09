@@ -23,10 +23,13 @@ const Contect = () => {
       filter: "blur(10px)",
     });
 
-    gsap.set(".rightContect .rightContect", {
+    gsap.set(".rightContect, .leftContect", {
       opacity: 1,
       scale: 1,
     });
+
+
+ 
 
     gsap.from(".contentDiv h1", {
       y: 100,
@@ -78,9 +81,6 @@ const Contect = () => {
 
 
 
-
-      const [showPopup, setShowPopup] = useState(false);
-  const [popupMessage, setPopupMessage] = useState("");
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -100,12 +100,8 @@ const Contect = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      // console.log("Success", res);
-      // alert(res.message);
-       console.log("Success", res);
-      setPopupMessage(res.message); // set message
-      setShowPopup(true); // show popup
-      setTimeout(() => setShowPopup(false), 3000);
+      console.log("Success", res);
+      alert(res.message);
     }
   };
 
@@ -188,24 +184,7 @@ const Contect = () => {
         </div>
       </div>
 
-        {showPopup && (
-        <div className="alert-popup d-flex flex-column justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100">
-          <div
-            className="alertCart bg-success rounded-3 overflow-hidden col-md-5 col-9"
-            style={{ fontSize: "16px", animation: "fadeInOut 3s" }}
-          >
-            <div className="alertMessage px-4 py-3 d-flex justify-content-between align-items-center text-white">
-              Success
-              <i
-                className="ri-close-line"
-                style={{ cursor: "pointer" }}
-                onClick={() => setShowPopup(false)}
-              ></i>
-            </div>
-            <div className="bg-danger px-4 py-2 text-white">{popupMessage}</div>
-          </div>
-        </div>
-      )}
+     
       
     </>
   );
