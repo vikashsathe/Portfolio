@@ -191,7 +191,7 @@ const Contect = () => {
         {showPopup && (
         <div className="alert-popup d-flex flex-column justify-content-center align-items-center position-fixed top-0 start-0 w-100 h-100">
           <div
-            className="alertCart bg-success rounded-3 overflow-hidden col-md-3 col-7"
+            className="alertCart bg-success rounded-3 overflow-hidden col-md-5 col-9"
             style={{ fontSize: "16px", animation: "fadeInOut 3s" }}
           >
             <div className="alertMessage px-4 py-3 d-flex justify-content-between align-items-center text-white">
