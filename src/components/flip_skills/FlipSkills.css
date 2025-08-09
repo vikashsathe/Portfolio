@@ -1,0 +1,38 @@
+.flipRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.flipDiv {
+  flex: 1 1 18%;
+  max-width: 18%;
+  height: 80px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.StringRow{
+    bottom: -10px;
+}
+
+
+@media (max-width: 567px) {
+  .flipDiv {
+           flex: 1 1 40%;
+        max-width: 16%;
+        height: 8px;  
+  }
+  .flipDiv img {
+   width: 80%;   
+   margin-top: 20px;
+  }
+  .StringRow{
+    bottom: -5px;
+}
+
+
+}
