@@ -106,7 +106,7 @@ const Contect = () => {
           <h1 className="mt-5 text-center">Contect.</h1>
         </div> */}
       {/* </div> */}
-      <div id="contect" className="contentDiv row mt-5 mb-5 d-flex justify-content-center align-items-start mb-5">
+      <div id="contact" className="contentDiv row mt-5 mb-5 d-flex justify-content-center align-items-start mb-5">
         <div className="col-md-4 col-11 leftContect">
           <h1 className="mb-4">Let'<span style={{color:"#ffe066"}}>s</span> Talk </h1>
           <p className="mb-3">

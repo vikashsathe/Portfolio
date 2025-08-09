@@ -246,12 +246,17 @@ const home = () => {
     }
     stringLing();
   });
+
+
   return (
     <>
 
       <div className="row d-flex justify-content-center align-items-center px-3 px-md-5"
         style={{ marginTop: "60px" }}
       >
+
+    
+
         <div className="col-md-5 col-12">
 <p
   className=""

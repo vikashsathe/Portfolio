@@ -33,35 +33,6 @@ const skills = () => {
   });
 
 
-gsap.utils.toArray(".skill-card").forEach((card) => {});
-
-
-gsap.set(".imgDiv", {
-scale: "1",
-   scrub: 1,
-    pin: true,
-    // markers:true,
-   
-
-});
-gsap.to(".scale_skills", {
-  scale: 6.5,
-  ease: "power4.out",
-  scrollTrigger: {
-    trigger: ".imgDiv",
-    start: "top 15%",
-    end: "top -100",
-    scrub: 1,
-    pin: true,
-   
-  },
-});
-
-    
-
-
-
-
 
 })
 
@@ -70,81 +41,60 @@ gsap.to(".scale_skills", {
 
 
   return (
-    <div className="mt-5 px-3 px-md-5 mb-5 skillsDiv" id="skills">
+    <div className="mt-5 px-3 px-md-5 mb-5 skillsDiv bg-dark" id="skills">
 
       <div className="row d-flex justify-content-center align-items-center">
-        <h1 className="mt-5 text-center">Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>
+        <h1 className="mt-5 col-12 text-center" style={{fontSize:"50px"}}>Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>
         <p className="text-center m-0 fw-light">skills, interests, passion and hobbies</p>
       </div>
-
-<div className="row  d-flex flex-row gap-3 mt-5 px-2 px-md-5 justify-content-center align-items-center">
-  <div className="row  d-flex gap-3 justify-content-center align-items-center">
-  <div className="col-md-11 col-12 gap-3 imgDiv d-flex flex-column justify-content-center align-items-start" style={{minHeight:"630px", maxHeight:"630px"}}>
-    <div className="col-12 gap-3 d-flex justify-content-center align-items-center" >
-    <div className="col-2  d-flex justify-content-center align-items-center" style={{height:"100px",scrollbarWidth:"none", cursor:"pointer"}}> 
-      <video src={video01} className="w-100 h-100" autoPlay loop playsInline style={{objectFit:"cover"}}></video>
-       </div>
-    <div className="col-2  d-flex justify-content-center align-items-center" style={{height:"100px",scrollbarWidth:"none", cursor:"pointer"}}> 
-      <video src={video02} className="w-100 h-100" autoPlay loop playsInline style={{objectFit:"cover"}}></video>
-       </div>
-
-    <div className="col-2  d-flex justify-content-center align-items-center" style={{height:"100px",scrollbarWidth:"none"}}> 
-      <video src={video03} className="w-100 h-100" autoPlay loop playsInline style={{objectFit:"cover"}}></video>
-       </div>
-    </div>
-    <div className="col-12 gap-3 d-flex justify-content-center align-items-center">
-    <div className="col-2 p-3 d-flex justify-content-center align-items-center" style={{height:"100px",scrollbarWidth:"none", cursor:"pointer"}}> 
-      <video src={video04} className="w-100 h-100" autoPlay loop playsInline style={{objectFit:"cover"}}></video>
-
-    </div>
-    <div
-  className="col-2 px-1 bg-white scale_skills d-flex flex-row flex-wrap gap-2 justify-content-center align-items-center"
-  style={{
-    height: "100px",
-    overflowY: "scroll",
-    scrollbarWidth: "none",
-    cursor: "pointer",
-    scrollBehavior: "smooth",
-  }}
->
-      {Skills_Data.map((skill) => (
-        <div className="d-flex p-2 gap-1 skill-card justify-content-center align-items-center">
-      <img src={skill.img} alt="" className="" style={{width:"10px"}} />
-      <p className="m-0" style={{ fontSize: "6px", whiteSpace:"nowrap" }}>{skill.s_name}</p>
+<div className="row p-3 mt-5 mb-5 ">
+  {Skills_Data.map((skill, index) => (
+    <div key={index} className="col-4 col-sm-4 col-md-3 col-lg-1 mb-4">
+      <div
+        className="bg-dark rounded-4 text-center px-2 py-3 d-flex flex-column justify-content-center align-items-center shadow skill-card"
+        style={{
+          transition: "all 0.3s ease",
+          cursor: "pointer",
+        }}
+      >
+        <img
+          src={skill.img}
+          alt={skill.s_name}
+          style={{
+            width: "50px",
+            marginBottom: "10px",
+            transition: "transform 0.3s ease",
+          }}
+          className="skill-icon"
+        />
+        <p
+          className="m-0"
+          style={{ fontSize: "8px", fontWeight: "500", whiteSpace: "nowrap", color:"#999" }}
+        >
+          {skill.s_name}
+        </p>
+      </div>
     </div>
   ))}
-
-
-
-       </div>
-    <div className="col-2  d-flex justify-content-center align-items-center" style={{height:"100px",scrollbarWidth:"none", cursor:"pointer"}}> 
-      <video src={video06} className="w-100 h-100" autoPlay loop playsInline style={{objectFit:"cover"}}></video>
-       </div>
-    </div>
-    <div className="col-12 gap-3 d-flex justify-content-center align-items-center">
-    <div className="col-2 d-flex justify-content-center align-items-center" style={{height:"100px",scrollbarWidth:"none", cursor:"pointer"}}> 
-      <video src={video07} className="w-100 h-100" autoPlay loop playsInline style={{objectFit:"cover"}}></video>
-       </div>
-    <div className="col-2 d-flex justify-content-center align-items-center" style={{height:"100px",scrollbarWidth:"none", cursor:"pointer"}}> 
-      <video src={video08} className="w-100 h-100" autoPlay loop playsInline style={{objectFit:"cover"}}></video>
-       </div>
-    <div className="col-2 d-flex justify-content-center align-items-center" style={{height:"100px",scrollbarWidth:"none", cursor:"pointer"}}> 
-      <video src={video09} className="w-100 h-100" autoPlay loop playsInline style={{objectFit:"cover"}}></video>
-       </div>
-    </div>
-    </div>
-    </div>  
+</div>
+<div className="d-flex justify-content-end aling-items-center px-3 py-3 px-md-5 gap-4">
+  <p className="rounded-5 d-flex justify-content-center align-items-center" style={{width:"50px", height:"50px", background:"#ffe066"}}><i class="ri-corner-down-right-line text-dark fs-2"></i></p>
+<h3 className="fw-bold">See all my<br/> work</h3>
 </div>
 
 
-
-
-
-
- 
 
     </div>
   );
 };
 
 export default skills;
+
+
+
+//  {Skills_Data.map((skill) => (
+//         <div className="d-flex p-2 gap-1 skill-card justify-content-center align-items-center">
+//       <img src={skill.img} alt="" className="" style={{width:"10px"}} />
+//       <p className="m-0" style={{ fontSize: "6px", whiteSpace:"nowrap" }}>{skill.s_name}</p>
+//     </div>
+//   ))}

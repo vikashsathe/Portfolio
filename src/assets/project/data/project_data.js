@@ -1,9 +1,9 @@
-import project_07 from '../img/sunMiniMeal.jpg'
-import project_01 from '../img/MajorProject.png'
-import project_02 from '../img/Zarodha.png'
-import project_03 from '../img/Img_3.jpg'
-import project_04 from '../img/Img_4.jpg'
-import project_05 from '../img/Img_5.jpg'
+import project_07 from '../img/Img_2.jpg'
+import project_01 from '../img/Img_2.jpg'
+import project_02 from '../img/Img_2.jpg'
+import project_03 from '../img/Img_2.jpg'
+import project_04 from '../img/Img_2.jpg'
+import project_05 from '../img/Img_2.jpg'
 
 
 const Projects_Data = [

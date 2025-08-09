@@ -85,7 +85,7 @@ const Project = () => {
             </div>
             <div className="right d-flex justify-content-center">
               <div className="col-12 px-2 py-0">
-                <div className="row d-flex gap-1 gap-md-5 position-relative">
+                <div className="row d-flex gap-2 gap-md-5 position-relative">
                   { Project_Data.map((project, index) => (
                     <div key={ index } className="col-5 card-body project-card">
                       <div className="card-body position-relative d-flex justify-content-center align-items-center overflow-hidden">

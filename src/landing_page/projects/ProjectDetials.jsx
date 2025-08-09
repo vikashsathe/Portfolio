@@ -19,8 +19,8 @@ const ProjectDetials = () => {
 
   return (
     <div className="container mb-5" >
-      <div className="row d-flex justify-content-center align-items-center" style={{paddingTop:"100px"}}>
-        <div className="d-flex col-10 justify-content-between align-items-center">
+      <div className="row d-flex px-3 px-md-5 justify-content-center align-items-center" style={{paddingTop:"100px"}}>
+        <div className="d-flex col-12 justify-content-between align-items-center">
           <h1 className="mt-5 mb-5">{project.title}</h1>
           <p
             className="mt-5 mb-5"
@@ -31,18 +31,12 @@ const ProjectDetials = () => {
           </p>
         </div>
         <div className="row d-flex justify-content-center align-items-center">
-            <div className="col-10 d-flex justify-content-between">
-                <div className="col-3 d-flex gap-3 flex-column" style={{maxHeight:"450px",overflow:"scroll",minHeight:"450px" ,paddingRight:"20px"}}>
-                    <img src={project.img} className="img-fluid border" style={{cursor:"pointer"}} alt="" />
-                    <img src={project.img} className="img-fluid border" style={{cursor:"pointer"}} alt="" />
-                    <img src={project.img} className="img-fluid border" style={{cursor:"pointer"}} alt="" />
-                    <img src={project.img} className="img-fluid border" style={{cursor:"pointer"}} alt="" />
-                    <img src={project.img} className="img-fluid border" style={{cursor:"pointer"}} alt="" />
-                </div>
-        <img className="col-9 border" src={project.img} alt={project.title} style={{maxWidth:"800px", maxHeight:"450px",cursor:"crosshair",minHeight:"450px"}} />
+            <div className="col-12 d-flex justify-content-between">
+              
+        <img className="col-12" src={project.img} alt={project.title} style={{maxHeight:"290px",cursor:"crosshair",minHeight:"590px"}} />
         </div>
         </div>
-        <p className="col-10 mt-5 mb-5">{project.description}</p>
+        <p className="col-12 mt-3 mt-md-5 mb-5" style={{textAlign:"justify"}}>{project.description}</p>
       </div>
     </div>
   );
