@@ -31,7 +31,66 @@ const skills = () => {
     },
     filter: "blur(10px)",
   });
+ gsap.from(".skillsCards", {
+    y: 100,
+    opacity: 0,
+    stagger:0.3,
+    duration: 0.5,    
+    scrollTrigger: {
+      trigger: ".skillsCards",
+      scoller: "body",
+      start: "top 100%",
+      end: "top 60%",
+       scrub: true,
+    },
+    filter: "blur(10px)",
+  });
 
+    gsap.from(".skillsCards img", {
+        rotateY: "360deg",
+         opacity: 0,
+    stagger:0.3,
+    duration: 2, 
+        scrollTrigger: {
+      trigger: ".skillsCards",
+      scoller: "body",
+      start: "top 100%",
+      end: "top 60%",
+         scrub: true,
+    },
+    filter: "blur(10px)",
+      });
+
+
+       gsap.from(".myWorkBtn", {
+    x:100,
+    opacity: 0,
+    stagger:0.3,
+    duration: 0.5,    
+    scrollTrigger: {
+      trigger: ".myWorkBtn",
+      scoller: "body",
+      start: "top 100%",
+      end: "top 60%",
+       scrub: true,
+    },
+    filter: "blur(10px)",
+  });
+
+       gsap.from(".myWorkBtn p", {
+   rotateY: "360deg",
+    opacity: 0,
+    stagger:0.3,
+    duration: 0.5,    
+    scrollTrigger: {
+      trigger: ".myWorkBtn",
+      scoller: "body",
+      start: "top 100%",
+      end: "top 60%",
+       scrub: true,
+    },
+    filter: "blur(10px)",
+  });
 
 
 })
@@ -43,13 +102,13 @@ const skills = () => {
   return (
     <div className="px-3 px-md-5 mt-5 mb-5 skillsDiv rounded-3 bg-dark" id="skills">
 
-      <div className="row  d-flex justify-content-center align-items-center">
-        <h1 className="mt-5 col-12 text-center" style={{fontSize:"50px"}}>Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>
-        <p className="text-center m-0 fw-light">skills, interests, passion and hobbies</p>
+      <div className="row skillTextRow d-flex justify-content-center align-items-center">
+        <h1 className="mt-5 col-12 text-center skillHeading">Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>
+        <p className="text-center m-0 fw-light" style={{color:"#999",fontSize:"13px"}}>skills, interests, passion and hobbies</p>
       </div>
-<div className="row p-3 mt-5 mb-5 ">
+<div className="row p-3 mt-3 mb-1 mt-md-5 mb-md-5 ">
   {Skills_Data.map((skill, index) => (
-    <div key={index} className="col-4 col-sm-4 col-md-3 col-lg-1 mb-4">
+    <div key={index} className="col-4 skillsCards col-sm-4 col-md-3 col-lg-1 mb-4">
       <div
         className="bg-dark rounded-4 text-center px-2 py-3 d-flex flex-column justify-content-center align-items-center shadow skill-card"
         style={{
@@ -77,7 +136,7 @@ const skills = () => {
     </div>
   ))}
 </div>
-<div className="d-flex justify-content-end aling-items-center px-3 py-3 px-md-5 gap-4">
+<div className="d-flex myWorkBtn justify-content-end aling-items-center px-3 py-3 px-md-5 gap-3 gap-md-4">
   <p className="rounded-5 d-flex justify-content-center align-items-center" style={{width:"50px", height:"50px", background:"#ffe066"}}><i class="ri-corner-down-right-line text-dark fs-2"></i></p>
 <h3 className="fw-bold">See all my<br/> work</h3>
 </div>

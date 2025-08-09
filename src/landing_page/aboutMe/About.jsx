@@ -21,6 +21,19 @@ const About = () => {
 
 
   useGSAP(() => {
+
+       gsap.from(".aboutDiv h1", {
+      y: 100,
+      opacity: 0,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".aboutDiv",
+        scroller: "body",
+        start: "top 85%",
+        end: "top -100%",
+      },
+      filter: "blur(10px)",
+    });
      
     function about_img() {
       gsap.from(".about_img, .aboutDiv", {

@@ -18,5 +18,19 @@
 }
 
 
+.skillHeading{
+  font-size: 50px;
+}
+
+
+
+@media (max-width: 567px) {
+.skillHeading{
+  font-size: 35px;
+}
+}
+
+
+
 
 

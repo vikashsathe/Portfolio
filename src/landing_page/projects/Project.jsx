@@ -78,7 +78,7 @@ const Project = () => {
               <h1 className="mt-5 mb-0 text-center">crafted with <span style={{color:"#ffe066"}}>love</span>.</h1>
               <p
                 className="m-0 fw-light"
-                style={ { fontSize: "14px"} }
+                style={ { fontSize: "13px", color:"#999"} }
               >
                these are few of my recent works
               </p>

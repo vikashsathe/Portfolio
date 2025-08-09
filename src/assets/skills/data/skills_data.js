@@ -60,7 +60,8 @@ const Skills_Data = [
     {
         img: Github,
         s_name:'Git & GitHub',
-    }
+    },
+    
     
 ]
 

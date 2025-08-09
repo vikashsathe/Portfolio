@@ -22,6 +22,20 @@ const Experience = () => {
 
 
   useGSAP(() => {
+
+
+       gsap.from(".ExprienceDiv h1", {
+      y: 100,
+      opacity: 0,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".ExprienceDiv",
+        scroller: "body",
+        start: "top 85%",
+        end: "top -100%",
+      },
+      filter: "blur(10px)",
+    });
   
     function experience_img() {
       gsap.from(".experience_img, .ExprienceDiv", {
