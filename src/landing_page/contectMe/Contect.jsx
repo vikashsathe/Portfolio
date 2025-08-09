@@ -43,7 +43,7 @@ const Contect = () => {
 
     function socialIcon() {
       gsap.from(".AboutsocialDiv a", {
-        x: 200,
+        x: 50,
         stagger: 1,
         opacity: 0,
         delay: 0.2,
