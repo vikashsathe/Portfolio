@@ -93,36 +93,38 @@ import { useEffect } from 'react';
 
 function App() {
 
-  useEffect(() => {
-    const startAnimations = () => {
-      const cursor = document.querySelector("#cursor");
-      if (!cursor) return;
+useEffect(() => {
+  if (window.innerWidth < 768) return; // Skip on mobile
 
-      gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+  const startAnimations = () => {
+    const cursor = document.querySelector("#cursor");
+    if (!cursor) return;
 
-      window.addEventListener("mousemove", (e) => {
-        gsap.to(cursor, {
-          x: e.clientX,
-          y: e.clientY,
-          duration: 0.3,
-          ease: "power3.out",
-        });
+    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
 
-        gsap.fromTo(
-          cursor.querySelector("path"),
-          { rotation: -10, transformOrigin: "center center" },
-          { rotation: 10, duration: 0.2, repeat: 1, yoyo: true, ease: "sine.inOut" }
-        );
+    window.addEventListener("mousemove", (e) => {
+      gsap.to(cursor, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.3,
+        ease: "power3.out",
       });
-    };
 
-    // Wait until all images/fonts are loaded
-    window.addEventListener("load", startAnimations);
+      gsap.fromTo(
+        cursor.querySelector("path"),
+        { rotation: -10, transformOrigin: "center center" },
+        { rotation: 10, duration: 0.2, repeat: 1, yoyo: true, ease: "sine.inOut" }
+      );
+    });
+  };
 
-    return () => {
-      window.removeEventListener("load", startAnimations);
-    };
-  }, []);
+  window.addEventListener("load", startAnimations);
+
+  return () => {
+    window.removeEventListener("load", startAnimations);
+  };
+}, []);
+
 
   return (
     <BrowserRouter>
