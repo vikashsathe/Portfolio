@@ -77,3 +77,8 @@ background: linear-gradient(160deg,rgba(249, 206, 52, 1) 0%, rgba(238, 42, 123, 
 
 
 
+.toggleWord {
+  display: inline-block; /* so width works properly */
+  width: 230px;          /* fixed width */
+  text-align: left;      /* or center if you want centered text */
+}

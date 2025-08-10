@@ -13,65 +13,46 @@ const home = () => {
 
   useGSAP(() => {
 
-    function breakText() {
-  var h1 = document.querySelector(".h1");
-  var h1text = h1.textContent;
+function breakText() {
+  var toggleWord = document.querySelector(".toggleWord");
+  var words = ["Software", "Frontend", "Backend", "UI/UX"]; // words to cycle
+  var index = 0;
 
-  // Clear h1 and wrap each letter in a span
-  var clutter = "";
-  h1text.split("").forEach(function (letter) {
-    clutter += `<span class="letter">${letter}</span>`;
-  });
-  h1.innerHTML = clutter;
+  function animateWord() {
+    // Pick current word
+    var h1text = words[index];
+    index = (index + 1) % words.length; // go to next word
 
-  // Animate each letter
-   gsap.fromTo(
-    ".letter",
-    { x: 80, opacity: 0 },
-    {
-      x: 0,
-      opacity: 1,
-      stagger: 0.05,
-      duration: 0.3,
-      ease: "power2.out",
-      repeat: -1,       // infinite
-      yoyo: true,       // reverse animation back
-      repeatDelay: 0.5  // small pause before repeating
-    }
-  );
+    // Wrap letters in spans
+    var clutter = "";
+    h1text.split("").forEach(function (letter) {
+      clutter += `<span class="letter">${letter}</span>`;
+    });
+    toggleWord.innerHTML = clutter;
+
+    // Animate letters
+    gsap.fromTo(
+      ".letter",
+      { x: 80, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        stagger: 0.05,
+        duration: 0.3,
+        ease: "power2.out",
+        yoyo: true,
+        repeat: 1, // play forward & backward
+        repeatDelay: 0.5,
+        onComplete: animateWord // when done, change word
+      }
+    );
+  }
+
+  animateWord(); // start animation
 }
 
 breakText();
 
-    //     function breakText(){
-    // var h1 = document.querySelector(".h1");
-    // var h1text = h1.textContent;
-
-    
-    // var spith1 = h1text.split("");
-    //  gsap.from(spith1, {
-    //     x: 80,
-    //     stagger: 1,
-    //     opacity: 0,
-    //     delay: 0.2,
-    //     duration: 0.3,
-    //   });
-    
-    // // var halfText = Math.floor(spith1.length / 2);
-    // // var clutter = ""
-
-    // // spith1.forEach(function (e, idx){
-    // //   if(idx<halfText){
-    // //     clutter = clutter + `<span class="Homeleft">${e}</span>`;
-    // //   }else{
-    // //     clutter = clutter + `<span class="Homeright">${e}</span>`;
-    // //   }
-    // // })
-
-    // // h1.innerHTML = clutter;
-
-    // }
-    // breakText()
 
     function home_img() {
       gsap.from(".home_img", {
@@ -138,10 +119,10 @@ home_heading();
                 fontWeight: 700,
               }}
             >
-              a Software Developer
+              a <span className="toggleWord">Software</span> Developer
             </span>
             <br />
-            <span className="h1"
+            <span className=""
               style={{
                 color: "#999",
                 fontWeight: 500,
