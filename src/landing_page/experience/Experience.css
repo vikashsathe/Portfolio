@@ -86,6 +86,6 @@ ul {
 
 
   .accordion {
-  --bs-accordion-btn-icon: url("../../assets/add-line.svg");
-  --bs-accordion-btn-active-icon: url("../../assets/subtract-line.svg")    
+  --bs-accordion-btn-icon: url("../../assets/svg/add-line.svg");
+  --bs-accordion-btn-active-icon: url("../../assets/svg/subtract-line.svg")    
 }

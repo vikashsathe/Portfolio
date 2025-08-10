@@ -40,6 +40,16 @@ const home = () => {
       });
     }
     home_img();
+    function home_heading() {
+  gsap.fromTo(
+    ".home_heading",
+    { scale: 10, opacity: 0 }, // start
+    { scale: 1, opacity: 1, duration: 0.7, ease: "power2.out" } // end
+  );
+}
+
+home_heading();
+
 
     function socialIcon() {
       gsap.from(".socialDiv a", {
@@ -64,7 +74,7 @@ const home = () => {
       <div className="row homeRow d-flex justify-content-center align-items-center px-2 px-md-5">
         <div className="col-md-5 col-12 mt-2 mt-md-5">
           <p
-            className=""
+            className="home_heading"
             style={{
               fontSize: "50px",
               fontWeight: 600,

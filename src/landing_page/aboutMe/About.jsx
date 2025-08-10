@@ -135,7 +135,7 @@ const About = () => {
                <ul className="d-flex flex-column mt-3 gap-3 sparkle-list">
               <li className="">
                 <div className="d-flex justify-content-between align-items-center">
-                  <h6 className="m-0">Master of Science in Application Development</h6>
+                  <h6 className="m-0">Master of Computer Applications (MCA)</h6>
                 <p className="m-0">Sage University</p>
              
              </div>

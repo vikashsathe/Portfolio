@@ -123,13 +123,13 @@ const mobileSideMenuOpen = () => {
     // menuLinksRef.current.children,
     ".mobileSideBar a",
     {
-      x: 80,
+      x: 90,
       opacity: 0,
     },
     {
       x: 0,
       opacity: 1,
-      duration: 0.6,
+      duration: 0.4,
       stagger: 0.5,
       ease: "power2.out",
     }
@@ -235,6 +235,7 @@ const mobileSideMenuClose = () => {
         <div
     // ref={menuLinksRef}
     className="d-flex flex-column px-4 py-3 gap-3 position-relative"
+    
   >
 
         <p className="mobileClose position-absolute" onClick={mobileSideMenuClose}><i className="ri-close-line fs-1"></i></p>
