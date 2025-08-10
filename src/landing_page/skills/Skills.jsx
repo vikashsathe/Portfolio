@@ -92,17 +92,6 @@ const skills = () => {
     filter: "blur(10px)",
   });
 
-
-
-
-const refreshTrigger = () => ScrollTrigger.refresh();
-window.addEventListener("resize", refreshTrigger)
-
-
-return () => {
-  window.removeEventListener("resize", refreshTrigger)
-};
-
 })
 
 
