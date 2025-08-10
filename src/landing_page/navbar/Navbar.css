@@ -44,23 +44,7 @@
   height: 80px;
 }
 
-.miniResume {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  top: 47px;
-  z-index: 10;
-  cursor: pointer;
-  right: 175px;
-  border-radius: 50%;
-  background: #030303;
-  box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
-}
-.miniResume img {
-  width: 25px;
-  transform: translate(12px, 12px);
 
-}
 
 .minDiv a:hover {
   scale: 1.04;
@@ -70,22 +54,6 @@
 }
 
 
-.miniContectBtn{
- width: 50px;
-  height: 50px;
-  position: fixed;
-  bottom: 47px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  cursor: pointer;
-  border-radius: 50%;
-  right: 50px;
-  background: transparent;
-  box-shadow:  0px 3px 3px 0.1px rgba(128, 128, 128, 0.4);
-  transition: transform 0.5s;
-}
 
 .miniContectBtn:hover a{
   scale: 1.1;
@@ -196,9 +164,49 @@ font-size: 18px;
 }
 
 
+
+.miniResume {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 47px;
+  z-index: 10;
+  cursor: pointer;
+  right: 175px;
+  border-radius: 50%;
+  background: #030303;
+  box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
+}
+.miniResume img {
+  width: 25px;
+  transform: translate(12px, 12px);
+
+}
+
+.miniContectBtn{
+ width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+  border-radius: 50%;
+  right: 50px;
+  background: transparent;
+  box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
+  transition: transform 0.5s;
+}
+
  @media (max-width: 567px) {
   .miniResume {
     right: 40px; 
     top: 26px;
+  }
+  .miniContectBtn{
+    bottom: 26px;
+    right: 40px;
   }
 } 
