@@ -132,10 +132,12 @@ const skills = () => {
     </div>
   ))}
 </div>
-<div className="d-flex myWorkBtn justify-content-end aling-items-center px-3 py-3 px-md-5 gap-3 gap-md-4">
+  <a href="https://github.com/vikashsathe" className="text-white text-decoration-none seeMore">
+<div className="d-flex myWorkBtn justify-content-end align-items-center px-3 py-3 px-md-5 gap-3 gap-md-4">
   <p className="rounded-5 d-flex justify-content-center align-items-center" style={{width:"50px", height:"50px", background:"#ffe066"}}><i class="ri-corner-down-right-line text-dark fs-2"></i></p>
 <h3 className="fw-bold">See all my<br/> work</h3>
 </div>
+</a>
 
 
 

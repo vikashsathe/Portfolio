@@ -238,7 +238,7 @@ const mobileSideMenuClose = () => {
   >
 
         <p className="mobileClose position-absolute" onClick={mobileSideMenuClose}><i className="ri-close-line fs-1"></i></p>
-        <h1 className="text-center" style={{letterSpacing:"10px", textTransform:"uppercase"}}>Well Come</h1>
+        <h2 className="text-center fs-1" style={{letterSpacing:"10px", textTransform:"uppercase"}}>Well Come</h2>
           <a
           href="#skills"
           onClick={mobileSideMenuClose}
@@ -405,10 +405,10 @@ const mobileSideMenuClose = () => {
                 className="col-12 border px-4 py-3 services-format rounded-3"
                 style={{ background: "lightgray" }}
               >
-                <h1>
+                <h2 className="fs-1">
                   Unlock <br />
                   Collaboration{" "}
-                </h1>
+                </h2>
                 <p className=" mt-3 readMore">
                   <a className="text-dark" style={{ textDecoration: "none" }}>
                     Read More <i className="ri-arrow-right-line"></i>

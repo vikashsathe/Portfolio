@@ -95,6 +95,7 @@ const home = () => {
               style={{
                 color: "#999",
                 fontWeight: 500,
+                fontSize:"48px"
               }}
             >
               based in India

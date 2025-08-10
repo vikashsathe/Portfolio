@@ -10,8 +10,16 @@
   height: 100vh;
 }
 
+
+
+
+
+
 /* 👇 Mobile screen */
 @media (max-width: 567px) {
+  .projectHeading{
+  font-size: 35px;
+}
   .wrapper {
     grid-template-columns: 1fr; /* stack vertically */
     height: auto; /* let content grow */
