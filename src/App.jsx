@@ -16,6 +16,12 @@ import Footer from './landing_page/footer/Footer.jsx';
 // import RippleEffect from './landing_page/ripple/Ripple.jsx';
 
 
+import { useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 
 function App() {
 
@@ -39,6 +45,15 @@ useGSAP(() => {
   });
 });
 
+
+ useEffect(() => {
+    const refreshTrigger = () => ScrollTrigger.refresh();
+    window.addEventListener("resize", refreshTrigger);
+
+    return () => {
+      window.removeEventListener("resize", refreshTrigger);
+    };
+  }, []);
 
 
   return (
@@ -73,3 +88,21 @@ useGSAP(() => {
 
 export default App;
 
+
+
+
+
+// // App.jsx
+// import { useEffect } from "react";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// export default function App() {
+ 
+
+//   return (
+//     // your routes here
+//   );
+// }
