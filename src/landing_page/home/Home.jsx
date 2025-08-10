@@ -15,22 +15,19 @@ const home = () => {
 
 function breakText() {
   var toggleWord = document.querySelector(".toggleWord");
-  var words = ["Software", "Frontend", "Backend", "UI/UX"]; // words to cycle
+  var words = ["Software", "Frontend", "Backend", "UI/UX"]; 
   var index = 0;
 
   function animateWord() {
-    // Pick current word
     var h1text = words[index];
-    index = (index + 1) % words.length; // go to next word
+    index = (index + 1) % words.length; 
 
-    // Wrap letters in spans
     var clutter = "";
     h1text.split("").forEach(function (letter) {
       clutter += `<span class="letter">${letter}</span>`;
     });
     toggleWord.innerHTML = clutter;
 
-    // Animate letters
     gsap.fromTo(
       ".letter",
       { x: 80, opacity: 0 },
@@ -38,17 +35,17 @@ function breakText() {
         x: 0,
         opacity: 1,
         stagger: 0.05,
-        duration: 0.3,
+        duration: 0.5,
         ease: "power2.out",
         yoyo: true,
-        repeat: 1, // play forward & backward
+        repeat: 1, 
         repeatDelay: 0.5,
-        onComplete: animateWord // when done, change word
+        onComplete: animateWord 
       }
     );
   }
 
-  animateWord(); // start animation
+  animateWord(); 
 }
 
 breakText();
