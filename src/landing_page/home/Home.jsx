@@ -44,7 +44,7 @@ const home = () => {
   gsap.fromTo(
     ".home_heading",
     { scale: 10, opacity: 0 }, // start
-    { scale: 1, opacity: 1, duration: 0.7, ease: "power2.out" } // end
+    { scale: 1, opacity: 1, duration: 0.9, ease: "power2.out" } // end
   );
 }
 
