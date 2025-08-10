@@ -148,7 +148,7 @@
   width: 80%;
   height: 100vh;
   max-height: 100vh;
-  background-color: #fff;
+  background-color: #E7F6F2;
   z-index: 200;
   color: #030303 !important;
 
@@ -170,10 +170,10 @@
 .mobileSideBar a{
 color: #030303 !important;
 cursor: pointer;
-font-weight: 500;
-text-transform: uppercase;
+font-weight: 600;
+text-transform:uppercase;
 font-size: 18px;
-letter-spacing: 1px;
+/* letter-spacing: 1px; */
 }
 .mobileClose{
     left: -40px;
@@ -181,10 +181,18 @@ letter-spacing: 1px;
     width: 40px;
     height: 40px;
     display: flex;
-    background-color: #fff;
+    background-color: #E7F6F2;
     border: none;
     justify-content: center;
     align-items: center;
+}
+
+
+.serviceCardMobile{
+  border-radius: 20px;
+  background-color: transparent;
+  background-color: #ffe066;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 0px 0px, rgba(2, 6, 9, 1) 0px 0px 3px, rgba(0, 0, 0, 0.10) 0px 0px 0px, rgba(0, 0, 0, 0.40) 0px 1px 0px;
 }
 
 

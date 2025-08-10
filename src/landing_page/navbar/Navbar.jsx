@@ -234,34 +234,28 @@ const mobileSideMenuClose = () => {
 
         <div
     // ref={menuLinksRef}
-    className="d-flex flex-column px-4 py-3 gap-4 position-relative"
+    className="d-flex flex-column px-4 py-3 gap-3 position-relative"
   >
 
         <p className="mobileClose position-absolute" onClick={mobileSideMenuClose}><i className="ri-close-line fs-1"></i></p>
-        <h2 className="text-center fs-1" style={{letterSpacing:"10px", textTransform:"uppercase"}}>Well Come</h2>
+        {/* <h1 className="text-center" style={{letterSpacing:"1px", textTransform:"uppercase"}}>Well Come</h1> */}
           <a
           href="#skills"
           onClick={mobileSideMenuClose}
-          className="text-white"
+          className="text-white mt-5"
           style={{ textDecoration: "none" }}
         >
           Skills
         </a>
-        {/* <a
-            href="#"
-            className="text-white"
-            onMouseEnter={handleMouseEnter}
-            style={{ textDecoration: "none" }}
-          >
-            Services
-          </a> */}
         <a
           href="#projects-section"
           className="text-white"
             onClick={mobileSideMenuClose}
           style={{ textDecoration: "none" }}
         >
-          Projects
+          
+              Projects
+          
         </a>
 
         <a
@@ -281,45 +275,20 @@ const mobileSideMenuClose = () => {
           Experience
         </a>
 
-        <div className="px-2" style={{overflow:"scroll",height:"70vh",scrollbarWidth:"none"}}> {Service_data.map((service, index) => (
+        <div className="px-2 mt-3" style={{overflow:"scroll",height:"65vh",scrollbarWidth:"none"}}> {Service_data.map((service, index) => (
                 <div
-                  className="col-12 serviceCard overflow-scroll mt-2 mb-3 services-format rounded-2"
+                  className="col-12 d-flex serviceCardMobile mt-3 mb-2 justify-content-center align-items-center rounded-5 border px-4 py-3 rounded-2"
                   key={index}
                   style={{ textAlign: "justify" }}
-                >
-                  <div>
-                    <img
-                      src={service.w_img}
-                      alt=""
-                      className="img-fluid"
-                      style={{
-                        objectFit: "cover",
-                        width: "100%",
-                        minHeight: "100px",
-                        maxHeight: "100px",
-                      }}
-                    />
-                  </div>
-
-                  <h2
-                    className="px-3 py-2 fs-4"
-                    style={{ letterSpacing: "1px" }}
-                  >
-                    {service.w_name}
-                  </h2>
-                  <p className="mb-3 readMore" >
-                    <a
-                      className="px-3 py-0 text-dark"
-                      style={{ textDecoration: "none", fontSize:"10px" }}
-                    >
-                      Read More <i className="ri-arrow-right-line"></i>
-                    </a>
-                  </p>
+                >  
+                <h6 className="m-0">
+                {service.w_name}
+                </h6>
                 </div>
               ))}
 
                   <div
-                className="col-12 d-flex justify-content-center mb-5 align-items-center rounded-5 border px-4 py-3 services-format rounded-2"
+                className="col-12 d-flex justify-content-center mb-5 mt-4 align-items-center rounded-5 border px-4 py-3 services-format rounded-2"
                 style={{ background: "lightgray" }}
               >
                 <h6 className="m-0 d-flex justify-content-center align-items-center gap-2">

@@ -19,17 +19,21 @@ const ProjectDetials = () => {
 
   return (
    <div className="row d-flex px-2 px-md-5 justify-content-center align-items-center" style={{paddingTop:"20px"}}>
-       <div className="col-md-8 col-12">
-         <p
-            className="col-12 text-end mt-0 mt-md-5"
+     <p
+            className="col-10 text-end mt-0 mt-md-5"
             style={{ cursor: "pointer" }}
             onClick={handleBackClick}
           >
             <i class="ri-arrow-left-circle-fill fs-1"></i>
           </p>
-          <img className="col-md-6 col-12" src={project.img} alt={project.title} style={{cursor:"crosshair"}} />
-      <h3 className="mt-3 mb-3 mt-md-5 mb-md-5">{project.title}</h3>
-        <p className="" style={{textAlign:"justify",color:"#55"}}>{project.description}</p>
+       <div className="d-flex flex-column flex-md-row justify-content-center align-items-start gap-4">
+        <div className="col-md-5 col-12">  <img className="col-md-12 col-12" src={project.img} alt={project.title} style={{cursor:"crosshair"}} /></div>
+        <div className="col-md-5 col-12"> <h3 className="col-md-12 mt-3 mb-3 mt-md-0 mb-md-3">{project.title}</h3>
+        <p className="" style={{textAlign:"justify",color:"#55"}}>{project.description}</p></div>
+        
+
+        
+     
        </div>
       </div>
   );
