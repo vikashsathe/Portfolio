@@ -12,23 +12,63 @@ const home = () => {
   
 
   useGSAP(() => {
+
+    function breakText() {
+  var h1 = document.querySelector(".h1");
+  var h1text = h1.textContent;
+
+  // Clear h1 and wrap each letter in a span
+  var clutter = "";
+  h1text.split("").forEach(function (letter) {
+    clutter += `<span class="letter">${letter}</span>`;
+  });
+  h1.innerHTML = clutter;
+
+  // Animate each letter
+   gsap.fromTo(
+    ".letter",
+    { x: 80, opacity: 0 },
+    {
+      x: 0,
+      opacity: 1,
+      stagger: 0.05,
+      duration: 0.3,
+      ease: "power2.out",
+      repeat: -1,       // infinite
+      yoyo: true,       // reverse animation back
+      repeatDelay: 0.5  // small pause before repeating
+    }
+  );
+}
+
+breakText();
+
     //     function breakText(){
     // var h1 = document.querySelector(".h1");
     // var h1text = h1.textContent;
 
+    
     // var spith1 = h1text.split("");
-    // var halfText = Math.floor(spith1.length / 2);
-    // var clutter = ""
+    //  gsap.from(spith1, {
+    //     x: 80,
+    //     stagger: 1,
+    //     opacity: 0,
+    //     delay: 0.2,
+    //     duration: 0.3,
+    //   });
+    
+    // // var halfText = Math.floor(spith1.length / 2);
+    // // var clutter = ""
 
-    // spith1.forEach(function (e, idx){
-    //   if(idx<halfText){
-    //     clutter = clutter + `<span class="left">${e}</span>`;
-    //   }else{
-    //     clutter = clutter + `<span class="right">${e}</span>`;
-    //   }
-    // })
+    // // spith1.forEach(function (e, idx){
+    // //   if(idx<halfText){
+    // //     clutter = clutter + `<span class="Homeleft">${e}</span>`;
+    // //   }else{
+    // //     clutter = clutter + `<span class="Homeright">${e}</span>`;
+    // //   }
+    // // })
 
-    // h1.innerHTML = clutter;
+    // // h1.innerHTML = clutter;
 
     // }
     // breakText()
@@ -44,7 +84,7 @@ const home = () => {
   gsap.fromTo(
     ".home_heading",
     { scale: 10, opacity: 0 }, // start
-    { scale: 1, opacity: 1, duration: 3, ease: "power2.out" } // end
+    { scale: 1, opacity: 1, duration: 0.8, ease: "power2.out" } // end
   );
 }
 
@@ -101,7 +141,7 @@ home_heading();
               a Software Developer
             </span>
             <br />
-            <span
+            <span className="h1"
               style={{
                 color: "#999",
                 fontWeight: 500,
