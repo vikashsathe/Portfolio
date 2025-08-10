@@ -93,10 +93,17 @@ const skills = () => {
   });
 
 
+
+
+const refreshTrigger = () => ScrollTrigger.refresh();
+window.addEventListener("resize", refreshTrigger)
+
+
+return () => {
+  window.removeEventListener("resize", refreshTrigger)
+};
+
 })
-
-
-
 
 
   return (
