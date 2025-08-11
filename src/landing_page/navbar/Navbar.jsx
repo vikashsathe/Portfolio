@@ -1,14 +1,19 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./Navbar.css";
-// import logo from "../../assets/logo/logo.png";
-
-import Logo from "../../assets/logo/logo.png";
-
-import Resume from "../../assets/resume/Vikash_Sathe.pdf";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import downloadBtn from "../../assets/resume/download-line.svg";
+
+
+import Logo from "../../assets/logo/logo.png";
 import Service_data from "../../assets/service/data/service_data.js";
+
+import Resume from "../../assets/resume/Vikash_Sathe.pdf";
+import contenctBtn from "../../assets/svg/chat-ai-fill.svg";
+import downloadMainResumeBtn from "../../assets/svg/download-2-line.svg";
+import downloadMiniResumeBtn from "../../assets/svg/download-line.svg";
+import closeBtn from "../../assets/svg/close-line.svg";
+import menuBtn from "../../assets/svg/menu-3-fill.svg";
+import rightArrow from "../../assets/svg/arrow-right-line.svg";
 
 
 const Navbar = () => {
@@ -218,14 +223,16 @@ const mobileSideMenuClose = () => {
             style={{ textDecoration: "none" }}
           >
             <p className="m-0 d-flex gap-2 col-9 downloadResumeBtn">
-              Resume <i className="ri-download-2-line"></i>
+              Resume 
+              <img src={downloadMainResumeBtn} alt="" width={"18px"} />
             </p>
           </a>
         </div>
 
         <div className="mobileSideMenu d-flex justify-content-center align-items-center d-lnline d-md-none">
           <p className="m-0" onClick={mobileSideMenuOpen}>
-            <i className="ri-menu-3-fill fs-2"></i>
+            {/* <i className="ri-menu-3-fill fs-2"></i> */}
+            <img src={menuBtn} alt="" width={"28px"} />
           </p>
         </div>
       </div>
@@ -238,7 +245,9 @@ const mobileSideMenuClose = () => {
     
   >
 
-        <p className="mobileClose position-absolute" onClick={mobileSideMenuClose}><i className="ri-close-line fs-1"></i></p>
+        <p className="mobileClose position-absolute" onClick={mobileSideMenuClose}>
+          <img src={closeBtn} alt="" width={"30px"} />
+          </p>
         {/* <h1 className="text-center" style={{letterSpacing:"1px", textTransform:"uppercase"}}>Well Come</h1> */}
           <a
           href="#skills"
@@ -293,7 +302,9 @@ const mobileSideMenuClose = () => {
                 style={{ background: "lightgray" }}
               >
                 <h6 className="m-0 d-flex justify-content-center align-items-center gap-2">
-                  See What's new <i className="ri-arrow-right-line"></i>{" "}
+                  See What's new 
+                  {/* <i className="ri-arrow-right-line"></i>{" "} */}
+                  <img src={rightArrow} alt="" width={"18px"} />
                 </h6>
               </div>
               </div>
@@ -304,7 +315,7 @@ const mobileSideMenuClose = () => {
       <div className="position-absolute" ref={miniResume}>
         <div className="miniResume">
           <a href={Resume} target="_blank">
-            <img src={downloadBtn} className="" alt="" />
+            <img src={downloadMiniResumeBtn} className="" alt="" />
           </a>
         </div>
       </div>
@@ -315,7 +326,8 @@ const mobileSideMenuClose = () => {
             className="text-light"
             style={{ textDecoration: "none" }}
           >
-            <i className="ri-chat-ai-fill fs-3"></i>
+            <img src={contenctBtn} className="" alt="" width={"27px"} />
+            {/* <i className="ri-chat-ai-fill fs-3"></i> */}
           </a>
         </div>
       </div>

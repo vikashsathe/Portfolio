@@ -3,15 +3,8 @@ import Skills_Data from "../../assets/skills/data/skills_data.js";
 import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"; // <-- Import ScrollTrigger
-import video01 from '../../assets/Skills_video/video01.mp4'
-import video02 from '../../assets/Skills_video/video02.mp4'
-import video03 from '../../assets/Skills_video/video03.mp4'
-import video04 from '../../assets/Skills_video/video04.mp4'
-import video06 from '../../assets/Skills_video/video06.mp4'
-import video07 from '../../assets/Skills_video/video07.mp4'
-import video08 from '../../assets/Skills_video/video08.mp4'
-import video09 from '../../assets/Skills_video/video09.mp4'
-import backImg from '../../assets/Skills_video/backImg.svg'
+
+import cornerDownArrow from "../../assets/svg/corner-down-right-line.svg";
 gsap.registerPlugin(ScrollTrigger); 
 
 
@@ -40,33 +33,16 @@ const skills = () => {
       trigger: ".skillsCards",
       scoller: "body",
       start: "top 100%",
-      end: "top 40%",
+      end: "top 50%",
        scrub: true,
     },
     filter: "blur(10px)",
   });
-
-    gsap.from(".skillsCards img", {
-        rotateY: "360deg",
-         opacity: 0,
-    stagger:0.3,
-    duration: 2, 
-        scrollTrigger: {
-      trigger: ".skillsCards",
-      scoller: "body",
-      start: "top 100%",
-      end: "top 60%",
-         scrub: true,
-    },
-    filter: "blur(10px)",
-      });
-
-
+  
        gsap.from(".myWorkBtn", {
     x:100,
     opacity: 0,
-    stagger:0.3,
-    duration: 0.5,    
+    stagger: 0.8,   
     scrollTrigger: {
       trigger: ".myWorkBtn",
       scoller: "body",
@@ -134,7 +110,9 @@ const skills = () => {
 </div>
   <a href="https://github.com/vikashsathe" className="text-white text-decoration-none seeMore">
 <div className="d-flex myWorkBtn justify-content-end align-items-center px-3 py-3 px-md-5 gap-3 gap-md-4">
-  <p className="rounded-5 d-flex justify-content-center align-items-center" style={{width:"50px", height:"50px", background:"#ffe066"}}><i class="ri-corner-down-right-line text-dark fs-2"></i></p>
+  <p className="rounded-5 d-flex justify-content-center align-items-center" style={{width:"50px", height:"50px", background:"#ffe066"}}>
+    <img src={cornerDownArrow} width={"28px"} alt="" />
+    </p>
 <h3 className="fw-bold">See all my<br/> work</h3>
 </div>
 </a>

@@ -6,7 +6,9 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 
-
+import linkedIn from "../../assets/svg/linkedin-fill.svg";
+import insta from "../../assets/svg/instagram-line.svg";
+import gitHub from "../../assets/svg/github-fill.svg";
 
 const home = () => {
   
@@ -77,7 +79,7 @@ home_heading();
         delay: 0.2,
         duration: 0.3,
       });
-      gsap.from(".socialDiv a i", {
+      gsap.from(".socialDiv a img", {
         rotateY: "360deg",
         stagger: 1,
         opacity: 0,
@@ -138,17 +140,17 @@ home_heading();
               target="_blank"
               href="https://www.linkedin.com/in/vikash-sathe-941166208/"
             >
-              <i className="socialIcon ri-linkedin-fill"></i>
+              <img src={linkedIn} className="socialIcon" width={"30px"} alt="" />
             </a>
 
             <a target="_blank" href="https://github.com/vikashsathe">
-              <i className="socialIcon ri-github-fill"></i>
+              <img src={gitHub} className="socialIcon" width={"30px"} alt="" />
             </a>
             <a
               target="_blank"
               href="https://www.linkedin.com/in/vikash-sathe-941166208/"
             >
-              <i className="socialIcon ri-instagram-line"></i>
+              <img src={insta} className="socialIcon" alt="" width={"30px"} />
             </a>
           </div>
         </div>

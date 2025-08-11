@@ -6,6 +6,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import React, { useState } from "react";
 
+import linkedIn from "../../assets/svg/linkedin-fill.svg";
+import insta from "../../assets/svg/instagram-line.svg";
+import gitHub from "../../assets/svg/github-fill.svg";
+import mailBtn from "../../assets/svg/mail-ai-line.svg";
+import phoneBtn from "../../assets/svg/phone-fill.svg";
+import locationBtn from "../../assets/svg/send-plane-fill.svg";
+
 const Contect = () => {
   useGSAP(() => {
     gsap.from(".rightContect, .leftContect", {
@@ -61,7 +68,7 @@ const Contect = () => {
         },
         filter: "blur(10px)",
       });
-      gsap.from(".AboutsocialDiv a i", {
+      gsap.from(".AboutsocialDiv a img", {
         rotateY: "360deg",
         stagger: 1,
         opacity: 0,
@@ -117,29 +124,38 @@ const Contect = () => {
           </p>
             <a href="#mail" className="text-decoration-none text-light">
           <p className="d-flex mb-2 justify-content-start m-0 align-items-center gap-3">
-            <i className="ri-mail-ai-line fs-4"></i> vikashsathe83@gmail.com
+            <img src={mailBtn} width={"22px"} alt="" />
+             vikashsathe83@gmail.com
           </p>
             </a>
             <a className="text-decoration-none text-light" href="https://wa.me/917869603377?text=Hi%20Vikash%2C%20I%20saw%20your%20portfolio!" target="_blank">
           <p className="d-flex mb-2 justify-content-start m-0 align-items-center gap-3">
-            <i className="ri-phone-fill fs-4"></i> +91 7869603377
+            <img src={phoneBtn} width={"22px"} alt="" />
+          +91 7869603377
           </p>
           </a>
           <p className="d-flex justify-content-start m-0 align-items-center gap-3">
-            <i className="ri-send-plane-fill fs-4"></i> Indore, Madhya Pradesh
+            <img src={locationBtn} width={"22px"} alt="" />
+             Indore, Madhya Pradesh
           </p>
 
           <div className="AboutsocialDiv col-lg-12 mt-4 mt-md-5 mb-5 d-flex gap-4">
-         <a target="_blank" href="https://www.linkedin.com/in/vikash-sathe-941166208/">
-              <i className="socialIcon ri-linkedin-fill"></i>
-              </a>
-            
-               <a target="_blank" href="https://github.com/vikashsathe">
-              <i className="socialIcon ri-github-fill"></i>
-            </a>
-               <a target="_blank" href="https://www.linkedin.com/in/vikash-sathe-941166208/">
-              <i className="socialIcon ri-instagram-line"></i>
-            </a>
+         <a
+                      target="_blank"
+                      href="https://www.linkedin.com/in/vikash-sathe-941166208/"
+                    >
+                      <img src={linkedIn} className="socialIcon" width={"30px"} alt="" />
+                    </a>
+        
+                    <a target="_blank" href="https://github.com/vikashsathe">
+                      <img src={gitHub} className="socialIcon" width={"30px"} alt="" />
+                    </a>
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/in/vikash-sathe-941166208/"
+                    >
+                      <img src={insta} className="socialIcon" alt="" width={"30px"} />
+                    </a>
           </div>
         </div>
 
