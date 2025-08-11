@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import Project_Data from "../../assets/project/data/project_data.js";
+import "./ProjectDetials.css"
 
 const ProjectDetials = () => {
   const { id } = useParams();
@@ -24,7 +25,7 @@ const ProjectDetials = () => {
             style={{ cursor: "pointer" }}
             onClick={handleBackClick}
           >
-            <i class="ri-arrow-left-circle-fill text-muted" style={{fontSize:"50px"}}></i>
+            <i class="ri-arrow-left-circle-fill productBackToHomeBtn text-muted" style={{fontSize:"50px"}}></i>
           </p>
        <div className="d-flex flex-column flex-md-row justify-content-center align-items-start gap-4">
         <div className="col-md-5 col-12">  <img className="col-md-12 col-12" src={project.img} alt={project.title} style={{cursor:"crosshair"}} /></div>
