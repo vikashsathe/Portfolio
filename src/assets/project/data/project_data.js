@@ -10,14 +10,14 @@ const Projects_Data = [
           title: "Sun Mini Meal",
         img: SunMiniMeal,
         description: 'I developed a clone of the SUN MINIMEAL website using CodeIgniter in PHP. The project replicates the original site’s clean design, responsive layout, and product details. Features include dynamic content, product showcase, and mobile-friendly UI. It demonstrates my skills in PHP, MVC architecture, and front-end integration.',
-       li: [
-  "Developed with CodeIgniter (MVC framework)",
-  "Responsive and mobile-friendly design",
-  "Dynamic product pages and content management",
-  "Clean UI with original site’s look and feel",
-  "Integrated PHP backend with HTML, CSS, JavaScript",
-  "Focused on performance and scalability"
-]
+//        li: [
+//   "Developed with CodeIgniter (MVC framework)",
+//   "Responsive and mobile-friendly design",
+//   "Dynamic product pages and content management",
+//   "Clean UI with original site’s look and feel",
+//   "Integrated PHP backend with HTML, CSS, JavaScript",
+//   "Focused on performance and scalability"
+// ]
     },
     {
         id:"02",
