@@ -10,43 +10,36 @@ import About from './landing_page/aboutMe/About.jsx';
 import Project from './landing_page/projects/Project.jsx';
 import Contect from './landing_page/contectMe/Contect.jsx';
 import ProjectDetials from './landing_page/projects/ProjectDetials.jsx';
-import { useGSAP } from '@gsap/react'
+import { useGSAP } from '@gsap/react';
 import gsap from "gsap"
 import Footer from './landing_page/footer/Footer.jsx';
-// import RippleEffect from './landing_page/ripple/Ripple.jsx';
-
-
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 function App() {
+  useGSAP(() => {
+    const cursor = document.querySelector("#cursor");
+    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
 
-useGSAP(() => {
-  const cursor = document.querySelector("#cursor");
-  gsap.set(cursor, { xPercent: -50, yPercent: -50 });
-
-  window.addEventListener("mousemove", (e) => {
-    gsap.to(cursor, {
-      x: e.clientX,
-      y: e.clientY,
-      duration: 0.3,
-      delay: 0.1,
-      ease: "power3.out",
+    window.addEventListener("mousemove", (e) => {
+      gsap.to(cursor, {
+        x: e.clientX,
+        y: e.clientY,
+        duration: 0.3,
+        delay: 0.1,
+        ease: "power3.out",
+      });
+      gsap.fromTo(cursor.querySelector("path"),
+        { rotation: -10, transformOrigin: "center center" },
+        { rotation: 10, duration: 0.2, repeat: 1, yoyo: true, ease: "sine.inOut" }
+      );
     });
-    // wing flap effect: scale or rotate lightly
-    gsap.fromTo(cursor.querySelector("path"),
-      { rotation: -10, transformOrigin: "center center" },
-      { rotation: 10, duration: 0.2, repeat: 1, yoyo: true, ease: "sine.inOut" }
-    );
   });
-});
 
-
- useEffect(() => {
+  useEffect(() => {
     const refreshTrigger = () => ScrollTrigger.refresh();
     window.addEventListener("resize", refreshTrigger);
 
@@ -55,20 +48,35 @@ useGSAP(() => {
     };
   }, []);
 
+  // Disable right click & shortcuts
+
+  useEffect(() => {
+    const disableContextMenu = (e) => e.preventDefault();
+    const disableKeys = (e) => {
+      if (e.keyCode === 123) e.preventDefault(); // F12
+      if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) e.preventDefault(); // Ctrl+Shift+I / J
+      if (e.ctrlKey && e.keyCode === 85) e.preventDefault(); // Ctrl+U
+    };
+
+    document.addEventListener("contextmenu", disableContextMenu);
+    document.addEventListener("keydown", disableKeys);
+
+    return () => {
+      document.removeEventListener("contextmenu", disableContextMenu);
+      document.removeEventListener("keydown", disableKeys);
+    };
+  }, []);
 
   return (
-  
     <BrowserRouter>
       <Navbar />
-       <div className="container-fluid">
-<p id='cursor'></p>
+      <div className="container-fluid">
+        <p id='cursor'></p>
         <Routes>
           <Route
             path="/"
             element={
               <>
-      {/* <RippleEffect /> */}
-
                 <Home />
                 <Skills />
                 <Experience />
@@ -87,22 +95,3 @@ useGSAP(() => {
 }
 
 export default App;
-
-
-
-
-
-// // App.jsx
-// import { useEffect } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// export default function App() {
- 
-
-//   return (
-//     // your routes here
-//   );
-// }

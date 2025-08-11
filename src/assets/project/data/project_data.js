@@ -1,6 +1,7 @@
 import SunMiniMeal from '../img/SunMiniMeal.svg'
 import Zarodha from '../img/Zarodha.svg'
 import MajorProject from '../img/MajorProject.svg'
+import Starbucks from '../img/Starbucks.svg'
 
 
 const Projects_Data = [
@@ -35,9 +36,9 @@ const Projects_Data = [
        
     },
         {
-        id:"01",
-          title: "SunMiniMeal",
-        img: SunMiniMeal,
+        id:"04",
+          title: "Starbucks Landing Page",
+        img: Starbucks,
        description: "Project Description This project is a smart e-commerce website built using the MERN stack  MongoDB, Express.js, React.js, and Node.js. The goal is to create a complete online shopping platform where users can buy products, view details, add items to cart or wishlist, and complete payment.The project has two panels: User Panel for customers Admin Panel for the store manager"
 
 
