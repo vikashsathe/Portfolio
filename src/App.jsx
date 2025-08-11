@@ -50,22 +50,22 @@ function App() {
 
   // Disable right click & shortcuts
 
-  // useEffect(() => {
-  //   const disableContextMenu = (e) => e.preventDefault();
-  //   const disableKeys = (e) => {
-  //     if (e.keyCode === 123) e.preventDefault(); // F12
-  //     if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) e.preventDefault(); // Ctrl+Shift+I / J
-  //     if (e.ctrlKey && e.keyCode === 85) e.preventDefault(); // Ctrl+U
-  //   };
+  useEffect(() => {
+    const disableContextMenu = (e) => e.preventDefault();
+    const disableKeys = (e) => {
+      if (e.keyCode === 123) e.preventDefault(); // F12
+      if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) e.preventDefault(); // Ctrl+Shift+I / J
+      if (e.ctrlKey && e.keyCode === 85) e.preventDefault(); // Ctrl+U
+    };
 
-  //   document.addEventListener("contextmenu", disableContextMenu);
-  //   document.addEventListener("keydown", disableKeys);
+    document.addEventListener("contextmenu", disableContextMenu);
+    document.addEventListener("keydown", disableKeys);
 
-  //   return () => {
-  //     document.removeEventListener("contextmenu", disableContextMenu);
-  //     document.removeEventListener("keydown", disableKeys);
-  //   };
-  // }, []);
+    return () => {
+      document.removeEventListener("contextmenu", disableContextMenu);
+      document.removeEventListener("keydown", disableKeys);
+    };
+  }, []);
 
   return (
     <BrowserRouter>
