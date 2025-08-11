@@ -18,9 +18,6 @@ const Projects_Data = [
   "Integrated PHP backend with HTML, CSS, JavaScript",
   "Focused on performance and scalability"
 ]
-
-
-
     },
     {
         id:"02",
@@ -35,13 +32,7 @@ const Projects_Data = [
         title: "MajorProject",
         img: MajorProject,
         description: 'I developed a clone of the SUN MINIMEAL website using CodeIgniter in PHP. The project replicates the original site’s clean design, responsive layout, and product details. Features include dynamic content, product showcase, and mobile-friendly UI. It demonstrates my skills in PHP, MVC architecture, and front-end integration.',
-        li: "Developed with CodeIgniter (MVC framework)",
-        li: "Responsive and mobile-friendly design",
-        li: "Responsive and mobile-friendly design",
-        li: 'Dynamic product pages and content management',
-        li: "Clean UI with original site’s look and feel",
-        li: "Integrated PHP backend with HTML, CSS, JavaScript",
-        li: "Focused on performance and scalability"
+       
     },
         {
         id:"01",
