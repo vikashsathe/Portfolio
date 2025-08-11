@@ -3,6 +3,7 @@ import Zarodha from "../img/Zarodha.svg";
 import MajorProject from "../img/MajorProject.svg";
 import Starbucks from "../img/Starbucks.svg";
 import Dreamify from "../img/Dreamify.svg";
+import E_commerce from "../img/E_commerce.svg";
 
 const Projects_Data = [
   {
@@ -72,15 +73,16 @@ const Projects_Data = [
   },
   {
     id: "06",
-    title: "Trandify – Your Own Trading Platform",
-    img: Zarodha,
+    title: "ShopEase – Simple shopping made easy",
+    img: E_commerce,
     description:
-      "A full-stack Zerodha clone built with the MERN stack for my college project. It replicates core features of the Zerodha trading platform, including user authentication, stock listings, real-time data display, and a responsive design for seamless user experience.",
+      "I developed a basic e-commerce web application using HTML, CSS, and JavaScript. The website includes features like product listing, search, add-to-cart, and checkout simulation. It has a responsive design for both desktop and mobile devices, and smooth user interactions are handled with JavaScript for a better shopping experience.",
     li: [
-      "Frontend: React.js with reusable components and responsive UI",
-      "Backend: Node.js & Express.js for API handling",
-      "Database: MongoDB for storing user profiles, transactions, and stock data",
-      "Clean Codebase: Organized MERN architecture for scalability",
+      "Built responsive e-commerce UI using HTML and CSS.",
+      "Developed product listing and search functionality.",
+      "Implemented add-to-cart and checkout simulation with JavaScript.",
+      "Designed a clean, user-friendly shopping interface.",
+      "Ensured mobile and desktop compatibility."
     ],
   },
 ];
