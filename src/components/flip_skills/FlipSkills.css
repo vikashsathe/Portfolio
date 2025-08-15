@@ -21,13 +21,16 @@
 
 
 @media (max-width: 567px) {
+  .flipRow{
+    gap: 1px;
+  }
   .flipDiv {
            flex: 1 1 40%;
         max-width: 16%;
         height: 8px;  
   }
   .flipDiv img {
-   width: 80%;   
+   width: 95%;   
    margin-top: 20px;
   }
   .StringRow{
