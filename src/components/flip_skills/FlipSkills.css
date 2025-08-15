@@ -21,9 +21,7 @@
 
 
 @media (max-width: 567px) {
-  .flipRow{
-    gap: 1px;
-  }
+  
   .flipDiv {
            flex: 1 1 40%;
         max-width: 16%;
