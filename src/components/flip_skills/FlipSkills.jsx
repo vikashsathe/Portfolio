@@ -31,6 +31,8 @@ const FlipSkills = () => {
   const [index01, setInde01] = useState(0);
 
 
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       gsap.from(imgRef01.current, {
@@ -43,7 +45,7 @@ const FlipSkills = () => {
 
         onComplete: () => {
           setInde01((prev) => (prev + 1) % imgSec01.length);
-          gsap.to(imgRef01.current, { duration: 0.5, scale: 1 });
+          gsap.to(imgRef01.current, { duration: 2, scale: 1 });
         },
       });
     }, 2000);
@@ -192,19 +194,19 @@ useGSAP(() => {
         </div>
         <div className="flipRow col-12">
            <div className="flipDiv">
-            <img src={imgSec01[index01]} alt="Flipping" />
+            <img src={imgSec01[index01]}  alt="Flipping" />
           </div>
           <div className="flipDiv">
-            <img src={imgSec02[index02]} alt="Flipping" />
+            <img src={imgSec02[index02]}  alt="Flipping" />
           </div>
           <div className="flipDiv">
-            <img src={imgSec03[index03]} alt="Flipping" />
+            <img src={imgSec03[index03]}  alt="Flipping" />
           </div>
           <div className="flipDiv">
-            <img src={imgSec04[index04]} alt="Flipping" />
+            <img src={imgSec04[index04]}  alt="Flipping" />
           </div>
           <div className="flipDiv">
-            <img src={imgSec05[index05]} alt="Flipping" />
+            <img src={imgSec05[index05]}  alt="Flipping" />
           </div>
 
         </div>
@@ -213,3 +215,10 @@ useGSAP(() => {
 }
 
 export default FlipSkills
+
+
+
+
+
+
+
