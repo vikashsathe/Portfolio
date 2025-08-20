@@ -7,7 +7,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr; /* desktop layout */
-  height: 100vh;
+  height: 100%;
 }
 
 
@@ -74,8 +74,6 @@
     cursor: crosshair;
 
 }
-
-
 
 .arrowShare {
 

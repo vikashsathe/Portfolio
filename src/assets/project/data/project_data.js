@@ -4,6 +4,8 @@ import MajorProject from "../img/MajorProject.svg";
 import Starbucks from "../img/Starbucks.svg";
 import Dreamify from "../img/Dreamify.svg";
 import E_commerce from "../img/E_commerce.svg";
+import FaceLink from "../img/FaceLink.svg";
+import KeepNote from "../img/KeepNote.svg";
 
 const Projects_Data = [
   {
@@ -23,15 +25,26 @@ const Projects_Data = [
   },
   {
     id: "02",
-    title: "Zarodha",
-    img: Zarodha,
+      title: "FaceLink – Spend Your Time With Loved Ones",
+    img: FaceLink,
     description:
-      "A full-stack Zerodha clone built with the MERN stack for my college project. It replicates core features of the Zerodha trading platform, including user authentication, stock listings, real-time data display, and a responsive design for seamless user experience.",
+      "This project is built with the MERN stack and provides real-time video calling, messaging, secure authentication, meeting rooms, and screen sharing. It uses WebRTC for peer-to-peer communication and Socket.io for instant messaging, ensuring smooth and low-latency interactions. The system includes private meeting rooms with unique IDs, host controls, and encrypted login for security. Screen sharing allows seamless collaboration during meetings, while performance is optimized for fast loading and stable connections across all networks. The design follows accessibility standards, adapts to mobile devices, and ensures a responsive, user-friendly experience, making it a scalable and modern communication platform.",
     li: [
-      "Frontend: React.js with reusable components and responsive UI",
-      "Backend: Node.js & Express.js for API handling",
-      "Database: MongoDB for storing user profiles, transactions, and stock data",
-      "Clean Codebase: Organized MERN architecture for scalability",
+     "Built with the MERN stack, supporting real-time video calls and messaging.",
+"Features secure authentication, meeting rooms, and screen sharing.",
+"Optimized performance, accessibility, and mobile responsiveness. Optimized for low-latency communication with Socket.io & WebRTC.",
+"Designed to be responsive and seamless across all devices."
+    ],
+  },
+  {
+    id: "08",
+    title: "KeepNote",
+    img: KeepNote,
+    description:
+      "Developed a MERN-based note-taking app with secure authentication, CRUD operations, search/filter, and responsive design. Integrated Framer Motion to deliver smooth, modern animations for an engaging user experience.",
+    li: [
+     "Built a MERN-based note-taking app – features secure authentication, CRUD operations, search/filter, and responsive design.",
+" Enhanced with Framer Motion – provides smooth, modern animations for an engaging user experience."
     ],
   },
   {
@@ -46,6 +59,7 @@ const Projects_Data = [
       "Designed for a responsive and intuitive user experience across all devices.",
     ],
   },
+    
   {
     id: "04",
     title: "Starbucks Landing Page",
@@ -71,8 +85,21 @@ const Projects_Data = [
       "Mobile-friendly layout with secure booking and real-time data handling.",
     ],
   },
-  {
+   {
     id: "06",
+   title: "Zarodha",
+    img: Zarodha,
+    description:
+      "A full-stack Zerodha clone built with the MERN stack for my college project. It replicates core features of the Zerodha trading platform, including user authentication, stock listings, real-time data display, and a responsive design for seamless user experience.",
+    li: [
+      "Frontend: React.js with reusable components and responsive UI",
+      "Backend: Node.js & Express.js for API handling",
+      "Database: MongoDB for storing user profiles, transactions, and stock data",
+      "Clean Codebase: Organized MERN architecture for scalability",
+    ],
+  },
+  {
+    id: "07",
     title: "ShopEase – Simple shopping made easy",
     img: E_commerce,
     description:
