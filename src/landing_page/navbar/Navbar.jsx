@@ -215,23 +215,22 @@ const mobileSideMenuClose = () => {
         </div>
 
         <div className="col-lg-2 d-flex justify-content-end align-items-center d-none d-md-inline">
-          <a
-            href={Resume}
-            target="_blank"
-            download={Resume}
-            className="text-white d-flex justify-content-center align-items-center"
-            style={{ textDecoration: "none" }}
-          >
-            <p className="m-0 d-flex gap-2 col-9 downloadResumeBtn">
-              Resume 
-              <img src={downloadMainResumeBtn} alt="" width={"18px"} />
-            </p>
-          </a>
+        <a
+  href={Resume}
+  download={Resume}
+  className="text-white d-flex justify-content-center align-items-center"
+  style={{ textDecoration: "none" }}
+>
+  <p className="m-0 d-flex gap-2 col-9 downloadResumeBtn">
+    Resume 
+    <img src={downloadMainResumeBtn} alt="" width="18px" />
+  </p>
+</a>
+
         </div>
 
         <div className="mobileSideMenu d-flex justify-content-center align-items-center d-lnline d-md-none">
           <p className="m-0" onClick={mobileSideMenuOpen}>
-            {/* <i className="ri-menu-3-fill fs-2"></i> */}
             <img src={menuBtn} alt="" width={"28px"} />
           </p>
         </div>
@@ -248,7 +247,6 @@ const mobileSideMenuClose = () => {
         <p className="mobileClose position-absolute" onClick={mobileSideMenuClose}>
           <img src={closeBtn} alt="" width={"30px"} />
           </p>
-        {/* <h1 className="text-center" style={{letterSpacing:"1px", textTransform:"uppercase"}}>Well Come</h1> */}
           <a
           href="#skills"
           onClick={mobileSideMenuClose}
