@@ -21,11 +21,34 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   // cursor
- useGSAP(() => {
+//  useGSAP(() => {
+//     const cursor = document.querySelector("#cursor");
+//     gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+
+//     window.addEventListener("mousemove", (e) => {
+//       gsap.to(cursor, {
+//         x: e.clientX,
+//         y: e.clientY,
+//         duration: 0.3,
+//         delay: 0.1,
+//         ease: "power3.out",
+//       });
+//       gsap.fromTo(cursor.querySelector("path"),
+//         { rotation: -10, transformOrigin: "center center" },
+//         { rotation: 10, duration: 0.2, repeat: 1, yoyo: true, ease: "sine.inOut" }
+//       );
+//     });
+//   });
+
+useGSAP(() => {
+  // Run only on desktop
+  if (window.innerWidth > 567) {
     const cursor = document.querySelector("#cursor");
+    if (!cursor) return;
+
     gsap.set(cursor, { xPercent: -50, yPercent: -50 });
 
-    window.addEventListener("mousemove", (e) => {
+    const moveCursor = (e) => {
       gsap.to(cursor, {
         x: e.clientX,
         y: e.clientY,
@@ -33,12 +56,21 @@ function App() {
         delay: 0.1,
         ease: "power3.out",
       });
-      gsap.fromTo(cursor.querySelector("path"),
+      gsap.fromTo(
+        cursor.querySelector("path"),
         { rotation: -10, transformOrigin: "center center" },
         { rotation: 10, duration: 0.2, repeat: 1, yoyo: true, ease: "sine.inOut" }
       );
-    });
-  });
+    };
+
+    window.addEventListener("mousemove", moveCursor);
+
+    // cleanup on unmount
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+    };
+  }
+});
 
    // loader
   const [loading, setLoading] = useState(true);
@@ -58,14 +90,7 @@ function App() {
 
 
 
-    useEffect(() => {
-    const refreshTrigger = () => ScrollTrigger.refresh();
-    window.addEventListener("resize", refreshTrigger);
-
-    return () => {
-      window.removeEventListener("resize", refreshTrigger);
-    };
-  }, []);
+  
 
 
    // Disable right click & shortcuts
@@ -87,7 +112,14 @@ function App() {
   //   };
   // }, []);
 
- 
+   useEffect(() => {
+    const refreshTrigger = () => ScrollTrigger.refresh();
+    window.addEventListener("resize", refreshTrigger);
+
+    return () => {
+      window.removeEventListener("resize", refreshTrigger);
+    };
+  }, []);
 
   return (
     <BrowserRouter>
