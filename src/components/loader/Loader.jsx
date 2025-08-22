@@ -22,7 +22,7 @@ const Loader = () => {
   }, []);
 
   return (
-    <div className="loader border">
+    <div className="loader" style={{borderRadius: "0rem 0rem 3rem 3rem"}}>
       <div className="flip-box">
         <span key={i} className="flip-word">
           {greetings[i]}
