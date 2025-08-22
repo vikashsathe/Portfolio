@@ -16,6 +16,8 @@ import menuBtn from "../../assets/svg/menu-3-fill.svg";
 import rightArrow from "../../assets/svg/arrow-right-line.svg";
 
 
+
+
 const Navbar = () => {
   const navRef = useRef(null);
   const miniResume = useRef(null);
@@ -309,16 +311,17 @@ const mobileSideMenuClose = () => {
               
       </div>
       </div>
-
       <div className="position-absolute" ref={miniResume}>
         <div className="miniResume">
+
           <a href={Resume} target="_blank">
             <img src={downloadMiniResumeBtn} className="" alt="" />
           </a>
         </div>
       </div>
-      <div className="position-absolute">
+      <div className="position-absolute borderDiv">
         <div className="miniContectBtn">
+          
           <a
             href="#contact "
             className="text-light"

@@ -72,6 +72,7 @@ const Project = () => {
   return (
     <>
       <div className="container projectDiv" id="projects-section" style={{marginBottom:"5rem"}}>
+        
         <div className="row mt-5 mb-5 px-0 px-md-3">
           <div className="wrapper">
             <div className="left d-flex align-items-center flex-column text-justify">

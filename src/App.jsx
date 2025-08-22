@@ -1,6 +1,6 @@
-import './App.css'
-import "./../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import "./../node_modules/bootstrap/dist/js/bootstrap.min.js"
+import './App.css';
+import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "./../node_modules/bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './landing_page/navbar/Navbar.jsx';
 import Home from './landing_page/home/Home.jsx';
@@ -11,16 +11,17 @@ import Project from './landing_page/projects/Project.jsx';
 import Contect from './landing_page/contectMe/Contect.jsx';
 import ProjectDetials from './landing_page/projects/ProjectDetials.jsx';
 import { useGSAP } from '@gsap/react';
-import gsap from "gsap"
+import gsap from "gsap";
 import Footer from './landing_page/footer/Footer.jsx';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import Loader from './components/loader/Loader.jsx';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-  useGSAP(() => {
+  // cursor
+ useGSAP(() => {
     const cursor = document.querySelector("#cursor");
     gsap.set(cursor, { xPercent: -50, yPercent: -50 });
 
@@ -39,7 +40,7 @@ function App() {
     });
   });
 
-  useEffect(() => {
+    useEffect(() => {
     const refreshTrigger = () => ScrollTrigger.refresh();
     window.addEventListener("resize", refreshTrigger);
 
@@ -48,7 +49,8 @@ function App() {
     };
   }, []);
 
-  // Disable right click & shortcuts
+
+   // Disable right click & shortcuts
 
   useEffect(() => {
     const disableContextMenu = (e) => e.preventDefault();
@@ -67,11 +69,29 @@ function App() {
     };
   }, []);
 
+  // loader
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      gsap.to(".loader", {
+        y: "-100%",
+        duration: 1.5,
+        ease: "power3.inOut",
+        onComplete: () => setLoading(false), 
+      });
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <BrowserRouter>
+
+      {loading && <Loader />}
       <Navbar />
-      <div className="container-fluid">
-        <p id='cursor'></p>
+      <div className="container-fluid app-content">
+        <p id="cursor"></p>
         <Routes>
           <Route
             path="/"
@@ -90,7 +110,7 @@ function App() {
           <Route path="/project/:id" element={<ProjectDetials />} />
         </Routes>
       </div>
-    </BrowserRouter> 
+    </BrowserRouter>
   );
 }
 

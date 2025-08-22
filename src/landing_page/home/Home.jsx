@@ -2,6 +2,7 @@ import "./Home.css";
 import MainImg from "../../assets/home_img/homeimg.png";
 import FlipSkills from "../../components/flip_skills/FlipSkills";
 
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -17,7 +18,7 @@ const home = () => {
 
 function breakText() {
   var toggleWord = document.querySelector(".toggleWord");
-  var words = ["Software", "Frontend", "Backend", "UI/UX"]; 
+  var words = ["Software", "Frontend", "Backend"]; 
   var index = 0;
 
   function animateWord() {
