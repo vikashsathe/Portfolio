@@ -63,7 +63,7 @@ const home = () => {
           opacity: 1,
           duration: 0.8,
           ease: "power2.out",
-          delay: 2.8,
+          delay: 3,
         }
       );
     }

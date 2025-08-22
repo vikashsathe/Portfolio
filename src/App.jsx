@@ -40,6 +40,24 @@ function App() {
     });
   });
 
+   // loader
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      gsap.to(".loader", {
+        y: "-100%",
+        duration:1.5,
+        ease: "power3.inOut",
+        onComplete: () => setLoading(false), 
+      });
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+
+
     useEffect(() => {
     const refreshTrigger = () => ScrollTrigger.refresh();
     window.addEventListener("resize", refreshTrigger);
@@ -69,21 +87,7 @@ function App() {
   //   };
   // }, []);
 
-  // loader
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      gsap.to(".loader", {
-        y: "-100%",
-        duration:1.5,
-        ease: "power3.inOut",
-        onComplete: () => setLoading(false), 
-      });
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
+ 
 
   return (
     <BrowserRouter>
