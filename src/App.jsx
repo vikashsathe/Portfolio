@@ -76,7 +76,7 @@ function App() {
     const timer = setTimeout(() => {
       gsap.to(".loader", {
         y: "-100%",
-        duration: 1.5,
+        duration:1.5,
         ease: "power3.inOut",
         onComplete: () => setLoading(false), 
       });
@@ -87,7 +87,6 @@ function App() {
 
   return (
     <BrowserRouter>
-
       {loading && <Loader />}
       <Navbar />
       <div className="container-fluid app-content">

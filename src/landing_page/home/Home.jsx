@@ -2,83 +2,79 @@ import "./Home.css";
 import MainImg from "../../assets/home_img/homeimg.png";
 import FlipSkills from "../../components/flip_skills/FlipSkills";
 
-
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 
-import linkedIn from "../../assets/svg/linkedin-fill.svg";
-import insta from "../../assets/svg/instagram-line.svg";
-import gitHub from "../../assets/svg/github-fill.svg";
-
 const home = () => {
-  
-
   useGSAP(() => {
+    function breakText() {
+      var toggleWord = document.querySelector(".toggleWord");
+      var words = ["Software", "Frontend", "Backend"];
+      var index = 0;
 
-function breakText() {
-  var toggleWord = document.querySelector(".toggleWord");
-  var words = ["Software", "Frontend", "Backend"]; 
-  var index = 0;
+      function animateWord() {
+        var h1text = words[index];
+        index = (index + 1) % words.length;
 
-  function animateWord() {
-    var h1text = words[index];
-    index = (index + 1) % words.length; 
+        var clutter = "";
+        h1text.split("").forEach(function (letter) {
+          clutter += `<span class="letter">${letter}</span>`;
+        });
+        toggleWord.innerHTML = clutter;
 
-    var clutter = "";
-    h1text.split("").forEach(function (letter) {
-      clutter += `<span class="letter">${letter}</span>`;
-    });
-    toggleWord.innerHTML = clutter;
-
-    gsap.fromTo(
-      ".letter",
-      { x: 80, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        stagger: 0.05,
-        duration: 0.5,
-        ease: "power2.out",
-        yoyo: true,
-        repeat: 1, 
-        repeatDelay: 0.5,
-        onComplete: animateWord 
+        gsap.fromTo(
+          ".letter",
+          { x: 80, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            stagger: 0.05,
+            duration: 0.5,
+            ease: "power2.out",
+            yoyo: true,
+            repeat: 1,
+            repeatDelay: 0.5,
+            onComplete: animateWord,
+          }
+        );
       }
-    );
-  }
 
-  animateWord(); 
-}
+      animateWord();
+    }
 
-breakText();
-
+    breakText();
 
     function home_img() {
       gsap.from(".home_img", {
         opacity: 0,
         duration: 5,
-        delay:3
+        delay: 2.8,
       });
     }
     home_img();
+
     function home_heading() {
-  gsap.fromTo(
-    ".home_heading",
-    { scale: 10, opacity: 0, }, // start
-    { scale: 1, opacity: 1, duration: 0.8, ease: "power2.out", delay:3 } // end
-  );
-}
-
-home_heading();
-
+      gsap.fromTo(
+        ".home_heading",
+        { scale: 0, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: 2.8,
+        }
+      );
+    }
+    home_heading();
 
     function socialIcon() {
       gsap.from(".socialDiv a", {
         x: 80,
         stagger: 1,
         opacity: 0,
-        delay: 3,
+        delay: 2.8,
         duration: 0.3,
       });
       gsap.from(".socialDiv a img", {
@@ -86,7 +82,7 @@ home_heading();
         stagger: 1,
         opacity: 0,
         duration: 1.2,
-        delay:3
+        delay: 2.8,
       });
     }
     socialIcon();
@@ -124,11 +120,12 @@ home_heading();
               a <span className="toggleWord">Software</span> Developer
             </span>
             <br />
-            <span className=""
+            <span
+              className=""
               style={{
                 color: "#999",
                 fontWeight: 500,
-                fontSize:"48px"
+                fontSize: "48px",
               }}
             >
               based in India
@@ -143,21 +140,22 @@ home_heading();
               target="_blank"
               href="https://www.linkedin.com/in/vikash-sathe-941166208/"
             >
-              <img src={linkedIn} className="socialIcon" width={"30px"} alt="" />
+              <i class="ri-linkedin-fill socialIcon"></i>
             </a>
 
             <a target="_blank" href="https://github.com/vikashsathe">
-              <img src={gitHub} className="socialIcon" width={"30px"} alt="" />
+              <i class="ri-github-fill socialIcon"></i>
             </a>
             <a
               target="_blank"
               href="https://www.linkedin.com/in/vikash-sathe-941166208/"
             >
-              <img src={insta} className="socialIcon" alt="" width={"30px"} />
+              <i class="ri-instagram-line socialIcon"></i>
             </a>
           </div>
         </div>
-        <div className="col-md-5 col-12 mt-md-5 mt-2 d-flex justify-content-md-end justify-content-center align-items-center"
+        <div
+          className="col-md-5 col-12 mt-md-5 mt-2 d-flex justify-content-md-end justify-content-center align-items-center"
           style={{ marginTop: "-65px" }}
         >
           <img
@@ -168,7 +166,7 @@ home_heading();
           />
         </div>
       </div>
-   <FlipSkills />
+      <FlipSkills />
     </>
   );
 };

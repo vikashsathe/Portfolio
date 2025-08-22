@@ -1,0 +1,39 @@
+
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: inherit;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #030303;
+}
+
+/* Navbar */
+body.light-mode .navDiv {
+  background-color: #f8f9fa !important; /* bootstrap light */
+  border-color: #ddd !important;
+}
+
+/* Links */
+body.light-mode a {
+  color: #000 !important;
+}
+
+/* Cards */
+body.light-mode .serviceCard,
+body.light-mode .serviceCardMobile {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #ccc !important;
+}
+
+/* Sidebar */
+body.light-mode .mobileSideBar {
+  background-color: #f8f9fa !important;
+  color: #000 !important;
+}
+

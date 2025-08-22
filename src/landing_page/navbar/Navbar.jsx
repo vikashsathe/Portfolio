@@ -14,6 +14,7 @@ import downloadMiniResumeBtn from "../../assets/svg/download-line.svg";
 import closeBtn from "../../assets/svg/close-line.svg";
 import menuBtn from "../../assets/svg/menu-3-fill.svg";
 import rightArrow from "../../assets/svg/arrow-right-line.svg";
+import LightModeToggle from "../../components/lightModeToggle/LightModeToggle.jsx";
 
 
 
@@ -44,7 +45,7 @@ const Navbar = () => {
       duration: 1.5,
       opacity: 0,
       ease: "power2.out",
-      delay: 3,
+      delay: 2.8,
     });
   });
 
@@ -144,20 +145,11 @@ const mobileSideMenuOpen = () => {
 };
 
 
-
-//  const mobileSideMenuClose = () => {
-//   console.log("Closing menu");
-//   menuRef.current.classList.add("d-none"); 
-// };
-
-
-
-
 const mobileSideMenuClose = () => {
   menuRef.current.classList.remove("open");
   setTimeout(() => {
     menuRef.current.classList.add("d-none");
-  }, 300); // same as transition time
+  }, 300); 
 };
 
   return (
@@ -228,6 +220,7 @@ const mobileSideMenuClose = () => {
     <img src={downloadMainResumeBtn} alt="" width="18px" />
   </p>
 </a>
+
 
         </div>
 
@@ -408,6 +401,14 @@ const mobileSideMenuClose = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+
+       <div className="position-absolute d-none">
+        <div className="lightModeTogle">
+          
+        <LightModeToggle />
         </div>
       </div>
     </div>

@@ -22,13 +22,16 @@ const Loader = () => {
   }, []);
 
   return (
-    <div className="loader" style={{borderRadius: "0rem 0rem 3rem 3rem"}}>
+    <div className="row">
+    <div className="loader" style={{borderRadius: "0rem 0rem 2rem 2rem"}}>
       <div className="flip-box">
-        <span key={i} className="flip-word">
+        <span key={i} className="flip-word col-8">
           {greetings[i]}
         </span>
       </div>
     </div>
+    </div>
+  
   );
 };
 

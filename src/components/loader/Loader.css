@@ -1,7 +1,7 @@
 .loader {
   position: fixed;
   inset: 0;
-  background: #030303;
+  background: #09090b;
   color: #fff;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
 .flip-word {
   display: inline-block;
   font-size: clamp(28px, 6vw, 64px);
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   line-height: 1;
   white-space: nowrap;
@@ -41,5 +41,3 @@
     opacity: 1;
   }
 }
-
-

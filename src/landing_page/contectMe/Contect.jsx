@@ -140,22 +140,22 @@ const Contect = () => {
           </p>
 
           <div className="AboutsocialDiv col-lg-12 mt-4 mt-md-5 mb-5 d-flex gap-4">
-         <a
-                      target="_blank"
-                      href="https://www.linkedin.com/in/vikash-sathe-941166208/"
-                    >
-                      <img src={linkedIn} className="socialIcon" width={"30px"} alt="" />
-                    </a>
-        
-                    <a target="_blank" href="https://github.com/vikashsathe">
-                      <img src={gitHub} className="socialIcon" width={"30px"} alt="" />
-                    </a>
-                    <a
-                      target="_blank"
-                      href="https://www.linkedin.com/in/vikash-sathe-941166208/"
-                    >
-                      <img src={insta} className="socialIcon" alt="" width={"30px"} />
-                    </a>
+       <a
+              target="_blank"
+              href="https://www.linkedin.com/in/vikash-sathe-941166208/"
+            >
+              <i class="ri-linkedin-fill socialIcon"></i>
+            </a>
+
+            <a target="_blank" href="https://github.com/vikashsathe">
+              <i class="ri-github-fill socialIcon"></i>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/vikash-sathe-941166208/"
+            >
+              <i class="ri-instagram-line socialIcon"></i>
+            </a>
           </div>
         </div>
 
