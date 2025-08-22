@@ -44,7 +44,7 @@ const Navbar = () => {
       duration: 1.5,
       opacity: 0,
       ease: "power2.out",
-      delay: 0.4,
+      delay: 3,
     });
   });
 

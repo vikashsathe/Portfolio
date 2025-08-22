@@ -58,14 +58,15 @@ breakText();
       gsap.from(".home_img", {
         opacity: 0,
         duration: 5,
+        delay:3
       });
     }
     home_img();
     function home_heading() {
   gsap.fromTo(
     ".home_heading",
-    { scale: 10, opacity: 0 }, // start
-    { scale: 1, opacity: 1, duration: 0.8, ease: "power2.out" } // end
+    { scale: 10, opacity: 0, }, // start
+    { scale: 1, opacity: 1, duration: 0.8, ease: "power2.out", delay:3 } // end
   );
 }
 
@@ -77,7 +78,7 @@ home_heading();
         x: 80,
         stagger: 1,
         opacity: 0,
-        delay: 0.2,
+        delay: 3,
         duration: 0.3,
       });
       gsap.from(".socialDiv a img", {
@@ -85,6 +86,7 @@ home_heading();
         stagger: 1,
         opacity: 0,
         duration: 1.2,
+        delay:3
       });
     }
     socialIcon();
