@@ -249,7 +249,7 @@ const mobileSideMenuClose = () => {
         <div className="miniResume d-flex justify-content-center align-items-center" >
 
           <a href={Resume} target="_blank" style={{textDecoration:"none", color:"#fff"}}>
-            <i class="ri-download-fill fs-3"></i>
+            <i className="ri-download-fill fs-3"></i>
           </a>
         </div>
       </div>
