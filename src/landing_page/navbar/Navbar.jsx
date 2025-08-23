@@ -189,6 +189,11 @@ const mobileSideMenuClose = () => {
       </div>
 
       <div ref={menuRef} className="mobileSideBar d-none d-flex flex-column">
+        
+    
+     
+
+
 
         <div
     // ref={menuLinksRef}
@@ -200,8 +205,8 @@ const mobileSideMenuClose = () => {
           <a
           href="#skills"
           onClick={mobileSideMenuClose}
-          className="text-white mt-5"
-          style={{ textDecoration: "none" }}
+          className="text-white"
+          style={{ textDecoration: "none",marginTop:"6.5rem" }}
         >
           Skills
         </a>
