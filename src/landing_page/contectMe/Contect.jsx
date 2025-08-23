@@ -6,12 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import React, { useState } from "react";
 
-import linkedIn from "../../assets/svg/linkedin-fill.svg";
-import insta from "../../assets/svg/instagram-line.svg";
-import gitHub from "../../assets/svg/github-fill.svg";
-import mailBtn from "../../assets/svg/mail-ai-line.svg";
-import phoneBtn from "../../assets/svg/phone-fill.svg";
-import locationBtn from "../../assets/svg/send-plane-fill.svg";
 
 const Contect = () => {
   useGSAP(() => {

@@ -11,6 +11,7 @@ const Projects_Data = [
   {
     id: "01",
     title: "Sun Mini Meal",
+    link: "",
     img: SunMiniMeal,
     description:
       "I developed a clone of the SUN MINIMEAL website using CodeIgniter in PHP. The project replicates the original site’s clean design, responsive layout, and product details. Features include dynamic content, product showcase, and mobile-friendly UI. It demonstrates my skills in PHP, MVC architecture, and front-end integration.",
@@ -26,6 +27,7 @@ const Projects_Data = [
   {
     id: "02",
       title: "FaceLink – Spend Your Time With Loved Ones",
+      link: 'https://facelink-3a7w.onrender.com',
     img: FaceLink,
     description:
       "This project is built with the MERN stack and provides real-time video calling, messaging, secure authentication, meeting rooms, and screen sharing. It uses WebRTC for peer-to-peer communication and Socket.io for instant messaging, ensuring smooth and low-latency interactions. The system includes private meeting rooms with unique IDs, host controls, and encrypted login for security. Screen sharing allows seamless collaboration during meetings, while performance is optimized for fast loading and stable connections across all networks. The design follows accessibility standards, adapts to mobile devices, and ensures a responsive, user-friendly experience, making it a scalable and modern communication platform.",
@@ -39,6 +41,7 @@ const Projects_Data = [
   {
     id: "08",
     title: "KeepNote",
+    link: 'https://notesordoc.onrender.com',
     img: KeepNote,
     description:
       "Developed a MERN-based note-taking app with secure authentication, CRUD operations, search/filter, and responsive design. Integrated Framer Motion to deliver smooth, modern animations for an engaging user experience.",

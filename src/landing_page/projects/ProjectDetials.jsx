@@ -27,8 +27,17 @@ const ProjectDetials = () => {
           >
             <i className="ri-arrow-left-circle-fill productBackToHomeBtn text-muted" style={{fontSize:"50px"}}></i>
           </p>
-       <div className="d-flex flex-column flex-md-row justify-content-center align-items-start gap-4">
-        <div className="col-md-5 col-12">  <img className="col-md-12 col-12" src={project.img} alt={project.title} style={{cursor:"crosshair"}} /></div>
+       <div className="d-flex flex-column flex-md-row justify-content-center align-items-start gap-0 gap-md-5">
+        <div className="col-md-5 col-12">  <img className="col-md-12 col-12" src={project.img} alt={project.title} style={{cursor:"crosshair"}} />
+
+        {project.link && (
+  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-white" style={{textDecoration:"none"}}>
+   <h4 className="mt-4"> Live Demo <i class="ri-links-fill"></i></h4> 
+  </a>
+)}
+
+        
+        </div>
         <div className="col-md-5 col-12"> <h3 className="col-md-12 mt-3 mb-3 mt-md-0 mb-md-3">{project.title}</h3>
         <p className="" style={{textAlign:"justify",color:"#55"}}>{project.description}</p>
          <ul style={{listStyleType:"disc", fontSize:"14px"}} className="col-12 d-flex flex-column gap-2 px-3">

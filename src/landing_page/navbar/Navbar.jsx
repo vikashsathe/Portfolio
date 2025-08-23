@@ -6,8 +6,6 @@ import gsap from "gsap";
 
 import Logo from "../../assets/logo/logo.png";
 import Resume from "../../assets/resume/Vikash_Sathe.pdf";
-import downloadMiniResumeBtn from "../../assets/svg/download-line.svg";
-import closeBtn from "../../assets/svg/close-line.svg";
 import LightModeToggle from "../../components/lightModeToggle/LightModeToggle.jsx";
 
 
@@ -188,7 +186,7 @@ const mobileSideMenuClose = () => {
         </div>
       </div>
 
-      <div ref={menuRef} className="mobileSideBar d-none d-flex flex-column">
+      <div ref={menuRef} className="mobileSideBar border d-none d-flex flex-column">
         
     
      
