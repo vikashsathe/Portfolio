@@ -140,17 +140,17 @@ const home = () => {
               target="_blank"
               href="https://www.linkedin.com/in/vikash-sathe-941166208/"
             >
-              <i class="ri-linkedin-fill socialIcon"></i>
+              <i className="ri-linkedin-fill socialIcon"></i>
             </a>
 
             <a target="_blank" href="https://github.com/vikashsathe">
-              <i class="ri-github-fill socialIcon"></i>
+              <i className="ri-github-fill socialIcon"></i>
             </a>
             <a
               target="_blank"
               href="https://www.linkedin.com/in/vikash-sathe-941166208/"
             >
-              <i class="ri-instagram-line socialIcon"></i>
+              <i className="ri-instagram-line socialIcon"></i>
             </a>
           </div>
         </div>

@@ -5,15 +5,9 @@ import gsap from "gsap";
 
 
 import Logo from "../../assets/logo/logo.png";
-import Service_data from "../../assets/service/data/service_data.js";
-
 import Resume from "../../assets/resume/Vikash_Sathe.pdf";
-import contenctBtn from "../../assets/svg/chat-ai-fill.svg";
-import downloadMainResumeBtn from "../../assets/svg/download-2-line.svg";
 import downloadMiniResumeBtn from "../../assets/svg/download-line.svg";
 import closeBtn from "../../assets/svg/close-line.svg";
-import menuBtn from "../../assets/svg/menu-3-fill.svg";
-import rightArrow from "../../assets/svg/arrow-right-line.svg";
 import LightModeToggle from "../../components/lightModeToggle/LightModeToggle.jsx";
 
 
@@ -88,38 +82,9 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  //  projectOpenDiv
-
-  useEffect(() => {
-    if (proDivRef.current) {
-      proDivRef.current.classList.add("d-none");
-    }
-  }, []);
-
-  function handleMouseEnter() {
-    console.log("enter");
-    proDivRef.current?.classList.remove("d-none");
-    proDivRef.current?.classList.add("show");
-    setIsProDivOpen(true);
-  }
-
-  function handleMouseLeave() {
-    console.log("leave");
-    proDivRef.current?.classList.add("d-none");
-    proDivRef.current?.classList.remove("show");
-    setIsProDivOpen(false);
-  }
-
     
     const menuRef = useRef();
-    // const menuLinksRef = useRef();
-
-// const mobileSideMenuOpen = () => {
-
-//   console.log("Opening menu");
-//   menuRef.current.classList.remove("d-none"); 
-// };
+   
 const mobileSideMenuOpen = () => {
   console.log("Opening menu");
   // menuRef.current.classList.remove("d-none");
@@ -153,7 +118,7 @@ const mobileSideMenuClose = () => {
 };
 
   return (
-    <div className="row py-4 d-flex position-relative justify-content-center mt-4 align-items-center g-0">
+    <div className="row py-4 d-flex position-relative justify-content-center mt-4 align-items-center g-0 navbar">
       <div
         className="col-11 col-md-10 d-flex justify-content-between align-items-center py-2 px-3 px-md-5 mt-2 mt-md-5 overflow-hidden navDiv"
         ref={navRef}
@@ -176,14 +141,7 @@ const mobileSideMenuClose = () => {
           >
             Skills
           </a>
-          <a
-            href="#"
-            className="text-white"
-            onMouseEnter={handleMouseEnter}
-            style={{ textDecoration: "none" }}
-          >
-            Services
-          </a>
+        
           <a
             href="#projects-section"
             className="text-white"
@@ -212,12 +170,12 @@ const mobileSideMenuClose = () => {
         <a
   href={Resume}
   download={Resume}
-  className="text-white d-flex justify-content-center align-items-center"
+  className="text-white d-flex justify-content-end align-items-center"
   style={{ textDecoration: "none" }}
 >
   <p className="m-0 d-flex gap-2 col-9 downloadResumeBtn">
     Resume 
-    <img src={downloadMainResumeBtn} alt="" width="18px" />
+    <i className="ri-download-2-line"></i>
   </p>
 </a>
 
@@ -226,18 +184,16 @@ const mobileSideMenuClose = () => {
 
         <div className="mobileSideMenu d-flex justify-content-center align-items-center d-lnline d-md-none">
           <p className="m-0" onClick={mobileSideMenuOpen}>
-            <img src={menuBtn} alt="" width={"28px"} />
+            <i className="ri-menu-3-line fs-1"></i>
           </p>
         </div>
       </div>
 
-      <div ref={menuRef} className="mobileSideBar d-none d-flex flex-column">
+      <div ref={menuRef} className="mobileSideBar border d-none d-flex flex-column">
 
         <div
     // ref={menuLinksRef}
-    className="d-flex flex-column px-4 py-3 gap-3 position-relative"
-    
-  >
+    className="d-flex flex-column px-4 py-3 gap-3 position-relative">
 
         <p className="mobileClose position-absolute" onClick={mobileSideMenuClose}>
           <img src={closeBtn} alt="" width={"30px"} />
@@ -278,37 +234,23 @@ const mobileSideMenuClose = () => {
           Experience
         </a>
 
-        <div className="px-2 mt-3" style={{overflow:"scroll",height:"65vh",scrollbarWidth:"none"}}> {Service_data.map((service, index) => (
-                <div
-                  className="col-12 d-flex serviceCardMobile mt-3 mb-2 justify-content-center align-items-center rounded-5 border px-4 py-3 rounded-2"
-                  key={index}
-                  style={{ textAlign: "justify" }}
-                >  
-                <h6 className="m-0">
-                {service.w_name}
-                </h6>
-                </div>
-              ))}
-
-                  <div
-                className="col-12 d-flex justify-content-center mb-5 mt-4 align-items-center rounded-5 border px-4 py-3 services-format rounded-2"
-                style={{ background: "lightgray" }}
-              >
-                <h6 className="m-0 d-flex justify-content-center align-items-center gap-2">
-                  See What's new 
-                  {/* <i className="ri-arrow-right-line"></i>{" "} */}
-                  <img src={rightArrow} alt="" width={"18px"} />
-                </h6>
-              </div>
-              </div>
+         
               
       </div>
+
+      <div className="position-absolute d-flex justify-content-center align-items-center" style={{bottom:"0"}}>
+        <h6 className="px-4 cursor-pointer py-2"><LightModeToggle /></h6>
+        
       </div>
+      </div>
+
+
       <div className="position-absolute" ref={miniResume}>
         <div className="miniResume">
 
           <a href={Resume} target="_blank">
             <img src={downloadMiniResumeBtn} className="" alt="" />
+            {/* <i class="ri-download-fill"></i> */}
           </a>
         </div>
       </div>
@@ -320,92 +262,14 @@ const mobileSideMenuClose = () => {
             className="text-light"
             style={{ textDecoration: "none" }}
           >
-            <img src={contenctBtn} className="" alt="" width={"27px"} />
-            {/* <i className="ri-chat-ai-fill fs-3"></i> */}
+            <i className="ri-chat-ai-fill fs-3"></i>
           </a>
         </div>
       </div>
-      <div className="container proDiv position-fixed text-dark"
-        style={{ background: "#fff" }}
-        ref={proDivRef}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className="row d-flex justify-content-center align-items-center px-5">
-          <div className="col-10 d-flex gap-3 mt-5">
-            <div
-              className="col-8 d-flex gap-4 px-2 overflow-scroll"
-              style={{ scrollbarWidth: "none" }}
-            >
-              {Service_data.map((service, index) => (
-                <div
-                  className="col-6 serviceCard mt-3 mb-3 services-format rounded-2"
-                  key={index}
-                  style={{ textAlign: "justify", width: "45%" }}
-                >
-                  <div>
-                    <img
-                      src={service.w_img}
-                      alt=""
-                      className="img-fluid"
-                      style={{
-                        objectFit: "contain",
-                        width: "100%",
-                        minHeight: "200px",
-                        maxHeight: "200px",
-                      }}
-                    />
-                  </div>
-
-                  <h2
-                    className="px-4"
-                    style={{ minHeight: "90px", letterSpacing: "1px" }}
-                  >
-                    {service.w_name}
-                  </h2>
-                  <p className="px-4" style={{ minHeight: "80px" }}>
-                    {service.w_disc}
-                  </p>
-                  <p className="mb-3 readMore">
-                    <a
-                      className="px-4 text-dark"
-                      style={{ textDecoration: "none" }}
-                    >
-                      Read More <i className="ri-arrow-right-line"></i>
-                    </a>
-                  </p>
-                </div>
-              ))}
-            </div>
-            <div className="col-4 d-flex gap-4 flex-column mt-3 mb-3">
-              <div
-                className="col-12 border px-4 py-3 services-format rounded-3"
-                style={{ background: "lightgray" }}
-              >
-                <h2 className="fs-1">
-                  Unlock <br />
-                  Collaboration{" "}
-                </h2>
-                <p className=" mt-3 readMore">
-                  <a className="text-dark" style={{ textDecoration: "none" }}>
-                    Read More <i className="ri-arrow-right-line"></i>
-                  </a>
-                </p>
-              </div>
-              <div
-                className="col-12 d-flex justify-content-center align-items-center rounded-5 border px-4 py-3 services-format rounded-2"
-                style={{ background: "lightgray" }}
-              >
-                <h5 className="m-0 d-flex justify-content-center align-items-center gap-2">
-                  See What's new <i className="ri-arrow-right-line"></i>{" "}
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    
 
 
-       <div className="position-absolute d-none">
+       <div className="position-absolute d-none d-md-block">
         <div className="lightModeTogle">
           
         <LightModeToggle />

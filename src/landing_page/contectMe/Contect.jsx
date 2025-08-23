@@ -124,18 +124,18 @@ const Contect = () => {
           </p>
             <a href="#mail" className="text-decoration-none text-light">
           <p className="d-flex mb-2 justify-content-start m-0 align-items-center gap-3">
-            <img src={mailBtn} width={"22px"} alt="" />
+            <i className="ri-mail-ai-fill fs-5"></i>
              vikashsathe83@gmail.com
           </p>
             </a>
             <a className="text-decoration-none text-light" href="https://wa.me/917869603377?text=Hi%20Vikash%2C%20I%20saw%20your%20portfolio!" target="_blank">
           <p className="d-flex mb-2 justify-content-start m-0 align-items-center gap-3">
-            <img src={phoneBtn} width={"22px"} alt="" />
+            <i className="ri-phone-fill fs-5"></i>
           +91 7869603377
           </p>
           </a>
           <p className="d-flex justify-content-start m-0 align-items-center gap-3">
-            <img src={locationBtn} width={"22px"} alt="" />
+            <i className="ri-send-plane-fill fs-5"></i>
              Indore, Madhya Pradesh
           </p>
 
@@ -144,17 +144,17 @@ const Contect = () => {
               target="_blank"
               href="https://www.linkedin.com/in/vikash-sathe-941166208/"
             >
-              <i class="ri-linkedin-fill socialIcon"></i>
+              <i className="ri-linkedin-fill socialIcon"></i>
             </a>
 
             <a target="_blank" href="https://github.com/vikashsathe">
-              <i class="ri-github-fill socialIcon"></i>
+              <i className="ri-github-fill socialIcon"></i>
             </a>
             <a
               target="_blank"
               href="https://www.linkedin.com/in/vikash-sathe-941166208/"
             >
-              <i class="ri-instagram-line socialIcon"></i>
+              <i className="ri-instagram-line socialIcon"></i>
             </a>
           </div>
         </div>

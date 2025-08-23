@@ -1,6 +1,6 @@
 import './App.css';
-import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./../node_modules/bootstrap/dist/js/bootstrap.min.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './landing_page/navbar/Navbar.jsx';
 import Home from './landing_page/home/Home.jsx';
@@ -21,34 +21,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   // cursor
-//  useGSAP(() => {
-//     const cursor = document.querySelector("#cursor");
-//     gsap.set(cursor, { xPercent: -50, yPercent: -50 });
-
-//     window.addEventListener("mousemove", (e) => {
-//       gsap.to(cursor, {
-//         x: e.clientX,
-//         y: e.clientY,
-//         duration: 0.3,
-//         delay: 0.1,
-//         ease: "power3.out",
-//       });
-//       gsap.fromTo(cursor.querySelector("path"),
-//         { rotation: -10, transformOrigin: "center center" },
-//         { rotation: 10, duration: 0.2, repeat: 1, yoyo: true, ease: "sine.inOut" }
-//       );
-//     });
-//   });
-
-useGSAP(() => {
-  // Run only on desktop
-  if (window.innerWidth > 567) {
+ useGSAP(() => {
     const cursor = document.querySelector("#cursor");
-    if (!cursor) return;
-
     gsap.set(cursor, { xPercent: -50, yPercent: -50 });
 
-    const moveCursor = (e) => {
+    window.addEventListener("mousemove", (e) => {
       gsap.to(cursor, {
         x: e.clientX,
         y: e.clientY,
@@ -56,37 +33,33 @@ useGSAP(() => {
         delay: 0.1,
         ease: "power3.out",
       });
-      gsap.fromTo(
-        cursor.querySelector("path"),
+      gsap.fromTo(cursor.querySelector("path"),
         { rotation: -10, transformOrigin: "center center" },
         { rotation: 10, duration: 0.2, repeat: 1, yoyo: true, ease: "sine.inOut" }
       );
-    };
+    });
+  });
 
-    window.addEventListener("mousemove", moveCursor);
-
-    // cleanup on unmount
-    return () => {
-      window.removeEventListener("mousemove", moveCursor);
-    };
-  }
-});
 
    // loader
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      gsap.to(".loader", {
-        y: "-100%",
-        duration:1.5,
-        ease: "power3.inOut",
-        onComplete: () => setLoading(false), 
-      });
-    }, 2000);
+ useEffect(() => {
+  const timer = setTimeout(() => {
+    gsap.to(".loader", {
+      y: "-100%",
+      duration: 1.5,
+      ease: "power3.inOut",
+      onComplete: () => {
+        setLoading(false);
+        ScrollTrigger.refresh();
+      },
+    });
+  }, 2000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  return () => clearTimeout(timer);
+}, []);
+
 
 
 

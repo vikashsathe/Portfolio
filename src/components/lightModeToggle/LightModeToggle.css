@@ -14,7 +14,7 @@ body.light-mode {
 
 /* Navbar */
 body.light-mode .navDiv {
-  background-color: #f8f9fa !important; /* bootstrap light */
+  background: rgb(212, 207, 207) !important;
   border-color: #ddd !important;
 }
 
@@ -22,18 +22,30 @@ body.light-mode .navDiv {
 body.light-mode a {
   color: #000 !important;
 }
+body.light-mode i
+ {
+  color: #000 !important;
+}
+body.light-mode .socialDiv a ,
+body.light-mode .AboutsocialDiv a 
+{
+  background: rgb(212, 207, 207) !important;
+}
 
 /* Cards */
 body.light-mode .serviceCard,
-body.light-mode .serviceCardMobile {
+body.light-mode .serviceCardMobile
+ {
   background-color: #fff !important;
   color: #000 !important;
   border-color: #ccc !important;
 }
 
 /* Sidebar */
-body.light-mode .mobileSideBar {
-  background-color: #f8f9fa !important;
+body.light-mode .mobileSideBar,
+body.light-mode .mobileClose
+ {
+    background: rgb(212, 207, 207) !important;
   color: #000 !important;
 }
 

@@ -23,7 +23,7 @@ const Loader = () => {
 
   return (
     <div className="row">
-    <div className="loader border" style={{borderRadius: "0rem 0rem 2rem 2rem"}}>
+    <div className="loader" style={{borderRadius: "0rem 0rem 2rem 2rem"}}>
       <div className="flip-box">
         <span key={i} className="flip-word col-8">
           {greetings[i]}

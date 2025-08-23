@@ -107,7 +107,7 @@ const About = () => {
           {/* Anwendung Div */}
           <div className="dropDownMessage d-none py-2 px-2 gap-3 d-flex flex-column" id="anwendungDiv1" style={{maxHeight:"274px", overflow:"scroll", scrollbarWidth:"none"}}>
                { Certificate_data.map((certificate, index) => (
-                <div className="position-relative certificate-body">
+                <div className="position-relative certificate-body" key={index}>
                          <img
                           src={ certificate.s_img }
                           alt=""
