@@ -7,15 +7,18 @@
   color: inherit;
 }
 
-body.light-mode {
-  background-color: #fff;
+body.light-mode
+ {
+  background-color: #99A98F;
   color: #030303;
 }
 
 /* Navbar */
-body.light-mode .navDiv {
-  background: rgb(212, 207, 207) !important;
-  border-color: #ddd !important;
+body.light-mode .navDiv,
+body.light-mode .miniResume
+ {
+  background: #C1D0B5 !important;
+  border-color: #000 !important;
 }
 
 /* Links */
@@ -29,7 +32,7 @@ body.light-mode i
 body.light-mode .socialDiv a ,
 body.light-mode .AboutsocialDiv a 
 {
-  background: rgb(212, 207, 207) !important;
+  background-color: #D6E8DB;
 }
 
 /* Cards */
@@ -43,9 +46,19 @@ body.light-mode .serviceCardMobile
 
 /* Sidebar */
 body.light-mode .mobileSideBar,
-body.light-mode .mobileClose
+body.light-mode .mobileClose,
+body.light-mode input,
+body.light-mode textarea
  {
-    background: rgb(212, 207, 207) !important;
-  color: #000 !important;
+  background: #C1D0B5 !important;
+  color: #030303 !important;
 }
+
+
+
+body.light-mode .downloadResumeBtn
+{
+  background-color: #D6E8DB;
+}
+
 

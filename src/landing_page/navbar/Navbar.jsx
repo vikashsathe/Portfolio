@@ -189,7 +189,7 @@ const mobileSideMenuClose = () => {
         </div>
       </div>
 
-      <div ref={menuRef} className="mobileSideBar border d-none d-flex flex-column">
+      <div ref={menuRef} className="mobileSideBar d-none d-flex flex-column">
 
         <div
     // ref={menuLinksRef}
@@ -238,7 +238,7 @@ const mobileSideMenuClose = () => {
               
       </div>
 
-      <div className="position-absolute d-flex justify-content-center align-items-center" style={{bottom:"0"}}>
+      <div className="position-absolute d-flex justify-content-center align-items-center" style={{bottom:"40px"}}>
         <h6 className="px-4 cursor-pointer py-2"><LightModeToggle /></h6>
         
       </div>
@@ -246,11 +246,10 @@ const mobileSideMenuClose = () => {
 
 
       <div className="position-absolute" ref={miniResume}>
-        <div className="miniResume">
+        <div className="miniResume d-flex justify-content-center align-items-center" >
 
-          <a href={Resume} target="_blank">
-            <img src={downloadMiniResumeBtn} className="" alt="" />
-            {/* <i class="ri-download-fill"></i> */}
+          <a href={Resume} target="_blank" style={{textDecoration:"none", color:"#fff"}}>
+            <i class="ri-download-fill fs-3"></i>
           </a>
         </div>
       </div>
