@@ -187,12 +187,6 @@ const mobileSideMenuClose = () => {
       </div>
 
       <div ref={menuRef} className="mobileSideBar border d-none d-flex flex-column">
-        
-    
-     
-
-
-
         <div
     // ref={menuLinksRef}
     className="d-flex flex-column px-4 py-3 gap-3 position-relative">
