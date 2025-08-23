@@ -74,7 +74,7 @@ const skills = () => {
   return (
     <div className="px-3 px-md-5 mt-5 mb-5 skillsDiv rounded-3 bg-dark" id="skills">
 
-      <div className="row skillTextRow d-flex justify-content-center align-items-center">
+      <div className="row skillTextRow d-flex justify-content-center align-items-center" style={{textTransform:"capitalize"}}>
         <h1 className="mt-5 col-12 text-center skillHeading">Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>
         <p className="text-center m-0 fw-light" style={{color:"#999",fontSize:"13px"}}>skills, interests, passion and hobbies</p>
       </div>

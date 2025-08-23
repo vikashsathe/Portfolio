@@ -75,7 +75,7 @@ const Project = () => {
         
         <div className="row mt-5 mb-5 px-0 px-md-3">
           <div className="wrapper">
-            <div className="left d-flex align-items-center flex-column text-justify">
+            <div className="left d-flex align-items-center flex-column text-justify" style={{textTransform:"capitalize"}}>
               <h1 className="mt-5 mb-0 text-center projectHeading">crafted with <span style={{color:"#ffe066"}}>love</span>.</h1>
               <p
                 className="m-0 fw-light"
