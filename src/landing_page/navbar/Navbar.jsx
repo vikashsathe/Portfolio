@@ -86,7 +86,6 @@ const Navbar = () => {
     const menuRef = useRef();
    
 const mobileSideMenuOpen = () => {
-  console.log("Opening menu");
   // menuRef.current.classList.remove("d-none");
    menuRef.current.classList.remove("d-none");
   menuRef.current.classList.add("open");
@@ -196,7 +195,7 @@ const mobileSideMenuClose = () => {
     className="d-flex flex-column px-4 py-3 gap-3 position-relative">
 
         <p className="mobileClose position-absolute" onClick={mobileSideMenuClose}>
-          <img src={closeBtn} alt="" width={"30px"} />
+          <i className="ri-close-line fs-1"></i>
           </p>
           <a
           href="#skills"
@@ -223,7 +222,7 @@ const mobileSideMenuClose = () => {
             onClick={mobileSideMenuClose}
           style={{ textDecoration: "none" }}
         >
-          About Me
+          About
         </a>
         <a
           href="#experience"
@@ -238,10 +237,11 @@ const mobileSideMenuClose = () => {
               
       </div>
 
-      <div className="position-absolute d-flex justify-content-center align-items-center" style={{bottom:"40px"}}>
-        <h6 className="px-4 cursor-pointer py-2"><LightModeToggle /></h6>
-        
+      <div className="position-absolute d-flex w-100 justify-content-center align-items-center" style={{bottom:"40px"}}>
+        <h6 className="px-4 m-0 cursor-pointer rounded py-2"><LightModeToggle /></h6>
+         <h6 className="px-5 m-0 cursor-pointer bg-dark text-white rounded py-2">Let's Talk</h6> 
       </div>
+     
       </div>
 
 

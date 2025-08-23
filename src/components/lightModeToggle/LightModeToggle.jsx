@@ -2,27 +2,19 @@ import React, { useEffect, useState } from "react";
 import "./LightModeToggle.css";
 
 const LightModeToggle = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
 
-  // on mount, check saved theme
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "dark";
-    setTheme(savedTheme);
-    if (savedTheme === "light") {
+    if (theme === "light") {
       document.body.classList.add("light-mode");
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    if (theme === "dark") {
-      document.body.classList.add("light-mode");
-      localStorage.setItem("theme", "light");
-      setTheme("light");
     } else {
       document.body.classList.remove("light-mode");
-      localStorage.setItem("theme", "dark");
-      setTheme("dark");
     }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
@@ -37,3 +29,4 @@ const LightModeToggle = () => {
 };
 
 export default LightModeToggle;
+
