@@ -30,21 +30,15 @@
     transition: transform 0.5s; 
 }
 
-
 .services-format:hover{
   transform: scale(1.04);
   cursor: pointer;
 }
 
-
-
-
 .logo {
   width: 150px;
   height: 80px;
 }
-
-
 
 .minDiv a:hover {
   scale: 1.04;
@@ -53,20 +47,13 @@
   opacity: 0.3;
 }
 
-
-
 .miniContectBtn:hover a{
   scale: 1.1;
 }
 
-
-
 .miniContectBtn:hover a{
     transform: scale(0.98);
 }
-
-
-
 
 @keyframes fadeSlide {
   from {
@@ -81,8 +68,6 @@
   }
 }
 
-
-
 .proDiv{
   height: 50vh;
   z-index: 10;
@@ -92,8 +77,6 @@
 .proDiv.show {
   animation: fadeSlide 0.8s ease forwards;
 }
-
-
 
 .serviceCard{
   border-radius: 20px;
@@ -111,7 +94,7 @@
  .mobileSideBar {
   position: fixed;
   top: 0;
-  right: 0;
+  right: 75%;
   width: 75%;
   height: 100vh;
   background-color: #030303;
@@ -121,20 +104,18 @@
   transition: transform 0.3s ease;
 }
 
-.mobileSideBar.open {
-  transform: translateX(0); /* visible */
-}
-
 .mobileSideBar a{
 color: #fff !important;
+text-decoration: none;
 cursor: pointer;
-font-weight: 500;
+font-weight: 400;
 text-transform:capitalize;
 font-size: 16px;
-letter-spacing: 0.1px;
+letter-spacing: 0.4px;
 }
+
 .mobileClose{
-    left: -40px;
+    left: -38px;
     top: 0px;
     width: 40px;
     height: 40px;
@@ -145,15 +126,6 @@ letter-spacing: 0.1px;
     justify-content: center;
     align-items: center;
 }
-
-.serviceCardMobile{
-  border-radius: 20px;
-  background-color: transparent;
-  background-color: #ffe066;
-  box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 0px 0px, rgba(2, 6, 9, 1) 0px 0px 3px, rgba(0, 0, 0, 0.10) 0px 0px 0px, rgba(0, 0, 0, 0.40) 0px 1px 0px;
-}
-
-
 
 .miniResume {
   width: 50px;
@@ -167,11 +139,7 @@ letter-spacing: 0.1px;
   background: #030303;
   box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
 }
-.miniResume img {
-  width: 25px;
-  transform: translate(12px, 12px);
 
-}
 
 .miniContectBtn{
  width: 50px;
@@ -200,8 +168,6 @@ letter-spacing: 0.1px;
     right: 40px;
   }
 } 
-
-
 
 
 .lightModeTogle{

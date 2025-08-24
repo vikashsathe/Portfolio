@@ -78,23 +78,47 @@ const Navbar = () => {
   }, []);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef();
+const menuRef = useRef(null);
 
-  const mobileSideMenuOpen = () => {
-    setIsMenuOpen(true);
-    document.body.style.overflow = "hidden";
 
-    gsap.fromTo(
-      ".mobileSideBar a",
-      { x: 90, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.4, stagger: 0.5, ease: "power2.out" }
-    );
-  };
+const mobileSideMenuOpen = () => {
+  setIsMenuOpen(true);
+  document.body.style.overflow = "hidden";
+};
 
-  const mobileSideMenuClose = () => {
+
+const mobileSideMenuClose = () => {
+  if (!menuRef.current) {
     setIsMenuOpen(false);
     document.body.style.overflow = "auto";
-  };
+    return;
+  }
+  gsap.to(menuRef.current, {
+    xPercent: 100,
+    duration: 0.25,
+    ease: "power2.in",
+    onComplete: () => {
+      setIsMenuOpen(false);
+      document.body.style.overflow = "auto";
+    },
+  });
+};
+
+
+useEffect(() => {
+  if (isMenuOpen && menuRef.current) {
+    gsap.fromTo(
+      menuRef.current,
+      { xPercent: 100 },
+      { xPercent: 0, duration: 0.40, ease: "power2.out" }
+    );
+    gsap.fromTo(
+      menuRef.current.querySelectorAll("a"),
+      { x: 60, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.45, stagger: 0.09, ease: "power2.out" }
+    );
+  }
+}, [isMenuOpen]);
 
   return (
     <div className="row py-4 d-flex position-relative justify-content-center mt-4 align-items-center g-0 navbar">
@@ -167,68 +191,35 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="mobileBackdrop d-flex" onClick={mobileSideMenuClose}>
-          <div
-            ref={menuRef}
-            className="mobileSideBar d-flex flex-column"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="d-flex flex-column px-4 py-3 gap-3 position-relative">
-              <p
-                className="mobileClose position-absolute"
-                onClick={mobileSideMenuClose}
-              >
-                <i className="ri-close-line fs-1"></i>
-              </p>
-              <a
-                href="#skills"
-                onClick={mobileSideMenuClose}
-                className="text-white"
-                style={{ textDecoration: "none", marginTop: "6.5rem" }}
-              >
-                Skills
-              </a>
-              <a
-                href="#projects-section"
-                className="text-white"
-                onClick={mobileSideMenuClose}
-                style={{ textDecoration: "none" }}
-              >
-                Projects
-              </a>
+  <div className="mobileBackdrop" onClick={mobileSideMenuClose}>
+    <aside
+      ref={menuRef}
+      className="mobileSideBar"
+      onClick={(e) => e.stopPropagation()}
+      role="dialog"
+      aria-modal="true"
+    >
+      <button className="mobileClose position-absolute" onClick={mobileSideMenuClose} aria-label="Close menu">
+        <i className="ri-close-line fs-1"></i>
+      </button>
 
-              <a
-                href="#about"
-                className="text-white"
-                onClick={mobileSideMenuClose}
-                style={{ textDecoration: "none" }}
-              >
-                About
-              </a>
-              <a
-                href="#experience"
-                className="text-white"
-                onClick={mobileSideMenuClose}
-                style={{ textDecoration: "none" }}
-              >
-                Experience
-              </a>
-            </div>
+      <nav className="mobileLinks d-flex flex-column gap-3 px-4" style={{marginTop:"5rem"}}>
+        <a href="#skills" onClick={mobileSideMenuClose}>Skills</a>
+        <a href="#projects-section" onClick={mobileSideMenuClose}>Projects</a>
+        <a href="#about" onClick={mobileSideMenuClose}>About</a>
+        <a href="#experience" onClick={mobileSideMenuClose}>Experience</a>
+      </nav>
 
-            <div
-              className="position-absolute d-flex w-100 justify-content-center align-items-center"
-              style={{ bottom: "40px" }}
-            >
-              <h6 className="px-4 m-0 cursor-pointer rounded py-2">
-                <LightModeToggle />
-              </h6>
-              <h6 className="px-5 m-0 cursor-pointer bg-dark text-white rounded py-2">
-                Let's Talk
-              </h6>
-            </div>
-          </div>
-        </div>
-      )}
+      <div className="mobileFooter d-flex justify-content-center align-items-center position-absolute" style={{bottom:"30px"}}>
+        <h6 className="px-4 m-0 cursor-pointer rounded py-2"><LightModeToggle /></h6>
+<a href="#contact" onClick={mobileSideMenuClose}>
+        <h6 className="px-5 m-0 cursor-pointer bg-dark text-white rounded py-2">Let's Talk</h6>
+        </a>
+      </div>
+    </aside>
+  </div>
+)}
+
 
       <div className="position-absolute" ref={miniResume}>
         <div className="miniResume d-flex justify-content-center align-items-center">
