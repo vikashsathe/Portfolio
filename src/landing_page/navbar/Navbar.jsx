@@ -3,13 +3,9 @@ import "./Navbar.css";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-
 import Logo from "../../assets/logo/logo.png";
 import Resume from "../../assets/resume/Vikash_Sathe.pdf";
 import LightModeToggle from "../../components/lightModeToggle/LightModeToggle.jsx";
-
-
-
 
 const Navbar = () => {
   const navRef = useRef(null);
@@ -80,39 +76,25 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-    
-    const menuRef = useRef();
-   
-const mobileSideMenuOpen = () => {
-  // menuRef.current.classList.remove("d-none");
-   menuRef.current.classList.remove("d-none");
-  menuRef.current.classList.add("open");
 
-  // Animate the links
-  gsap.fromTo(
-    // menuLinksRef.current.children,
-    ".mobileSideBar a",
-    {
-      x: 90,
-      opacity: 0,
-    },
-    {
-      x: 0,
-      opacity: 1,
-      duration: 0.4,
-      stagger: 0.5,
-      ease: "power2.out",
-    }
-  );
-};
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef();
 
+  const mobileSideMenuOpen = () => {
+    setIsMenuOpen(true);
+    document.body.style.overflow = "hidden";
 
-const mobileSideMenuClose = () => {
-  menuRef.current.classList.remove("open");
-  setTimeout(() => {
-    menuRef.current.classList.add("d-none");
-  }, 300); 
-};
+    gsap.fromTo(
+      ".mobileSideBar a",
+      { x: 90, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.4, stagger: 0.5, ease: "power2.out" }
+    );
+  };
+
+  const mobileSideMenuClose = () => {
+    setIsMenuOpen(false);
+    document.body.style.overflow = "auto";
+  };
 
   return (
     <div className="row py-4 d-flex position-relative justify-content-center mt-4 align-items-center g-0 navbar">
@@ -138,7 +120,7 @@ const mobileSideMenuClose = () => {
           >
             Skills
           </a>
-        
+
           <a
             href="#projects-section"
             className="text-white"
@@ -164,19 +146,17 @@ const mobileSideMenuClose = () => {
         </div>
 
         <div className="col-lg-2 d-flex justify-content-end align-items-center d-none d-md-inline">
-        <a
-  href={Resume}
-  download={Resume}
-  className="text-white d-flex justify-content-end align-items-center"
-  style={{ textDecoration: "none" }}
->
-  <p className="m-0 d-flex gap-2 col-9 downloadResumeBtn">
-    Resume 
-    <i className="ri-download-2-line"></i>
-  </p>
-</a>
-
-
+          <a
+            href={Resume}
+            download={Resume}
+            className="text-white d-flex justify-content-end align-items-center"
+            style={{ textDecoration: "none" }}
+          >
+            <p className="m-0 d-flex gap-2 col-9 downloadResumeBtn">
+              Resume
+              <i className="ri-download-2-line"></i>
+            </p>
+          </a>
         </div>
 
         <div className="mobileSideMenu d-flex justify-content-center align-items-center d-lnline d-md-none">
@@ -186,73 +166,83 @@ const mobileSideMenuClose = () => {
         </div>
       </div>
 
-      <div ref={menuRef} className="mobileSideBar d-none d-flex flex-column">
-        <div
-    // ref={menuLinksRef}
-    className="d-flex flex-column px-4 py-3 gap-3 position-relative">
+      {isMenuOpen && (
+        <div className="mobileBackdrop d-flex" onClick={mobileSideMenuClose}>
+          <div
+            ref={menuRef}
+            className="mobileSideBar d-flex flex-column"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="d-flex flex-column px-4 py-3 gap-3 position-relative">
+              <p
+                className="mobileClose position-absolute"
+                onClick={mobileSideMenuClose}
+              >
+                <i className="ri-close-line fs-1"></i>
+              </p>
+              <a
+                href="#skills"
+                onClick={mobileSideMenuClose}
+                className="text-white"
+                style={{ textDecoration: "none", marginTop: "6.5rem" }}
+              >
+                Skills
+              </a>
+              <a
+                href="#projects-section"
+                className="text-white"
+                onClick={mobileSideMenuClose}
+                style={{ textDecoration: "none" }}
+              >
+                Projects
+              </a>
 
-        <p className="mobileClose position-absolute" onClick={mobileSideMenuClose}>
-          <i className="ri-close-line fs-1"></i>
-          </p>
-          <a
-          href="#skills"
-          onClick={mobileSideMenuClose}
-          className="text-white"
-          style={{ textDecoration: "none",marginTop:"6.5rem" }}
-        >
-          Skills
-        </a>
-        <a
-          href="#projects-section"
-          className="text-white"
-            onClick={mobileSideMenuClose}
-          style={{ textDecoration: "none" }}
-        >
-          
-              Projects
-          
-        </a>
+              <a
+                href="#about"
+                className="text-white"
+                onClick={mobileSideMenuClose}
+                style={{ textDecoration: "none" }}
+              >
+                About
+              </a>
+              <a
+                href="#experience"
+                className="text-white"
+                onClick={mobileSideMenuClose}
+                style={{ textDecoration: "none" }}
+              >
+                Experience
+              </a>
+            </div>
 
-        <a
-          href="#about"
-          className="text-white"
-            onClick={mobileSideMenuClose}
-          style={{ textDecoration: "none" }}
-        >
-          About
-        </a>
-        <a
-          href="#experience"
-          className="text-white"
-            onClick={mobileSideMenuClose}
-          style={{ textDecoration: "none" }}
-        >
-          Experience
-        </a>
-
-         
-              
-      </div>
-
-      <div className="position-absolute d-flex w-100 justify-content-center align-items-center" style={{bottom:"40px"}}>
-        <h6 className="px-4 m-0 cursor-pointer rounded py-2"><LightModeToggle /></h6>
-         <h6 className="px-5 m-0 cursor-pointer bg-dark text-white rounded py-2">Let's Talk</h6> 
-      </div>
-     
-      </div>
-
+            <div
+              className="position-absolute d-flex w-100 justify-content-center align-items-center"
+              style={{ bottom: "40px" }}
+            >
+              <h6 className="px-4 m-0 cursor-pointer rounded py-2">
+                <LightModeToggle />
+              </h6>
+              <h6 className="px-5 m-0 cursor-pointer bg-dark text-white rounded py-2">
+                Let's Talk
+              </h6>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="position-absolute" ref={miniResume}>
-        <div className="miniResume d-flex justify-content-center align-items-center" >
-
-          <a href={Resume} target="_blank" style={{textDecoration:"none", color:"#fff"}}>
+        <div className="miniResume d-flex justify-content-center align-items-center">
+          <a
+            href={Resume}
+            target="_blank"
+            style={{ textDecoration: "none", color: "#fff" }}
+          >
             <i className="ri-download-fill fs-3"></i>
           </a>
         </div>
       </div>
       <div className="position-absolute borderDiv">
         <div className="miniContectBtn">
-          
           <a
             href="#contact "
             className="text-light"
@@ -262,13 +252,10 @@ const mobileSideMenuClose = () => {
           </a>
         </div>
       </div>
-    
 
-
-       <div className="position-absolute d-none d-md-block">
+      <div className="position-absolute d-none d-md-block">
         <div className="lightModeTogle">
-          
-        <LightModeToggle />
+          <LightModeToggle />
         </div>
       </div>
     </div>

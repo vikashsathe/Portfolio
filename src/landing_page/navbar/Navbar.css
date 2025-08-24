@@ -113,11 +113,10 @@
   top: 0;
   right: 0;
   width: 75%;
-  height: 100%;
+  height: 100vh;
   background-color: #030303;
   z-index: 200;
   color:  #fff !important;
-
   transform: translateX(100%); /* hidden to the right */
   transition: transform 0.3s ease;
 }
