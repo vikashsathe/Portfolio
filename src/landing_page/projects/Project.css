@@ -12,26 +12,21 @@
 
 
 
-
-
-
-/* 👇 Mobile screen */
 @media (max-width: 567px) {
   .projectHeading{
   font-size: 35px;
 }
   .wrapper {
-    grid-template-columns: 1fr; /* stack vertically */
-    height: auto; /* let content grow */
+    grid-template-columns: 1fr; 
+    height: auto; 
   }
 
   .left, .right {
-    width: 100%; /* full width */
-    /* padding: 1rem !important; */
+    width: 100%; 
   }
 
   .left p {
-    padding: 0 !important; /* remove big left padding on mobile */
+    padding: 0 !important;
     text-align: center;
   }
 
@@ -49,7 +44,6 @@
   position: sticky;
   top: 0;
   height: 70vh;
-  /* background-color: rgb(244, 86, 7); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,9 +54,7 @@
 
 
 .card-body {
-    /* height: 190px; */
     background-color: transparent;
-
 }
 
 .card-body img {
@@ -102,12 +94,3 @@
     top: 30px;
     border-radius: 50%;
 }
-
-
-/* 
- @media (max-width: 567px) {
-  .arrowShare {
-    right:15px;
-       bottom: 15px;
-  }
-}  */

@@ -90,7 +90,7 @@ const home = () => {
 
   return (
     <>
-      <div className="row homeRow d-flex justify-content-center align-items-center px-2 px-md-5">
+      <div id="home-section" className="row homeRow d-flex justify-content-center align-items-center px-2 px-md-5">
         <div className="col-md-5 col-12 mt-2 mt-md-5">
           <p
             className="home_heading"

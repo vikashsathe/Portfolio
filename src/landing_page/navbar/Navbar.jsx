@@ -204,6 +204,7 @@ useEffect(() => {
       </button>
 
       <nav className="mobileLinks d-flex flex-column gap-3 px-4" style={{marginTop:"5rem"}}>
+        <a href="#home-section" onClick={mobileSideMenuClose}>Home</a>
         <a href="#skills" onClick={mobileSideMenuClose}>Skills</a>
         <a href="#projects-section" onClick={mobileSideMenuClose}>Projects</a>
         <a href="#about" onClick={mobileSideMenuClose}>About</a>
