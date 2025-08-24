@@ -107,23 +107,16 @@ const About = () => {
           {/* Anwendung Div */}
           <div className="dropDownMessage d-none py-2 px-2 gap-3 d-flex flex-column" id="anwendungDiv1" style={{maxHeight:"274px", overflow:"scroll", scrollbarWidth:"none"}}>
                { Certificate_data.map((certificate, index) => (
-                <div className="position-relative certificate-body" key={index}>
+                <div className="position-relative certificate-body d-flex justify-content-center align-items-center" key={index}>
                          <img
                           src={ certificate.s_img }
                           alt=""
                           className="img-fluid rounded-1"
                           style={ { objectFit:"cover" } }
                         />
-                        {/* <a href={certificate.s_link} target="_blank">
-                        <p className="position-absolute bg-dark rounded-5 d-flex justify-content-center align-items-center" style={{top:"30px", right:"30px", width:"50px",height:"50px", cursor:"pointer"}}>p</p>
-                        </a> */}
-                         <div className="arrowShare d-none" style={{top:"15px", right:"15px"}}>
-                          <a href={certificate.s_link} target="_blank">
-                          <i
-                            className="ri-arrow-right-up-line fs-4"
-                            onClick={ () => handleArrowClick(project) }
-                            style={ { cursor: "pointer" } }
-                          ></i>
+                         <div className="arrowShare d-none d-flex justify-content-center align-items-center">
+                          <a href={certificate.s_link} target="_blank" style={ { cursor: "pointer" } }>
+                          <i className="ri-add-line fs-2"></i>
                           </a>
                         </div>
                         </div>

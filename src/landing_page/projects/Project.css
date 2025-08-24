@@ -72,39 +72,29 @@
 .card-body img:hover {
     transform: scale(0.98);
     cursor: crosshair;
-
 }
 
 .arrowShare {
 
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     position: absolute;
-    right: 30px;
-    bottom: 15px;
-    background: #030303;
+    opacity: 0.9;
     text-decoration: none;
-    color: #fff;
     overflow: hidden;
+    color: #030303;
+    background: #ffe066;
 }
-
-.arrowShare i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .arrowShare:hover {
     scale: 1.05;
-    color: #030303;
-    background-color: #fff;
+    background: #030303;
+    color: #fff;
     transition: all 0.5s ease-in;
 }
 
 .xBtn {
-
     right: 30px;
     background: black;
     width: 40px;

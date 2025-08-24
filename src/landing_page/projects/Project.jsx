@@ -96,9 +96,9 @@ const Project = () => {
                           className="img-fluid"
                           style={ { objectFit: "contain" } }
                         />
-                        <div className="arrowShare d-none">
+                        <div className="arrowShare d-none d-flex justify-content-center align-items-center">
                           <i
-                            className="ri-arrow-right-up-line fs-4"
+                            className="ri-add-line fs-2"
                             onClick={ () => handleArrowClick(project) }
                             style={ { cursor: "pointer" } }
                           ></i>

@@ -124,12 +124,3 @@ const skills = () => {
 };
 
 export default skills;
-
-
-
-//  {Skills_Data.map((skill) => (
-//         <div className="d-flex p-2 gap-1 skill-card justify-content-center align-items-center">
-//       <img src={skill.img} alt="" className="" style={{width:"10px"}} />
-//       <p className="m-0" style={{ fontSize: "6px", whiteSpace:"nowrap" }}>{skill.s_name}</p>
-//     </div>
-//   ))}
