@@ -18,7 +18,7 @@ const Certificate_data = [
     {
         s_no:'03',
         s_name:'Certificate at Open Weaver - JavaScript',
-        // s_img: Img_2,
+        s_img: Img_2,
         s_link: "https://www.google.com/url?sa=D&q=https://certificates.openweaver.com/en/verify/07253084628398&ust=1753114020000000&usg=AOvVaw13000k5a2UAXA17-gFIDz3&hl=en&source=gmail"
     },
 ]

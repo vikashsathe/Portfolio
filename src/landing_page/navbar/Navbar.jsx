@@ -37,94 +37,81 @@ const Navbar = () => {
     });
   });
 
-  useEffect(() => {
-    let lastScrollTop = 0;
-    miniResume.current.classList.add("d-none");
+  const [scrollState, setScrollState] = useState("top");
+  const [lastScroll, setLastScroll] = useState(0);
 
+  useEffect(() => {
     const handleScroll = () => {
-      let currentScroll = window.scrollY;
-      let maxScroll =
+      const currentScroll = window.scrollY;
+      const maxScroll =
         document.documentElement.scrollHeight - window.innerHeight;
 
-      if (!navRef.current) return;
-
       if (currentScroll === 0) {
-        // console.log("Reached top");
-        navRef.current.classList.add("navD");
-        navRef.current.classList.remove("d-none");
-        miniResume.current.classList.add("d-none");
+        setScrollState("top");
       } else if (currentScroll >= maxScroll) {
-        // console.log("Reached bottom");
-        navRef.current.classList.add("d-none");
-        miniResume.current.classList.remove("d-none");
-      } else if (currentScroll > lastScrollTop) {
-        // console.log("Scrolling down");
-        navRef.current.classList.add("d-none");
-        navRef.current.classList.add("navD");
-        miniResume.current.classList.remove("d-none");
-      } else if (currentScroll < lastScrollTop) {
-        // console.log("Scrolling up");
-        navRef.current.classList.remove("d-none");
-        navRef.current.classList.add("amin");
-        navRef.current.classList.add("navD");
-        miniResume.current.classList.add("d-none");
+        setScrollState("bottom");
+      } else if (currentScroll > lastScroll) {
+        setScrollState("down");
+      } else if (currentScroll < lastScroll) {
+        setScrollState("up");
       }
 
-      lastScrollTop = currentScroll;
+      setLastScroll(currentScroll);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScroll]);
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-const menuRef = useRef(null);
+  const menuRef = useRef(null);
 
+  const mobileSideMenuOpen = () => {
+    setIsMenuOpen(true);
+    document.body.style.overflow = "hidden";
+  };
 
-const mobileSideMenuOpen = () => {
-  setIsMenuOpen(true);
-  document.body.style.overflow = "hidden";
-};
-
-
-const mobileSideMenuClose = () => {
-  if (!menuRef.current) {
-    setIsMenuOpen(false);
-    document.body.style.overflow = "auto";
-    return;
-  }
-  gsap.to(menuRef.current, {
-    xPercent: 100,
-    duration: 0.25,
-    ease: "power2.in",
-    onComplete: () => {
+  const mobileSideMenuClose = () => {
+    if (!menuRef.current) {
       setIsMenuOpen(false);
       document.body.style.overflow = "auto";
-    },
-  });
-};
+      return;
+    }
+    gsap.to(menuRef.current, {
+      xPercent: 100,
+      duration: 0.25,
+      ease: "power2.in",
+      onComplete: () => {
+        setIsMenuOpen(false);
+        document.body.style.overflow = "auto";
+      },
+    });
+  };
 
-
-useEffect(() => {
-  if (isMenuOpen && menuRef.current) {
-    gsap.fromTo(
-      menuRef.current,
-      { xPercent: 100 },
-      { xPercent: 0, duration: 0.40, ease: "power2.out" }
-    );
-    gsap.fromTo(
-      menuRef.current.querySelectorAll("a"),
-      { x: 60, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.45, stagger: 0.09, ease: "power2.out" }
-    );
-  }
-}, [isMenuOpen]);
+  useEffect(() => {
+    if (isMenuOpen && menuRef.current) {
+      gsap.fromTo(
+        menuRef.current,
+        { xPercent: 100 },
+        { xPercent: 0, duration: 0.4, ease: "power2.out" }
+      );
+      gsap.fromTo(
+        menuRef.current.querySelectorAll("a"),
+        { x: 60, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.45, stagger: 0.09, ease: "power2.out" }
+      );
+    }
+  }, [isMenuOpen]);
 
   return (
     <div className="row py-4 d-flex position-relative justify-content-center mt-4 align-items-center g-0 navbar">
       <div
-        className="col-11 col-md-10 d-flex justify-content-between align-items-center py-2 px-3 px-md-5 mt-2 mt-md-5 overflow-hidden navDiv"
         ref={navRef}
+        className={`col-11 col-md-10 d-flex justify-content-between align-items-center py-2 px-3 px-md-5 mt-2 mt-md-5 overflow-hidden navDiv
+    ${scrollState === "top" ? "navD" : ""}
+    ${scrollState === "up" ? "navD amin" : ""}
+    ${scrollState === "down" ? "navD d-none" : ""}
+  `}
         style={{ position: "fixed" }}
       >
         <div className="col-2 col-md-2 d-flex align-items-center">
@@ -191,38 +178,66 @@ useEffect(() => {
       </div>
 
       {isMenuOpen && (
-  <div className="mobileBackdrop" onClick={mobileSideMenuClose}>
-    <aside
-      ref={menuRef}
-      className="mobileSideBar"
-      onClick={(e) => e.stopPropagation()}
-      role="dialog"
-      aria-modal="true"
-    >
-      <button className="mobileClose position-absolute" onClick={mobileSideMenuClose} aria-label="Close menu">
-        <i className="ri-close-line fs-1"></i>
-      </button>
+        <div className="mobileBackdrop" onClick={mobileSideMenuClose}>
+          <aside
+            ref={menuRef}
+            className="mobileSideBar"
+            onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+          >
+            <button
+              className="mobileClose position-absolute"
+              onClick={mobileSideMenuClose}
+              aria-label="Close menu"
+            >
+              <i className="ri-close-line fs-1"></i>
+            </button>
 
-      <nav className="mobileLinks d-flex flex-column gap-3 px-4" style={{marginTop:"5rem"}}>
-        <a href="#home-section" onClick={mobileSideMenuClose}>Home</a>
-        <a href="#skills" onClick={mobileSideMenuClose}>Skills</a>
-        <a href="#projects-section" onClick={mobileSideMenuClose}>Projects</a>
-        <a href="#about" onClick={mobileSideMenuClose}>About</a>
-        <a href="#experience" onClick={mobileSideMenuClose}>Experience</a>
-      </nav>
+            <nav
+              className="mobileLinks d-flex flex-column gap-3 px-4"
+              style={{ marginTop: "5rem" }}
+            >
+              <a href="#home-section" onClick={mobileSideMenuClose}>
+                Home
+              </a>
+              <a href="#skills" onClick={mobileSideMenuClose}>
+                Skills
+              </a>
+              <a href="#experience" onClick={mobileSideMenuClose}>
+                Experience
+              </a>
+              <a href="#projects-section" onClick={mobileSideMenuClose}>
+                Projects
+              </a>
+              <a href="#about" onClick={mobileSideMenuClose}>
+                About
+              </a>
+            </nav>
 
-      <div className="mobileFooter d-flex justify-content-center align-items-center position-absolute" style={{bottom:"100px"}}>
-        <h6 className="px-4 m-0 cursor-pointer rounded py-2"><LightModeToggle /></h6>
-<a href="#contact" onClick={mobileSideMenuClose}>
-        <h6 className="px-5 m-0 cursor-pointer bg-dark text-white rounded py-2">Let's Talk</h6>
-        </a>
-      </div>
-    </aside>
-  </div>
-)}
+            <div
+              className="mobileFooter d-flex justify-content-center align-items-center position-absolute"
+              style={{ bottom: "100px" }}
+            >
+              <h6 className="px-4 m-0 cursor-pointer rounded py-2">
+                <LightModeToggle />
+              </h6>
+              <a href="#contact" onClick={mobileSideMenuClose}>
+                <h6 className="px-5 m-0 cursor-pointer bg-dark text-white rounded py-2">
+                  Let's Talk
+                </h6>
+              </a>
+            </div>
+          </aside>
+        </div>
+      )}
 
-
-      <div className="position-absolute" ref={miniResume}>
+      <div
+        className={`position-absolute
+    ${scrollState === "bottom" || scrollState === "down" ? "" : "d-none"}
+  `}
+        ref={miniResume}
+      >
         <div className="miniResume d-flex justify-content-center align-items-center">
           <a
             href={Resume}
@@ -233,6 +248,7 @@ useEffect(() => {
           </a>
         </div>
       </div>
+
       <div className="position-absolute borderDiv">
         <div className="miniContectBtn">
           <a

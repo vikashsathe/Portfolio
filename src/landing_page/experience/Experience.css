@@ -3,6 +3,7 @@
 #closeSkillCard{
   max-height: 664px;
   /* background-color: orange; */
+
   overflow: scroll;
   scrollbar-width: none;
   text-align: justify;
@@ -57,6 +58,13 @@
     border: none !important;
     border-radius: 0 0 14px 14px;
 }
+.accordion-item{
+  box-shadow: none;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;

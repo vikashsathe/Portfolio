@@ -118,7 +118,7 @@ const Contect = () => {
           </p>
             <a href="#mail" className="text-decoration-none text-light">
           <p className="d-flex mb-2 justify-content-start m-0 align-items-center gap-3">
-            <i className="ri-mail-ai-fill fs-5"></i>
+            <i className="ri-mail-send-fill fs-5"></i>
              vikashsathe83@gmail.com
           </p>
             </a>

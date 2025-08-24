@@ -48,7 +48,8 @@ body.light-mode .serviceCardMobile
 body.light-mode .mobileSideBar,
 body.light-mode .mobileClose,
 body.light-mode input,
-body.light-mode textarea
+body.light-mode textarea,
+body.light-mode #productDiv1
  {
   background: #C1D0B5 !important;
   color: #030303 !important;
@@ -58,7 +59,6 @@ body.light-mode textarea
 body.light-mode .arrowShare:hover i{
   color: #fff !important;
 }
-
 
 body.light-mode .downloadResumeBtn
 {

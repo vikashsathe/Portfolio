@@ -63,9 +63,6 @@ function App() {
 
 
 
-  
-
-
    // Disable right click & shortcuts
 
   // useEffect(() => {

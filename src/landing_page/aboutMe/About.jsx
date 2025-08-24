@@ -5,11 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 // certificates img 
 import Certificate_data from "../../assets/certificate/data/certificate_data.js";
-
 import FlipSkills from "../../components/flip_skills/FlipSkills.jsx";
-
-
-
 
 const About = () => {
     function setActive(link, divId) {
@@ -18,6 +14,8 @@ const About = () => {
     document.querySelectorAll('.dropDownMessage').forEach(el => el.classList.add('d-none'));
     document.getElementById(divId).classList.remove('d-none');
   }
+
+  const [certificateArrow, setCertificateArrow] = useState(false)
 
 
   useGSAP(() => {
@@ -52,36 +50,7 @@ const About = () => {
 
   });
 
-    useEffect(() => {
-  const cards = document.querySelectorAll(".certificate-body");
-  
-  cards.forEach((card) => {
-    const arrow = card.querySelector(".arrowShare");
-
-    card.addEventListener("mouseenter", () => {
-      if (arrow) arrow.classList.remove("d-none");
-    });
-
-    card.addEventListener("mouseleave", () => {
-      if (arrow) arrow.classList.add("d-none");
-    });
-
-  });
-  
-
-
-
-
-  return () => {
-    cards.forEach((card) => {
-      card.replaceWith(card.cloneNode(true)); 
-    });
-  };
-}, [Certificate_data]);
-
-
-
-    
+ 
   return (
     <>
       <div className="row pt-4 pt-md-0 d-flex MainAboutDiv justify-content-center align-items-start px-2 px-md-5" id="about">
@@ -91,56 +60,77 @@ const About = () => {
           <p style={{fontSize:"14px"}}>Hello my VIKASH SATHE, I’m a Full Stack MERN Developer with expertise in MongoDB, Express, React, Node.js, and Data Structures & Algorithms(DSA) in JAVA, focused on building efficient, scalable, and responsive web applications.</p>
           <div className="row d-flex topicDiv py-4 mt-4 mb-3 justify-content-start align-items-center">
                <a className="nav-link col-md-3 col-4 text-center"
-              onClick={(e) => setActive(e.currentTarget, 'anwendungDiv1')}>
+              onClick={(e) => setActive(e.currentTarget, 'carouselExampleFade')}>
               Certificates
             </a>
             <a className="nav-link col-md-3 col-4 text-center"
               onClick={(e) => setActive(e.currentTarget, 'productDiv1')}>
               Education
-            </a>
-         
-        
+            </a> 
           </div>
-
-  
 
           {/* Anwendung Div */}
-          <div className="dropDownMessage d-none py-2 px-2 gap-3 d-flex flex-column" id="anwendungDiv1" style={{maxHeight:"274px", overflow:"scroll", scrollbarWidth:"none"}}>
-               { Certificate_data.map((certificate, index) => (
-                <div className="position-relative certificate-body d-flex justify-content-center align-items-center" key={index}>
-                         <img
-                          src={ certificate.s_img }
-                          alt=""
-                          className="img-fluid rounded-1"
-                          style={ { objectFit:"cover" } }
-                        />
-                         <div className="arrowShare d-none d-flex justify-content-center align-items-center">
-                          <a href={certificate.s_link} target="_blank" style={ { cursor: "pointer" } }>
-                          <i className="ri-add-line fs-2"></i>
-                          </a>
-                        </div>
-                        </div>
-                  )) }
-          
-          </div>
-                  {/* Product Div */}
-          <div className="dropDownMessage d-none py-3 px-4" id="productDiv1">
-               <ul className="d-flex flex-column mt-3 gap-3 sparkle-list">
-              <li className="">
-                <div className="d-flex justify-content-between align-items-center">
-                  <h6 className="m-0">Master of Computer Applications (MCA)</h6>
-                <p className="m-0">Sage University</p>
-             
-             </div>
-             <div className="d-flex justify-content-between mt-2">
-              <p className="m-0">Indore, MP</p>
-              <p className="m-0">2022-2024</p>
+  <div id="carouselExampleFade" 
+     className="carousel slide carousel-fade m-auto m-md-0 dropDownMessage" 
+     data-bs-ride="carousel" 
+     data-bs-interval="3000"
+     style={{height: "250px", width: "350px"}}
+     onMouseEnter={() => setCertificateArrow(true)}
+     onMouseLeave={() => setCertificateArrow(false)}
+>
+  <div className="carousel-inner position-relative h-100"    
+  >
+    {Certificate_data.map((certificate, index) => (
+      <div 
+        key={index} 
+        className={`carousel-item ${index === 0 ? "active" : ""}`}
+      >
+        <img 
+          src={certificate.s_img} 
+          className="d-block w-100 h-100 rounded-2" 
+          style={{objectFit: "cover"}} 
+          alt={`certificate-${index}`} 
+        />
 
-             </div>
-              </li>
-              
-            </ul>
-             
+        {certificateArrow && (
+          <div 
+            className="arrowShare position-absolute d-flex justify-content-center align-items-center" 
+            style={{
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <a href={certificate.s_link} target="_blank" style={{cursor: "pointer"}}>
+              <i className="ri-add-line fs-2 text-white"></i>
+            </a>
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <i className="ri-arrow-left-circle-line text-dark fs-2"></i>
+    <span className="visually-hidden">Previous</span>
+  </button>
+
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <i className="ri-arrow-right-circle-line text-dark fs-2"></i>
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+
+                  {/* Product Div */}
+          <div className="dropDownMessage d-none p-4" id="productDiv1"
+          style={{height: "180px"}}
+          >
+            <h6 className="m-0" style={{letterSpacing:"1px"}}>Master of Computer Applications (MCA)</h6>
+            <div className="d-flex justify-content-between align-items-center mt-4 mb-4">
+            <p className="m-0 text-muted">2022-2024</p>
+            <p className="m-0 text-muted">Indore, MP</p>
+            </div>
+            <p className="m-0 clgBtn rounded-2 fw-light text-muted d-inline px-4 py-2" style={{background:"#030303", cursor:"pointer"}}>Sage University <i class="ri-arrow-right-up-line"></i></p>
           </div>
 
 

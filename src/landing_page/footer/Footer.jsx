@@ -11,10 +11,10 @@ const Footer = () => {
         
      gsap.to(".heartBlink", {
   opacity: 0,
-  duration: 1.5, // how fast it shrinks/disappears
-  repeat: -1,    // infinite loop
-  yoyo: true,    // go back to original state
-  ease: "power1.inOut" // smooth transition
+  duration: 1.5, 
+  repeat: -1,    
+  yoyo: true,    
+  ease: "power1.inOut"
 });
 
     
