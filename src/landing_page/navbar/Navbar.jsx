@@ -210,7 +210,7 @@ useEffect(() => {
         <a href="#experience" onClick={mobileSideMenuClose}>Experience</a>
       </nav>
 
-      <div className="mobileFooter d-flex justify-content-center align-items-center position-absolute" style={{bottom:"30px"}}>
+      <div className="mobileFooter d-flex justify-content-center align-items-center position-absolute" style={{bottom:"60px"}}>
         <h6 className="px-4 m-0 cursor-pointer rounded py-2"><LightModeToggle /></h6>
 <a href="#contact" onClick={mobileSideMenuClose}>
         <h6 className="px-5 m-0 cursor-pointer bg-dark text-white rounded py-2">Let's Talk</h6>
