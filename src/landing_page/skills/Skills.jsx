@@ -2,9 +2,7 @@ import "./Skills.css";
 import Skills_Data from "../../assets/skills/data/skills_data.js";
 import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger"; // <-- Import ScrollTrigger
-
-import shape from "../../assets/home_img/ai-shape.webp"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import cornerDownArrow from "../../assets/svg/corner-down-right-line.svg";
 gsap.registerPlugin(ScrollTrigger); 
