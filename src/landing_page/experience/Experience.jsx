@@ -59,7 +59,7 @@ const Experience = () => {
           <img
             src={experience_img}
             alt=""
-            className="experience_img"
+            className="experience_img profilePicture"
             style={{ width: "80%" }}
           />
         </div>

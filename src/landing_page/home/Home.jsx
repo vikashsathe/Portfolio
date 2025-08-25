@@ -88,6 +88,8 @@ const home = () => {
     socialIcon();
   });
 
+
+
   return (
     <>
       <div id="home-section" className="row homeRow d-flex justify-content-center align-items-center px-2 px-md-5">
@@ -161,7 +163,7 @@ const home = () => {
           <img
             src={MainImg}
             alt=""
-            className="home_img"
+            className="home_img profilePicture"
             style={{ width: "80%" }}
           />
         </div>

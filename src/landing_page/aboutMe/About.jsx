@@ -139,7 +139,7 @@ const About = () => {
           <img
             src={about_img}
             alt=""
-            className="about_img"
+            className="about_img profilePicture"
             style={{ width: "80%" }}
           />
         </div>

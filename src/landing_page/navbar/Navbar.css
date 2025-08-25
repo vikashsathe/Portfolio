@@ -37,19 +37,22 @@
   100% { left: 120%; }
 }
 
-
 .downloadResumeBtn {
   border: none;
-  box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
-   background-color: #fff;
-   color: #030303;
-  padding: 15px 30px;
+  padding: 10px 30px;
   border-radius: 40px;
-  transition: transform 0.5s; 
+  background-color: #A1A1AA;
+  color: #030303;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
 }
-.downloadResumeBtn:hover{
-   transform: scale(1.04);
+
+.downloadResumeBtn:hover {
+  transform: scale(1.03);
+  background: #E4E4E7;
 }
+
 
 .services-format h2 {
     font-size: 35px;
@@ -76,13 +79,7 @@
   opacity: 0.3;
 }
 
-.miniContectBtn:hover a{
-  scale: 1.1;
-}
 
-.miniContectBtn:hover a{
-    transform: scale(0.98);
-}
 
 @keyframes fadeSlide {
   from {
@@ -156,36 +153,33 @@ letter-spacing: 0.4px;
     align-items: center;
 }
 
-.miniResume {
+.miniResume,
+.miniContectBtn {
   width: 45px;
   height: 45px;
   position: fixed;
-  top: 47px;
-  z-index: 100;
+  z-index: 99;
   cursor: pointer;
-  right: 175px;
   border-radius: 50%;
     background: linear-gradient(145deg, #030303, #0a0a0a, #030303);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.85);
   border: 1.5px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s ease-in-out;
 }
 
-
+.miniResume{
+top: 47px;
+right: 175px;
+}
 .miniContectBtn{
- width: 45px;
-  height: 45px;
-  position: fixed;
   bottom: 47px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  cursor: pointer;
-  border-radius: 50%;
   right: 50px;
-    background: linear-gradient(145deg, #030303, #0a0a0a, #030303);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.85);
-  border: 1.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.miniContectBtn:hover a,
+.miniResume:hover a
+{
+    transform: scale(1.08);
 }
 
  @media (max-width: 567px) {

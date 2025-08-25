@@ -163,9 +163,9 @@ const Navbar = () => {
             className="text-white d-flex justify-content-end align-items-center"
             style={{ textDecoration: "none" }}
           >
-            <p className="m-0 d-flex gap-2 col-9 fw-semibold downloadResumeBtn">
+            <p className="m-0 d-flex justify-content-center align-items-center gap-2 col-9 fw-semibold downloadResumeBtn">
               Resume
-              <i className="ri-download-2-fill"></i>
+              <i className="ri-download-2-fill fs-5"></i>
             </p>
           </a>
         </div>
@@ -250,13 +250,14 @@ const Navbar = () => {
       </div>
 
       <div className="position-absolute borderDiv">
-        <div className="miniContectBtn">
+        <div className="miniContectBtn d-flex justify-content-center align-items-center">
           <a
             href="#contact "
             className="text-light"
             style={{ textDecoration: "none" }}
           >
-            <i className="ri-chat-ai-fill fs-4"></i>
+            <i className="ri-message-3-fill fs-4"></i>
+            
           </a>
         </div>
       </div>

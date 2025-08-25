@@ -1,10 +1,4 @@
-.home_img{
-    transform: rotateY(180deg);
-    width: 100%;
-    height: 70% !important;
-    /* max-width: 500px; */
-    
-}
+
 
 
 .socialDiv a{
@@ -74,7 +68,20 @@ background: linear-gradient(160deg,rgba(249, 206, 52, 1) 0%, rgba(238, 42, 123, 
 
 
 .toggleWord {
-  display: inline-block; /* so width works properly */
-  width: 230px;          /* fixed width */
-  text-align: left;      /* or center if you want centered text */
+  display: inline-block; 
+  width: 230px;          
+  text-align: left;      
+}
+
+.home_img {
+transform: rotateY(180deg);
+width: 100%;
+  height: 70% !important;
+}
+
+.profilePicture{
+  transition: filter 0.4s ease
+  }
+.profilePicture:hover {
+  filter: drop-shadow(0 0 2px rgba(255, 224, 102, 0.8));
 }

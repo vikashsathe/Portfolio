@@ -15,10 +15,14 @@ body.light-mode
 
 /* Navbar */
 body.light-mode .navDiv,
-body.light-mode .miniResume
+body.light-mode .miniResume,
+body.light-mode .miniContectBtn,
+body.light-mode .socialDiv a ,
+body.light-mode .AboutsocialDiv a 
  {
   background: #C1D0B5 !important;
   border-color: #000 !important;
+  border: none !important;
 }
 
 /* Links */
@@ -29,11 +33,8 @@ body.light-mode i
  {
   color: #000 !important;
 }
-body.light-mode .socialDiv a ,
-body.light-mode .AboutsocialDiv a 
-{
-  background-color: #D6E8DB;
-}
+
+
 
 /* Cards */
 body.light-mode .serviceCard,
@@ -66,3 +67,6 @@ body.light-mode .downloadResumeBtn
 }
 
 
+.downloadResumeBtn,
+.miniResume,
+.miniContectBtn
