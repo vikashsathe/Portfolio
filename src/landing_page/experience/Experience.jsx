@@ -64,7 +64,7 @@ const Experience = () => {
           />
         </div>
          <div className="col-md-5 col-12 ExprienceDiv order-0 order-md-1 mt-5" >
-          <h1 className="mb-4 text-start" >Exprience.</h1>
+           <h1 className="mb-2 col-12 text-start SectionHeading">What <span style={{color:"#ffe066"}}>I’ve </span>Done</h1>
           <p style={{fontSize:"14px"}}>Gained hands-on experience by building projects using MERN stack and PHP. Worked on e-commerce apps, login systems, and APIs. Focused on full-stack development, clean code, and real-world problem solving.</p>
           <div className="row d-flex mt-4 mb-4 justify-content-start align-items-center">
              <a className="nav-link col-md-3 col-4 active text-center"

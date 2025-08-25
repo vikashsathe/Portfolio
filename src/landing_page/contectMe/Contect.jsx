@@ -110,7 +110,7 @@ const Contect = () => {
     <>
       <div id="contact" className="contentDiv row mt-5 d-flex justify-content-center align-items-start mb-3 mb-md-5 px-2 px-md-0">
         <div className="col-md-4 col-12 leftContect">
-          <h1 className="mb-4">Let'<span style={{color:"#ffe066"}}>s</span> Talk </h1>
+          <h1 className="mb-2 SectionHeading">Get in<span style={{color:"#ffe066"}}>Touch</span></h1>
           <p className="mb-3" style={{textAlign:"justify"}}>
             I'm currently avaliable to take on new project, so feel free to send
             me a message about anything that you want me to work on. You can

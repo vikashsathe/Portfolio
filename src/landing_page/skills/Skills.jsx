@@ -20,7 +20,7 @@ const skills = () => {
       trigger: ".skillsDiv",
       scoller: "body",
       start: "top 85%",
-      end: "top -100%",
+      end: "top -100%"
     },
     filter: "blur(10px)",
   });
@@ -75,7 +75,7 @@ const skills = () => {
     <div className="px-3 px-md-5 mt-5 mb-5 skillsDiv rounded-3 bg-dark" id="skills">
 
       <div className="row skillTextRow d-flex justify-content-center align-items-center" style={{textTransform:"capitalize"}}>
-        <h1 className="mt-5 col-12 text-center skillHeading">Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>
+        <h1 className="mt-5 col-12 text-center SectionHeading">Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>
         <p className="text-center m-0 fw-light" style={{color:"#999",fontSize:"13px"}}>skills, interests, passion and hobbies</p>
       </div>
 <div className="row p-3 mt-3 mb-1 mt-md-5 ">

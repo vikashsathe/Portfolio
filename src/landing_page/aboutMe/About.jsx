@@ -56,7 +56,7 @@ const About = () => {
       <div className="row pt-4 pt-md-0 d-flex MainAboutDiv justify-content-center align-items-start px-2 px-md-5" id="about">
         
          <div className="col-lg-5 col-12 aboutDiv">
-          <h1 className="mb-4 text-start" >About.</h1>
+          <h1 className="mb-2 col-12 text-start SectionHeading">Get to <span style={{color:"#ffe066"}}>Know </span>Me</h1>
           <p style={{fontSize:"14px"}}>Hello my VIKASH SATHE, I’m a Full Stack MERN Developer with expertise in MongoDB, Express, React, Node.js, and Data Structures & Algorithms(DSA) in JAVA, focused on building efficient, scalable, and responsive web applications.</p>
           <div className="row d-flex topicDiv py-4 mt-4 mb-3 justify-content-start align-items-center">
                <a className="nav-link col-md-3 col-4 text-center"

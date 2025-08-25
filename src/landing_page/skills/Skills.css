@@ -18,19 +18,19 @@
 }
 
 
-.skillHeading{
-  font-size: 50px;
-}
+
 
 .seeMore h3:hover{
   transform: scale(0.98);
   color: wheat;
 }
 
-
+.SectionHeading{
+  font-size: 50px;
+}
 
 @media (max-width: 567px) {
-.skillHeading{
+.SectionHeading{
   font-size: 35px;
 }
 }

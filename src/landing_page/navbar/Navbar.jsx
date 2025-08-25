@@ -163,9 +163,9 @@ const Navbar = () => {
             className="text-white d-flex justify-content-end align-items-center"
             style={{ textDecoration: "none" }}
           >
-            <p className="m-0 d-flex gap-2 col-9 downloadResumeBtn">
+            <p className="m-0 d-flex gap-2 col-9 fw-semibold downloadResumeBtn">
               Resume
-              <i className="ri-download-2-line"></i>
+              <i className="ri-download-2-fill"></i>
             </p>
           </a>
         </div>
@@ -244,7 +244,7 @@ const Navbar = () => {
             target="_blank"
             style={{ textDecoration: "none", color: "#fff" }}
           >
-            <i className="ri-download-fill fs-3"></i>
+            <i className="ri-download-fill fs-4"></i>
           </a>
         </div>
       </div>
@@ -256,7 +256,7 @@ const Navbar = () => {
             className="text-light"
             style={{ textDecoration: "none" }}
           >
-            <i className="ri-chat-ai-fill fs-3"></i>
+            <i className="ri-chat-ai-fill fs-4"></i>
           </a>
         </div>
       </div>
