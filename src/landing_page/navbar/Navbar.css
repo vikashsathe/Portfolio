@@ -5,9 +5,19 @@
 .navDiv {
   background: #030303;
   border-radius: 15px;
-  z-index: 100;
-  box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
+  z-index: 101;
+  box-shadow: 0px 1.5px 5px rgba(255, 255, 255, 0.25), 
+    0px 0px 0px rgba(0, 0, 0, 0.6)
 }
+
+
+
+
+
+
+
+
+
 
 .downloadResumeBtn {
   border: none;
@@ -132,12 +142,13 @@ letter-spacing: 0.4px;
   height: 45px;
   position: fixed;
   top: 47px;
-  z-index: 10;
+  z-index: 100;
   cursor: pointer;
   right: 175px;
   border-radius: 50%;
   background: #030303;
-  box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
+  box-shadow: 0px 1.5px 5px rgba(255, 255, 255, 0.25), 
+    0px 0px 0px rgba(0, 0, 0, 0.6)
 }
 
 
@@ -154,8 +165,9 @@ letter-spacing: 0.4px;
   border-radius: 50%;
   right: 50px;
   background: transparent;
-  box-shadow: 0px 3px 5px 0.2px rgba(128, 128, 128, 0.3);
   transition: transform 0.5s;
+  box-shadow: 0px 1.5px 5px rgba(255, 255, 255, 0.25), 
+    0px 0px 0px rgba(0, 0, 0, 0.6)
 }
 
  @media (max-width: 567px) {

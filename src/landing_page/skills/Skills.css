@@ -2,7 +2,7 @@
 .skillsDiv{
  
     overflow-x: hidden;
-    z-index: 1000;
+    z-index: 9;
 }
 
 
@@ -34,8 +34,5 @@
   font-size: 35px;
 }
 }
-
-
-
 
 

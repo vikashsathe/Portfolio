@@ -4,6 +4,8 @@ import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"; // <-- Import ScrollTrigger
 
+import shape from "../../assets/home_img/ai-shape.webp"
+
 import cornerDownArrow from "../../assets/svg/corner-down-right-line.svg";
 gsap.registerPlugin(ScrollTrigger); 
 
@@ -72,7 +74,7 @@ const skills = () => {
 
 
   return (
-    <div className="px-3 px-md-5 mt-5 mb-5 skillsDiv rounded-3 bg-dark" id="skills">
+    <div className="px-3 px-md-5 mt-5 mb-5 skillsDiv position-relative rounded-3 bg-dark" id="skills">
 
       <div className="row skillTextRow d-flex justify-content-center align-items-center" style={{textTransform:"capitalize"}}>
         <h1 className="mt-5 col-12 text-center SectionHeading">Things I'm <span style={{color:"#ffe066"}}>good</span> at</h1>
@@ -116,9 +118,6 @@ const skills = () => {
 <h3 className="fw-bold">See all my<br/> work</h3>
 </div>
 </a>
-
-
-
     </div>
   );
 };
